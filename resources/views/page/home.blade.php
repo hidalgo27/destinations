@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Factor - Multipurpose Landing page Template With Page Builder</title>
+    <title>Peruvian Destiations | Peru Travel Packages</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -10,9 +10,7 @@
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{mix("css/font-awesome.css")}}">
     <!-- main style sheet -->
-
     <link rel="shortcut icon" href="images/favicon.ico">
-
 
 </head>
 <body>
@@ -156,7 +154,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <div class="content-area-2 clearfix">
                             <div class="content-area-figure-1">
-                                <img src="images/travel/content-area-1.png" alt="content area">
+                                <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                             </div>
                             <div class=" col-md-12 ">
                                 <div class="travel-duration tx-center">
@@ -176,7 +174,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
                         <div class="content-area-2 clearfix">
                             <div class="content-area-figure-1">
-                                <img src="images/travel/content-area-2.png" alt="content area">
+                                <img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">
                             </div>
                             <div class=" col-md-12 ">
                                 <div class="travel-duration tx-center">
@@ -196,7 +194,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
                         <div class="content-area-2 clearfix">
                             <div class="content-area-figure-1">
-                                <img src="images/travel/content-area-3.png" alt="content area">
+                                <img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">
                             </div>
                             <div class=" col-md-12 ">
                                 <div class="travel-duration tx-center">
@@ -254,10 +252,10 @@
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <div class="content-area-3">
                             <div class="content-video-1">
-                                <img src="images/travel/video-1.jpg" alt="video">
+                                <img src="{{asset('images/travel/video-2.jpg')}}" alt="video">
 
                                 <div class="content-video-btn-1">
-                                    <a href="https://player.vimeo.com/video/102732914?title=0&amp;byline=0&amp;portrait=0&amp;color=11b1c2&amp;wmode=opaque"  class="html5lightbox content-vbtn-color-blue" data-width="570" data-height="320" title="title here "><i class="fa fa-play-circle"></i></a>
+                                    <a href="https://www.youtube.com/watch?v=XzMFpRp5pYo"  class="html5lightbox content-vbtn-color-blue" data-width="570" data-height="320"><i class="fa fa-play-circle"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -296,50 +294,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
-                        <div class="testi-cap-2">
-                            <img src="images/travel/testi-1.png" alt="testimonial">
-                            <div class="cap-content-2">
-                                <h6>Sarah Schmidt</h6>
-                                <p>CEO Digitalcraft</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
-                        <div class="testi-cap-2">
-                            <img src="images/travel/testi-1.png" alt="testimonial">
-                            <div class="cap-content-2">
-                                <h6>Sarah Schmidt</h6>
-                                <p>CEO Digitalcraft</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
-                        <div class="testi-cap-2">
-                            <img src="images/travel/testi-1.png" alt="testimonial">
-                            <div class="cap-content-2">
-                                <h6>Sarah Schmidt</h6>
-                                <p>CEO Digitalcraft</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
-                        <div class="testi-cap-2">
-                            <img src="images/travel/testi-1.png" alt="testimonial">
-                            <div class="cap-content-2">
-                                <h6>Sarah Schmidt</h6>
-                                <p>CEO Digitalcraft</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -392,7 +347,7 @@
                             <textarea  name="message" placeholder="MESSAGE"></textarea>
                         </div><!-- /.col-md-4 col -->
                         <div class="col-md-12 col-sm-12 col-xs-12 tx-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.4s">
-                            <input class="form-btn" value="Book Now" type="submit" id="submit_btn4">
+                            <input class="form-btn" value="Inquire Now" type="submit" id="submit_btn4">
                         </div><!-- /.col-md-4 col -->
                         <div id="contact_results"></div>
                     </div>
@@ -447,7 +402,7 @@
                     </ul>
                 </div>
                 <div class="copyright-text-1 tx-center">
-                    <p>© Travel 2015, All Rights Reserved, Developed by designvilla</p>
+                    <p>© Travel 2017, All Rights Reserved, Developed by Hidalgo</p>
                 </div>
             </div><!-- /.container -->
         </div><!-- /.row -->
@@ -456,14 +411,9 @@
 
 
 <!--====================== JAVA SCRIPTS =============================-->
-{{--<script>--}}
-    {{--window.Laravel = {!! json_encode([--}}
-        {{--'csrfToken' => csrf_token(),--}}
-        {{--]) !!};--}}
-{{--</script>--}}
+
 <script src="{{asset("js/app.js")}}"></script>
 <script src="{{asset("js/admin/plugins.js")}}"></script>
-
 
 
 
