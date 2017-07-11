@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Peruvian Destinations
                 </div>
 
                 <div class="links">
