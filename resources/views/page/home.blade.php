@@ -52,7 +52,8 @@
 
     {{--</header><!-- /.item -->--}}
 
-    <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+    {{--<div id="carousel-example-generic" class="carousel slide carousel-fade position-relative" data-ride="carousel">--}}
+    <div id="carousel-example-generic" class="carousel slide position-relative" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -64,83 +65,29 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="{{asset('images/slider/slider-1.jpg')}}" alt="...">
-                <div class="carousel-caption">
-                    <div class="container padding-top-50"><!-- container -->
-                        <div class="row"><!--.row -->
-                            <div class="col-md-8 col-sm-7 col-xs-12 padding-top-50 ">
-                                <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                                    <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
-                                </div>
-                                <div class="header-small-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                                    <h6 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendis sefaucibus risus sit amet auctor sodales<br> justo erat tempor eros, non </h6>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-5 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                                <div class="header-form-2 bg-color-white">
-                                    <div class="row">
-                                        <h5 class="color-orange-2 tx-center">WELCOME TO YOUR<br> NEW LIVING!</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div id="contact_form" >
-                                            <div class="row">
-                                                <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
-                                            </div>
-                                            <div class="row">
-                                                <input class="" required="required" id="email" name="email" placeholder="EMAIL" type="email">
-                                            </div>
-                                            <div class="row">
-                                                <input class="" required="required" id="phone" name="phone" placeholder="PHONE" type="text">
-                                            </div>
-                                            <div class="row">
-                                                <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
-                                            </div>
-                                            <div class="row">
-                                                <input class="color-white" value="REGISTER NOW"  type="submit" id="submit_btn">
-                                            </div>
-                                            <div id="contact_results"></div>
-                                        </div>
-                                    </div>
-                                    <!--<div class="row">
-                                        <form id="signup-1" class="mailchimp">
-                                            <div class="row">
-                                                <input class="" name="name" placeholder="NAME" type="text">
-                                            </div>
-                                            <div class="row">
-                                                <input class="" name="EMAIL" placeholder="EMAIL" type="text">
-                                            </div>
-                                            <div class="row">
-                                                <input class="" name="phone" placeholder="PHONE" type="text">
-                                            </div>
-                                            <div class="row">
-                                                <textarea class=""  name="message" placeholder="MESSAGE"></textarea>
-                                            </div>
-                                            <div class="row">
-                                                <input class="color-white" value="REGISTER NOW" type="submit">
-                                            </div>
-                                            <div class="subscription-success"></div>
-                                            <div class="subscription-error"></div>
-                                        </form>
-                                    </div>-->
-                                </div>
-                            </div>
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
+                <div class="carousel-caption col-md-4 text-left">
+                    <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                        <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <img src="{{asset('images/slider/slider-2.jpg')}}" alt="...">
-                <div class="carousel-caption well">
-
+                <div class="carousel-caption">
+                    <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                        <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
+                    </div>
+                    <div class="header-small-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
+                        <h6 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendis sefaucibus risus sit amet auctor sodales<br> justo erat tempor eros, non </h6>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <img src="{{asset('images/slider/slider-3.jpg')}}" alt="...">
-                <div class="carousel-caption well">
+                <div class="carousel-caption">
 
                 </div>
             </div>
-
         </div>
 
         <!-- Controls -->
@@ -152,6 +99,47 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+
+        <div class="col-md-4 col-sm-5 col-xs-12 os-animation form-header" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+            <div class="header-form-2 bg-color-white">
+                <div class="row">
+                    <h5 class="color-orange-2 tx-center">INQUIRE NOW</h5>
+                </div>
+                <div class="row">
+                    <div id="contact_form" >
+                        <div class="row">
+                            <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
+                        </div>
+                        <div class="row">
+                            <input class="" required="required" id="email" name="email" placeholder="EMAIL" type="email">
+                        </div>
+                        <div class="row">
+                            <input class="" required="required" id="country" name="country" placeholder="COUNTRY" type="email">
+                        </div>
+                        <div class="row">
+                            <input class="" required="required" id="travel-date" name="travel-date" placeholder="TRAVEL DATE" type="date">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input class="" required="required" id="travel-date" name="travel-date" placeholder="TRAVELERS" min="0" type="number">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="" required="required" id="days" name="days" placeholder="DAYS" min="0" type="number">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
+                        </div>
+                        <div class="row">
+                            <input class="color-white" value="INQUIRE NOW"  type="submit" id="submit_btn">
+                        </div>
+                        <div id="contact_results"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
 
@@ -166,67 +154,62 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="icon-menu"></i> Menu
                     </button>
-                    <a class="navbar-brand" href="#"> <img src="http://mogulsdemo.com/html/pride-home/images/logo----.png" /></a>
+                    <a class="navbar-brand" href="#"> <img src="{{asset('images/logo-peruvian.png')}}" width="270"/></a>
                 </div>
 
 
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                        <div class="col-md-12 text-center margin-top-20">
-                            <a href="" class="btn btn-danger">Contact Us</a>
-                            <a href="" class="btn btn-danger">Inquire Now</a>
-                        </div>
+                        {{--<div class="col-md-12 text-center margin-top-20">--}}
+                            {{--<a href="" class="btn btn-danger">Contact Us</a>--}}
+                        {{--</div>--}}
                         <div class="col-md-12">
                             <ul class="nav navbar-nav">
 
                                 <li class="dropdown mega-dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">FIND YORU HOTEL <span class="caret"></span></a>
-                                    <ul class="dropdown-menu mega-dropdown-menu">
-                                        <li class="col-sm-4">
-                                            <ul>
-                                                <li class="dropdown-header">Features</li>
-                                                <li><a href="#">Auto Carousel</a></li>
-                                                <li><a href="#">Carousel Control</a></li>
-                                                <li><a href="#">Left & Right Navigation</a></li>
-                                                <li><a href="#">Four Columns Grid</a></li>
-                                                <!-- <li class="divider"></li>
-                                                <li class="dropdown-header">Fonts</li>
-                                                <li><a href="#">Glyphicon</a></li>
-                                                <li><a href="#">Google Fonts</a></li> -->
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-4">
-                                            <ul>
-                                                <li class="dropdown-header">Plus</li>
-                                                <li><a href="#">Navbar Inverse</a></li>
-                                                <li><a href="#">Pull Right Elements</a></li>
-                                                <li><a href="#">Coloured Headers</a></li>
-                                                <li><a href="#">Primary Buttons & Default</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="col-sm-4">
-                                            <ul>
-                                                <li class="dropdown-header">Much more</li>
-                                                <li><a href="#">Easy to Customize</a></li>
-                                                <li><a href="#">Calls to action</a></li>
-                                                <li><a href="#">Custom Fonts</a></li>
-                                                <li><a href="#">Slide down on Hover</a></li>
-                                            </ul>
-                                        </li>
+                                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">DESTINATIONS <span class="caret"></span></a>--}}
+                                    {{--<ul class="dropdown-menu mega-dropdown-menu">--}}
+                                        {{--<li class="col-sm-4">--}}
+                                            {{--<ul>--}}
+                                                {{--<li class="dropdown-header">Features</li>--}}
+                                                {{--<li><a href="#">Auto Carousel</a></li>--}}
+                                                {{--<li><a href="#">Carousel Control</a></li>--}}
+                                                {{--<li><a href="#">Left & Right Navigation</a></li>--}}
+                                                {{--<li><a href="#">Four Columns Grid</a></li>--}}
+                                                {{--<!-- <li class="divider"></li>--}}
+                                                {{--<li class="dropdown-header">Fonts</li>--}}
+                                                {{--<li><a href="#">Glyphicon</a></li>--}}
+                                                {{--<li><a href="#">Google Fonts</a></li> -->--}}
+                                            {{--</ul>--}}
+                                        {{--</li>--}}
+                                        {{--<li class="col-sm-4">--}}
+                                            {{--<ul>--}}
+                                                {{--<li class="dropdown-header">Plus</li>--}}
+                                                {{--<li><a href="#">Navbar Inverse</a></li>--}}
+                                                {{--<li><a href="#">Pull Right Elements</a></li>--}}
+                                                {{--<li><a href="#">Coloured Headers</a></li>--}}
+                                                {{--<li><a href="#">Primary Buttons & Default</a></li>--}}
+                                            {{--</ul>--}}
+                                        {{--</li>--}}
+                                        {{--<li class="col-sm-4">--}}
+                                            {{--<ul>--}}
+                                                {{--<li class="dropdown-header">Much more</li>--}}
+                                                {{--<li><a href="#">Easy to Customize</a></li>--}}
+                                                {{--<li><a href="#">Calls to action</a></li>--}}
+                                                {{--<li><a href="#">Custom Fonts</a></li>--}}
+                                                {{--<li><a href="#">Slide down on Hover</a></li>--}}
+                                            {{--</ul>--}}
+                                        {{--</li>--}}
 
-                                    </ul>
+                                    {{--</ul>--}}
                                 </li>
-
-
-                                <li><a href="#">SPECIAL OFFERS</a></li><li>
-                                    <a href="#">PLAN YOUR EVENTS</a></li><li>
-                                    <a href="#">OUR BRANDS</a></li>
-
-                                <li><a href="#">LOYALTY</a></li>
-                                <li>
-                                    <a href="#">CONTACT US</a>
-                                </li>
+                                <li><a href="#">DESTINATIONS</a></li>
+                                <li><a href="#">TRAVEL PACKAGES</a></li>
+                                <li><a href="#">TESTIMONIALS</a></li>
+                                <li><a href="#">ABOUT</a></li>
+                                {{--<li><a href="#">TRAVEL BLOG</a></li>--}}
+                                <li><a href="" class="btn btn-danger color-white">Inquire Now</a></li>
 
                             </ul>
                         </div>
@@ -250,10 +233,10 @@
 
                     </div>
 
-                    <div class="why_bookonline">
-                        <p> Why Bookonline?</p>
+                    {{--<div class="why_bookonline">--}}
+                        {{--<p> Why Bookonline?</p>--}}
 
-                    </div>
+                    {{--</div>--}}
 
                 </div>
 
@@ -473,7 +456,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <div class="feature-2">
                             <div class="feature-figure-1">
-                                <img src="images/travel/feature-icon-1.png" alt="feature">
+                                <img src="{{asset('images/icons/location.png')}}" alt="feature">
                             </div>
                             <div class="feature-title-1">
                                 <h6>Destinations</h6>
@@ -488,7 +471,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
                         <div class="feature-2">
                             <div class="feature-figure-1">
-                                <img src="images/travel/feature-icon-2.png" alt="feature">
+                                <img src="{{asset('images/icons/tours.png')}}" alt="feature">
                             </div>
                             <div class="feature-title-1">
                                 <h6>Hot Tours</h6>
@@ -503,7 +486,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
                         <div class="feature-2">
                             <div class="feature-figure-1">
-                                <img src="images/travel/feature-icon-3.png" alt="feature">
+                                <img src="{{asset('images/icons/hotel.png')}}" alt="feature">
                             </div>
                             <div class="feature-title-1">
                                 <h6>Hotel Info</h6>
@@ -518,7 +501,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.3s">
                         <div class="feature-2">
                             <div class="feature-figure-1">
-                                <img src="images/travel/feature-icon-4.png" alt="feature">
+                                <img src="{{asset('images/icons/honeymon.png')}}" alt="feature">
                             </div>
                             <div class="feature-title-1">
                                 <h6>Honeymoons</h6>
