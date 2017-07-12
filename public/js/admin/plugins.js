@@ -20498,3 +20498,6 @@ function onScrollInit( items, trigger ) {
 
 onScrollInit( $('.os-animation') );
 onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
+
+
+// slider

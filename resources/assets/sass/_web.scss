@@ -77,7 +77,9 @@ h6 {
 .tx-left{text-align:left;}
 /* text colors */
 
-.color-white{color:#fff;}
+.color-white{
+  color:#fff !important;
+}
 .color-red-1{color:#f00a77;}
 .color-green-1{color:#008363;}
 .color-black-1{color:#adadad;}
@@ -99,7 +101,20 @@ h6 {
 .header-big-text-2{}
 .header-big-text-2 h1{font-size:72px;}
 
+.color-black{
+  color: #333333;
+}
 
+.padding-5{padding:5px;}
+.padding-10{padding:10px;}
+.padding-15{padding:15px;}
+.padding-20{padding:20px;}
+.padding-25{padding:25px;}
+.padding-35{padding:35px;}
+.padding-40{padding:40px;}
+.padding-45{padding:45px;}
+.padding-50{padding:50px;}
+.padding-55{padding:55px;}
 /* PADDING BOTTOM */
 
 .padding-bottom-5{padding-bottom:5px;}
@@ -184,6 +199,22 @@ h6 {
   bottom:auto;
 
 }
+
+.text-10{font-size: 10px;}
+.text-11{font-size: 11px;}
+.text-12{font-size: 12px;}
+.text-13{font-size: 13px;}
+.text-14{font-size: 14px;}
+.text-15{font-size: 15px;}
+.text-16{font-size: 16px;}
+.text-17{font-size: 17px;}
+.text-18{font-size: 18px;}
+.text-19{font-size: 19px;}
+.text-20{font-size: 20px;}
+.text-30{font-size: 30px;}
+.text-40{font-size: 40px;}
+.text-50{font-size: 50px;}
+
 .section-title-1{}
 .section-title-1 h5{text-transform:uppercase;}
 
@@ -194,7 +225,9 @@ h6 {
 form .row {
   margin-bottom: 20px;
 }
-
+.position-relative{
+  position: relative;
+}
 #page {
 
 }
@@ -264,10 +297,12 @@ body.bodyPaddingLess {
   line-height: 50px;
   font-weight: normal;
 }
-
+.navbar > .container-fluid .navbar-brand{
+  margin-left: 40px !important;
+}
 .navbar.plain .navbar-brand img, .navbar-grey .navbar-brand img {
   float: left;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .navbar.navbar-grey {
@@ -396,12 +431,15 @@ header.dark .navbar.plain a {
   max-width: 100%;
   width: 100%;
 }
-
+.carousel-control{
+  width: 5%;
+}
 .carousel.carousel2 .carousel-control.left {
   left: -100px;
 }
 .carousel.carousel2 .carousel-control.right {
   right: -100px;
+  background: none;
 }
 
 .carousel.carousel2 .item h3 {
@@ -628,11 +666,11 @@ header .navbar-white a {
 .header-form-1 textarea{width:100%;font-size:14px;height:100px; border:none;color:#adadad;}
 
 /* contact-forms 2 */
-.header-form-2{padding:15px;position:relative;top:100px;}
-.header-form-2 .row{margin-left:0;margin-right:0;margin-bottom:15px;}
+.header-form-2{padding:15px;position:relative;}
+.header-form-2 .row{margin-left:0;margin-right:0;margin-bottom:5px;}
 .header-form-2 input{width:100%; border:1px solid rgba(255,255,255,0); background:#f1f1f1;}
-.header-form-2 input[type="submit"]{padding:14px 0;box-shadow:none;border:none;font-weight:700;font-size:24px;background:#f56800;}
-.header-form-2 input, .header-form-2 textarea[placeholder]{padding:12px 10px;color:#adadad}
+.header-form-2 input[type="submit"]{padding:8px 0;box-shadow:none;border:none;font-weight:700;font-size:20px;background:#f56800;}
+.header-form-2 input, .header-form-2 textarea[placeholder]{padding:5px 10px;color:#ffffff}
 .header-form-2 textarea{width:100%;font-size:14px;height:100px; border:none;background:#f1f1f1;color:#adadad;}
 
 /* subscription form 1 */
@@ -894,6 +932,12 @@ header .navbar-white a {
 /*CONTENT AREA 3 travel*/
 #content-area-3{
   background:url('../images/travel/bg-1.jpg') no-repeat;
+  background-position:top center;
+
+}
+
+#content-area-4{
+  background:url('../images/travel/bg-2.jpg') no-repeat;
   background-position:top center;
 
 }
@@ -1930,3 +1974,150 @@ header .navbar-white a {
 .countdown-title h1{text-transform:uppercase;font-size:72px;color:#fff;font-family:'Lato';letter-spacing:5px;}
 .countdown-title p{text-transform:uppercase;color:#fff;letter-spacing:1px;margin-top:15px;margin-bottom:13px;}
 
+//========================//
+//--slider
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      transition-property: opacity;
+    }
+
+    .item,
+    .active.left,
+    .active.right {
+      opacity: 0;
+    }
+
+    .active,
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+
+    .next,
+    .prev,
+    .active.left,
+    .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+
+}
+
+
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+//.item:nth-child(1) {
+//  background: #74C390;
+//}
+//
+//.item:nth-child(2) {
+//  background: #51BCE8;
+//}
+//
+//.item:nth-child(3) {
+//  background: #E46653;
+//}
+
+
+
+
+.jain_container{ margin:0px; padding:0px;}
+.jain_container .medias{margin-top: 15px;}
+.jain_container .medias ul{ padding:0px; margin:0px; }
+.jain_container .medias ul li{  display:inline;  padding:7px 0px;}
+/* .jain_container .medias i {    font-size: 18px;} */
+.jain_container  .navbar-brand{ height:inherit;}
+
+
+.jain_container .navbar-default{position: absolute;    top: 50px;     background-color: rgba(255, 255, 255, 0.72);}
+
+.jain_container .nav>li>a{padding: 15px 10px;color:#4c1f1e;}
+
+.jain_container .navbar-nav{    margin-top: 20px;}
+
+.medias ul li a {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #fff;
+  line-height: 30px;
+  background: #4c1f1e;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.classus p{color:#4c1f1e;padding-top: 10px;}
+.why_bookonline p{color:#4c1f1e;   font-family: RadikalW01-Medium; font-size:18px;}
+.medias ul li a:hover {    background: #000;}
+
+
+.mega-dropdown {
+  position: static !important;
+}
+.mega-dropdown-menu {
+  padding: 20px 0px;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.mega-dropdown-menu > li > ul {
+  padding: 0;
+  margin: 0;
+}
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ca7167;
+  color: #4c1f1e;
+  font-family: RadikalW01_Black_bold;
+  text-transform: uppercase;
+}
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+  text-decoration: none;
+}
+.mega-dropdown-menu .dropdown-header {
+  font-size: 18px;
+  color: #ff3546;
+  padding: 5px 60px 5px 5px;
+  line-height: 30px;
+}
+
+//----------web
+//BANNER OFFERS
+.box-banner-offers{
+  padding: 20px;
+  border-radius: 5px;
+  margin: 25% 0;
+  background: rgba(255,255,255,.5);
+  color: #000000;
+}
+.carousel-caption{
+  left: 5%;
+  right: 0;
+  bottom: 25%;
+  text-align: left;
+}
+//formulario top
+.form-header{
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
