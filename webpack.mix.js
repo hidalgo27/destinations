@@ -23,7 +23,7 @@ mix.scripts([
     'resources/assets/js/vendors/viedolightbox/video.js',
     'resources/assets/js/vendors/jquery.waypoints.min.js',
     //Customized
-    'resources/assets/js/vendors/function-admin.js',
+    'resources/assddssets/js/vendors/function-admin.js',
     'resources/assets/js/vendors/function.js',
 ], 'public/js/admin/plugins.js');
 

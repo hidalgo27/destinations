@@ -358,7 +358,24 @@
             <div class="container os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s"><!-- container -->
 
                 <div class="callout-title-2 tx-center">
-                    <h3>Looking for ANY ASISSTANCE</h3>
+                    <div class="col-md-2">
+                        <a href="">Travel Blog</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="">Community Forums</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="">Customer Reviews</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="">Gallery</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="">Travel Blog</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="">Travel Blog</a>
+                    </div>
                 </div>
                 <div class="callout-btn-6 tx-center">
                     <a href="#">CALL TO ACTION</a>

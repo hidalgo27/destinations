@@ -522,49 +522,72 @@
 
     </div><!-- /.item -->
 
-    <div class="item testimonial-2 padding-top-50 padding-bottom-50" id="testimonial-2">
-        <div class="container">
+    {{--<div class="item testimonial-2 padding-top-50 padding-bottom-50" id="testimonial-2">--}}
+        {{--<div class="container">--}}
 
-            <div id="owl-testimonial-1" class="testimonials-ct">
+            {{--<div id="owl-testimonial-1" class="testimonials-ct">--}}
 
-                <div class="item">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
-                        <div class="testi-cap-2">
-                            <img src="images/travel/testi-1.png" alt="testimonial">
-                            <div class="cap-content-2">
-                                <h6>Sarah Schmidt</h6>
-                                <p>CEO Digitalcraft</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>
-                        <div class="testi-cap-2">
-                            <img src="images/travel/testi-1.png" alt="testimonial">
-                            <div class="cap-content-2">
-                                <h6>Sarah Schmidt</h6>
-                                <p>CEO Digitalcraft</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="item">--}}
+                    {{--<div class="col-md-6 col-sm-6 col-xs-12">--}}
+                        {{--<div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>--}}
+                        {{--<div class="testi-cap-2">--}}
+                            {{--<img src="images/travel/testi-1.png" alt="testimonial">--}}
+                            {{--<div class="cap-content-2">--}}
+                                {{--<h6>Sarah Schmidt</h6>--}}
+                                {{--<p>CEO Digitalcraft</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-6 col-sm-6 col-xs-12">--}}
+                        {{--<div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>--}}
+                        {{--<div class="testi-cap-2">--}}
+                            {{--<img src="images/travel/testi-1.png" alt="testimonial">--}}
+                            {{--<div class="cap-content-2">--}}
+                                {{--<h6>Sarah Schmidt</h6>--}}
+                                {{--<p>CEO Digitalcraft</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
-            </div>
-        </div>
-    </div>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="item callout-7" id="callout-7">
 
         <div class="row"><!--.row -->
 
             <div class="container os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s"><!-- container -->
 
-                <div class="callout-title-2 tx-center">
-                    <h3>Looking for ANY ASISSTANCE</h3>
+                <div class="callout-title-2 tx-center color-white">
+                    <div class="col-md-2">
+                        <i class="fa fa-thumb-tack fa-5x" aria-hidden="true"></i>
+                        <a href="" class="display-block color-orange-2">Destinations</a>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
+                        <a href="" class="display-block color-orange-2">Tours</a>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fa fa-th-large fa-5x" aria-hidden="true"></i>
+                        <a href="" class="display-block color-orange-2">Travel Blog</a>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
+                        <a href="" class="display-block color-orange-2">Travel Packages</a>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+                        <a href="" class="display-block color-orange-2">About Us</a>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fa fa-comment-o fa-5x" aria-hidden="true"></i>
+                        <a href="" class="display-block color-orange-2">Testimonials</a>
+                    </div>
                 </div>
-                <div class="callout-btn-6 tx-center">
-                    <a href="#">CALL TO ACTION</a>
-                </div>
+                {{--<div class="callout-btn-6 tx-center">--}}
+                    {{--<a href="#">CALL TO ACTION</a>--}}
+                {{--</div>--}}
             </div><!-- /.container -->
         </div><!-- /.row -->
     </div><!-- /.item -->
