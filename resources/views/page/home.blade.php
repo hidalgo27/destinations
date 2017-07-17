@@ -594,43 +594,132 @@
     <div class=" item padding-top-60 padding-bottom-50" id="contact-form-1">
         <div class="row wrapper">
             <div class="container">
-                <div class="row contact-form-1">
-                    <div id="contact_form4" >
-                        <div class="col-md-4 col-sm-4 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                            <label>FIRST NAME</label>
-                            <input placeholder="FIRST NAME" name="fname" required="required" type="text">
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                            <label>LAST NAME</label>
-                            <input placeholder="LAST NAME" name="lname" required="required" type="text">
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                            <label>EMAIL</label>
-                            <input placeholder="EMAIL" name="email" required="required" type="email">
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                            <label>PHONE NUMBER</label>
-                            <input placeholder="PHONE NUMBER" name="phone" required="required" type="text">
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
-                            <label>COUNTRY</label>
-                            <input placeholder="COUNTRY" name="country" required="required" type="text">
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
-                            <label>PACKAGE</label>
-                            <input placeholder="PACKAGE" name="package" required="required" type="text">
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-12 col-sm-12 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.3s">
-                            <label>MESSAGE</label>
-                            <textarea  name="message" placeholder="MESSAGE"></textarea>
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-12 col-sm-12 col-xs-12 tx-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.4s">
-                            <input class="form-btn" value="Inquire Now" type="submit" id="submit_btn4">
-                        </div><!-- /.col-md-4 col -->
-                        <div id="contact_results"></div>
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="row">
+                        <div class="process">
+                            <div class="process-row nav nav-tabs">
+                                <div class="process-step">
+                                    <button type="button" class="btn btn-info btn-circle" data-toggle="tab" href="#menu1"><i class="fa fa-map-marker fa-3x"></i></button>
+                                    <p><small>Choose<br/>destinations</small></p>
+                                </div>
+                                <div class="process-step">
+                                    <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu2"><i class="fa fa-file-text-o fa-3x"></i></button>
+                                    <p><small>Your<br />datails</small></p>
+                                </div>
+
+                                <div class="process-step">
+                                    <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#menu5"><i class="fa fa-check fa-3x"></i></button>
+                                    <p><small>Personal<br />information</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="menu1" class="tab-pane fade active in">
+                                <div class="box-destination">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off" value="Machu Picchu">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Machu Picchu</span>
+                                        </label>
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Nazca Lines</span>
+                                        </label>
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Peruvian Amazon</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Trujillo / Chiclayo</span>
+                                        </label>
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Cuzco</span>
+                                        </label>
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Lake Titicaca</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Paracas / Ballestas Islands</span>
+                                        </label>
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Lima</span>
+                                        </label>
+                                        <label class="btn btn-custom col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check fa-3x"></i>
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="" class="img-responsive">
+                                            <span>Arequipa / Colca Canyon</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <ul class="list-unstyled list-inline pull-right">
+                                    <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                                </ul>
+                            </div>
+                            <div id="menu2" class="tab-pane fade">
+                                <div class="box-your-details">
+                                    <div class="btn-group col-md-12" data-toggle="buttons">
+                                        <label class="btn btn-details col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check"></i>
+                                            <span>Nazca Lines</span>
+                                        </label>
+                                        <label class="btn btn-details col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <span><i class="fa fa-check"></i> Nazca Lines</span>
+                                        </label>
+                                        <label class="btn btn-details col-md-4">
+                                            <input type="checkbox" autocomplete="off">
+                                            <i class="fa fa-check"></i>
+                                            <span>Peruvian Amazon</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled list-inline pull-right">
+                                    <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                                    <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                                </ul>
+                            </div>
+
+                            <div id="menu5" class="tab-pane fade">
+                                <h3>Menu 5</h3>
+                                <p>Some content in menu 5.</p>
+                                <ul class="list-unstyled list-inline pull-right">
+                                    <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                                    <li><button type="button" class="btn btn-success"><i class="fa fa-check"></i> Done!</button></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div><!-- /.container -->
         </div>
     </div><!-- /.item -->
     <footer class="item footer  footer-2" id="footer-2">
