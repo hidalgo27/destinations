@@ -671,10 +671,10 @@ header .navbar-white a {
 /* contact-forms 2 */
 .header-form-2{padding:15px;position:relative;}
 .header-form-2 .row{margin-left:0;margin-right:0;margin-bottom:5px;}
-.header-form-2 input{width:100%; border:1px solid rgba(255,255,255,0); background:#f1f1f1;}
+.header-form-2 input{width:100%; border:1px solid rgba(255,255,255,0); background:#e6e6e6;}
 .header-form-2 input[type="submit"]{padding:8px 0;box-shadow:none;border:none;font-weight:700;font-size:20px;background:#f56800;}
-.header-form-2 input, .header-form-2 textarea[placeholder]{padding:5px 10px;color:#ffffff}
-.header-form-2 textarea{width:100%;font-size:14px;height:100px; border:none;background:#f1f1f1;color:#adadad;}
+.header-form-2 input, .header-form-2 textarea[placeholder]{padding:5px 10px;color:#adadad}
+.header-form-2 textarea{width:100%;font-size:14px;height:100px; border:none;background:#e6e6e6;color:#adadad;}
 
 /* subscription form 1 */
 .subsription-form-1{}
@@ -2171,7 +2171,7 @@ body,
 .btn-custom.active.focus i, .btn-custom.active i{
   display: block;
   top: 0;
-  color: red;
+  color: #01b4e9;
   z-index: inherit;
 }
 
@@ -2197,7 +2197,24 @@ body,
   background: #bfbfbf;
   padding: 20px 0px;
 }
+.oncheck-form{
+  font-weight: bold !important;
+}
+.check-from{
+  display: none !important;
+  font-weight: bold !important;
+}
+.btn-details.active.focus .check-from, .btn-details.active .check-from{
+  color: #000;
+  display: inline-block !important;
+  font-weight: bold;
+}
 
-.btn-details.active.focus i, .btn-details.active i{
-  color: #f56800;
+.btn-details.active.focus .oncheck-form, .btn-details.active .oncheck-form{
+  display: none !important;
+}
+
+
+.box-personal .header-form-2 input, .box-personal .header-form-2 textarea[placeholder]{
+  padding: 15px 10px;
 }
