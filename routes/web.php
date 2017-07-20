@@ -16,3 +16,9 @@ Route::get('/', [
     'as' => 'home_path',
 ]);
 
+//---itinerary
+Route::get('/packages/{titulo}', [
+    'uses' => 'HomeController@show',
+    'as' => 'show_path',
+]);
+

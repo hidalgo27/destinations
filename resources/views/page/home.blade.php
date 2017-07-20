@@ -1,252 +1,438 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Peruvian Destiations | Peru Travel Packages</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@extends('layouts.page.home')
 
-    <!-- Loading Bootstrap -->
-    <link href="{{mix('css/app.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{mix("css/font-awesome.css")}}">
-    <!-- main style sheet -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+@section('content')
+    <div class="padding-top-60 padding-bottom-20" id="gallary-1">
 
-</head>
-<body>
+        <div class="wrapper">
 
-<div id="page" class="page">
+            <div class="container">
 
-    {{--<header class="item header margin-top-0 header19" id="header19">--}}
-
-        {{--<div class="container padding-top-100 padding-bottom-200"><!-- container -->--}}
-            {{--<div class="row"><!--.row -->--}}
-                {{--<div class="col-md-12 col-sm-12 col-xs-12 margin-top-100 margin-bottom-100 tx-center">--}}
-                    {{--<div class="header-big-text-2 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
-                        {{--<h2 class="color-white">best places to teavel</h2>--}}
-                        {{--<h3 class="color-white">EXPLORE THE PLANET</h3>--}}
-                    {{--</div>--}}
-                    {{--<div class="subscription-form-2 col-md-8 col-sm-12 col-xs-12 tx-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">--}}
-                        {{--<!-- SIMPLE CONTACT FORM -->--}}
-
-                        {{--<div id="contact_form3" >--}}
-                            {{--<input name="name" class="input-field" placeholder="YOUR NAME" type="text" required="required">--}}
-                            {{--<input name="email" class="input-field" placeholder="YOUR EMAIL" required="required" type="email">--}}
-                            {{--<input class="subs-form-btn" value="KEEP ME UPDATED" type="submit" id="submit_btn3">--}}
-                            {{--<div id="contact_results"></div>--}}
-                        {{--</div>--}}
-
-                        {{--<!--<form id="signup-1" class="mailchimp">--}}
-                            {{--<input class="input-field" name="NAME" placeholder="YOUR NAME" type="text">--}}
-                            {{--<input class="input-field" name="EMAIL" placeholder="YOUR EMAIL" required="" type="email">--}}
-                            {{--<input class="subs-form-btn" value="KEEP ME UPDATED" type="submit">--}}
-                            {{--<div class="subscription-success tx-left"></div>--}}
-                            {{--<div class="subscription-error tx-left"></div>--}}
-                        {{--</form>-->--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-
-            {{--</div><!-- /.row -->--}}
-
-        {{--</div><!-- /.container -->--}}
-
-    {{--</header><!-- /.item -->--}}
-
-    {{--<div id="carousel-example-generic" class="carousel slide carousel-fade position-relative" data-ride="carousel">--}}
-    <div id="carousel-example-generic" class="carousel slide position-relative" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="{{asset('images/slider/slider-1.jpg')}}" alt="...">
-                <div class="carousel-caption col-md-4 text-left">
-                    <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
+                <div class="row margin-bottom-20">
+                    <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                        <h2 class="color-orange-2"><strong>Affordable Custom Tours one click away</strong></h2>
+                        <h4><b>“Better Hotels and superior Service at the best price”</b></h4>
+                        <div class="sec-title-div-1"></div>
+                        <p class="">Finally can you enjoy of superb personalized service and exclusive itineraries as renowned world travel agencies do. With PERUVIAN DESTINATIONS Tour operator you cut off the middlemen, thus saving lots of money. To get a Quick Quote just fill in the form above and you will get a free quote in less than 24 Hours guaranteed..</p>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="{{asset('images/slider/slider-2.jpg')}}" alt="...">
-                <div class="carousel-caption">
-                    <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
-                    </div>
-                    <div class="header-small-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                        <h6 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendis sefaucibus risus sit amet auctor sodales<br> justo erat tempor eros, non </h6>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="{{asset('images/slider/slider-3.jpg')}}" alt="...">
-                <div class="carousel-caption">
 
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-
-        <div class="col-md-4 col-sm-5 col-xs-12 os-animation form-header" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-            <div class="header-form-2 bg-color-white">
                 <div class="row">
-                    <h5 class="color-orange-2 tx-center">INQUIRE NOW</h5>
-                </div>
-                <div class="row">
-                    <div id="contact_form" >
-                        <div class="row">
-                            <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
-                        </div>
-                        <div class="row">
-                            <input class="" required="required" id="email" name="email" placeholder="EMAIL" type="email">
-                        </div>
-                        <div class="row">
-                            <input class="" required="required" id="country" name="country" placeholder="COUNTRY" type="email">
-                        </div>
-                        <div class="row">
-                            <input class="" required="required" id="travel-date" name="travel-date" placeholder="TRAVEL DATE" type="date">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input class="" required="required" id="travel-date" name="travel-date" placeholder="TRAVELERS" min="0" type="number">
+                    <div class="col-sm-3">
+                        <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+                            <li class="active"><a href="#vtab1" data-toggle="tab" class="text-20">Peru Specials</a></li>
+                            <li><a href="#vtab3" data-toggle="tab" class="text-20">Peru Offers</a></li>
+                            <li><a href="#vtab2" data-toggle="tab" class="text-20">Peru Trekking</a></li>
+                            <li><a href="#vtab4" data-toggle="tab" class="text-20">How to Book</a></li>
+                        </ul>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">Our Promise</h3>
                             </div>
-                            <div class="col-md-6">
-                                <input class="" required="required" id="days" name="days" placeholder="DAYS" min="0" type="number">
+                            <div class="panel-body">
+                                <p class="text-14">At Peruvian Destinations we are friends that will treat you like family. With INTEGRITY, ENTHUSIASM and FAIRNESS we understand it is all about personal service and here we go far beyond the extra mile.</p>
+                                <img src="{{asset('images/marco.jpg')}}" alt="" class="img-responsive">
                             </div>
                         </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
+                                @foreach($paquete->take(6) as $paquetes)
+
+                                <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                    <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
+                                    <div class="content-area-2 clearfix">
+                                        <div class="content-area-figure-1">
+                                            <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
+                                        </div>
+                                        <div class=" col-md-12 ">
+                                            <div class="travel-duration tx-center">
+                                                <p class="date color-white">{{$paquetes->duracion}}</p>
+                                                <p class="days color-white">days</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                            <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                            <h6>
+                                                @foreach($paquetes->precio_paquetes as $precio)
+                                                    @if($precio->estrellas == 2)
+                                                        <b>${{$precio->precio_d}}</b>
+                                                    @endif
+                                                @endforeach
+                                            </h6>
+                                        </div>
+
+                                        <div class="col-md-12 text-left color-green-1 text-12 margin-bottom-10">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                            @endforeach
+                                            ...
+                                        </div>
+
+                                    </div>
+                                    </a>
+                                </div><!-- /.col-md-4 col -->
+                                @endforeach
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="vtab2">
+                                @foreach($paquete_f->take(6) as $paquetes)
+
+                                    <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                        <div class="content-area-2 clearfix">
+                                            <div class="content-area-figure-1">
+                                                <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
+                                            </div>
+                                            <div class=" col-md-12 ">
+                                                <div class="travel-duration tx-center">
+                                                    <p class="date color-white">{{$paquetes->duracion}}</p>
+                                                    <p class="days color-white">days</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                                <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                                <h6>
+                                                    @foreach($paquetes->precio_paquetes as $precio)
+                                                        @if($precio->estrellas == 2)
+                                                            ${{$precio->precio_d}}
+                                                        @endif
+                                                    @endforeach
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-md-12 text-left color-green-1 text-12">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)
+                                                    {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                                @endforeach
+                                                ...
+                                            </div>
+
+                                        </div>
+                                    </div><!-- /.col-md-4 col -->
+                                @endforeach
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade in" id="vtab3">
+                                @foreach($paquete_mg->take(6) as $paquetes)
+
+                                    <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                        <div class="content-area-2 clearfix">
+                                            <div class="content-area-figure-1">
+                                                <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
+                                            </div>
+                                            <div class=" col-md-12 ">
+                                                <div class="travel-duration tx-center">
+                                                    <p class="date color-white">{{$paquetes->duracion}}</p>
+                                                    <p class="days color-white">days</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                                <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                                <h6>
+                                                    @foreach($paquetes->precio_paquetes as $precio)
+                                                        @if($precio->estrellas == 2)
+                                                            ${{$precio->precio_d}}
+                                                        @endif
+                                                    @endforeach
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-md-12 text-left color-green-1 text-12">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)
+                                                    {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                                @endforeach
+                                                ...
+                                            </div>
+
+                                        </div>
+                                    </div><!-- /.col-md-4 col -->
+                                @endforeach
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade in" id="vtab4">
+                                @foreach($paquete_m->take(6) as $paquetes)
+
+                                    <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                        <div class="content-area-2 clearfix">
+                                            <div class="content-area-figure-1">
+                                                <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
+                                            </div>
+                                            <div class=" col-md-12 ">
+                                                <div class="travel-duration tx-center">
+                                                    <p class="date color-white">{{$paquetes->duracion}}</p>
+                                                    <p class="days color-white">days</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                                <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                                <h6>
+                                                    @foreach($paquetes->precio_paquetes as $precio)
+                                                        @if($precio->estrellas == 2)
+                                                            ${{$precio->precio_d}}
+                                                        @endif
+                                                    @endforeach
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-md-12 text-left color-green-1 text-12">
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)
+                                                    {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                                @endforeach
+                                                ...
+                                            </div>
+
+                                        </div>
+                                    </div><!-- /.col-md-4 col -->
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row hide">
+                    <div class="col-md-3">
+
                         <div class="row">
-                            <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
+                            <div class="process hide">
+                                <div class="process-row nav nav-tabs">
+                                    <div class="process-step">
+                                        <button type="button" class="btn btn-info btn-circle" data-toggle="tab" href="#step1"><i class="fa fa-map-marker fa-3x"></i></button>
+                                        <p><small>Choose<br/>destinations</small></p>
+                                    </div>
+
+                                    <div class="process-step">
+                                        <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#step2"><i class="fa fa-check fa-3x"></i></button>
+                                        <p><small>Personal<br />information</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div id="step1" class="tab-pane fade active in">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title text-30 text-center">Destinations</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="margin-top-20 margin-bottom-20" data-toggle="buttons">
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Machu Picchu
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Amazon
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Lima
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Nazca
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Inca Trail
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Cuzco
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Lake Titicaca
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Colca Canyon
+                                                </label>
+                                                <label class="btn btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="btn-search">
+                                        <li><button type="button" class="btn btn-lg btn-primary next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                                    </ul>
+                                </div>
+
+                                <div id="step2" class="tab-pane fade">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading text-center">
+                                            <h3 class="panel-title text-30">TRIP LENGTH (days)</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="margin-top-20 margin-bottom-20" data-toggle="buttons">
+                                                <label class="btn btn-lg btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off">4 - 7
+                                                </label>
+                                                <label class="btn btn-lg btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off">8 - 10
+                                                </label>
+                                                <label class="btn btn-lg btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off">11 - 14
+                                                </label>
+                                                <label class="btn btn-lg btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off">15 - 17
+                                                </label>
+                                                <label class="btn btn-lg btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off">18+
+                                                </label>
+                                                <label class="btn btn-lg btn-default spacer-10">
+                                                    <input type="checkbox" autocomplete="off"> Undecided
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="list-unstyled list-inline pull-right">
+                                        <li><button type="button" class="btn btn-lg btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
+                                        <li><button type="button" class="btn btn-lg btn-success"><i class="fa fa-check"></i> Done!</button></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <input class="color-white" value="INQUIRE NOW"  type="submit" id="submit_btn">
+
+
+
+                        <div id="app">
+                            <router-link to="/">Home</router-link>
                         </div>
-                        <div id="contact_results"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-    <div class="jain_container">
-
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container1 container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="icon-menu"></i> Menu
-                    </button>
-                    <a class="navbar-brand" href="#"> <img src="{{asset('images/logo-peruvian.png')}}" width="270"/></a>
-                </div>
-
-
-                <div class="col-md-6">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                        {{--<div class="col-md-12 text-center margin-top-20">--}}
-                            {{--<a href="" class="btn btn-danger">Contact Us</a>--}}
-                        {{--</div>--}}
-                        <div class="col-md-12">
-                            <ul class="nav navbar-nav">
-
-                                <li class="dropdown mega-dropdown">
-                                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">DESTINATIONS <span class="caret"></span></a>--}}
-                                    {{--<ul class="dropdown-menu mega-dropdown-menu">--}}
-                                        {{--<li class="col-sm-4">--}}
-                                            {{--<ul>--}}
-                                                {{--<li class="dropdown-header">Features</li>--}}
-                                                {{--<li><a href="#">Auto Carousel</a></li>--}}
-                                                {{--<li><a href="#">Carousel Control</a></li>--}}
-                                                {{--<li><a href="#">Left & Right Navigation</a></li>--}}
-                                                {{--<li><a href="#">Four Columns Grid</a></li>--}}
-                                                {{--<!-- <li class="divider"></li>--}}
-                                                {{--<li class="dropdown-header">Fonts</li>--}}
-                                                {{--<li><a href="#">Glyphicon</a></li>--}}
-                                                {{--<li><a href="#">Google Fonts</a></li> -->--}}
-                                            {{--</ul>--}}
-                                        {{--</li>--}}
-                                        {{--<li class="col-sm-4">--}}
-                                            {{--<ul>--}}
-                                                {{--<li class="dropdown-header">Plus</li>--}}
-                                                {{--<li><a href="#">Navbar Inverse</a></li>--}}
-                                                {{--<li><a href="#">Pull Right Elements</a></li>--}}
-                                                {{--<li><a href="#">Coloured Headers</a></li>--}}
-                                                {{--<li><a href="#">Primary Buttons & Default</a></li>--}}
-                                            {{--</ul>--}}
-                                        {{--</li>--}}
-                                        {{--<li class="col-sm-4">--}}
-                                            {{--<ul>--}}
-                                                {{--<li class="dropdown-header">Much more</li>--}}
-                                                {{--<li><a href="#">Easy to Customize</a></li>--}}
-                                                {{--<li><a href="#">Calls to action</a></li>--}}
-                                                {{--<li><a href="#">Custom Fonts</a></li>--}}
-                                                {{--<li><a href="#">Slide down on Hover</a></li>--}}
-                                            {{--</ul>--}}
-                                        {{--</li>--}}
-
-                                    {{--</ul>--}}
-                                </li>
-                                <li><a href="#">DESTINATIONS</a></li>
-                                <li><a href="#">TRAVEL PACKAGES</a></li>
-                                <li><a href="#">TESTIMONIALS</a></li>
-                                <li><a href="#">ABOUT</a></li>
-                                {{--<li><a href="#">TRAVEL BLOG</a></li>--}}
-                                <li><a href="" class="btn btn-danger color-white">Inquire Now</a></li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-2 medias">
-
-                    <ul>
-                        <li> <a href=""> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li> <a href=""> <i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li> <a href=""> <i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-
-                    </ul>
-
-                    <div class="classus">
-
-                        <p> Call us +91 22 39178077</p>
 
                     </div>
+                    <div class="col-md-9">
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
+                                </div>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">22</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left">Austrian Alps</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>$200.00</h6>
+                                </div>
 
-                    {{--<div class="why_bookonline">--}}
-                        {{--<p> Why Bookonline?</p>--}}
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">
+                                </div>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">22</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left">Austrian Alps</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>$200.00</h6>
+                                </div>
 
-                    {{--</div>--}}
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">
+                                </div>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">22</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left">Austrian Alps</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>$200.00</h6>
+                                </div>
 
-                </div>
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
+                                </div>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">22</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left">Austrian Alps</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>$200.00</h6>
+                                </div>
 
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">
+                                </div>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">22</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left">Austrian Alps</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>$200.00</h6>
+                                </div>
 
-            </div>
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">
+                                </div>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">22</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left">Austrian Alps</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>$200.00</h6>
+                                </div>
 
-        </nav>
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                    </div>
 
-    </div>
+                </div><!-- /.row -->
 
+            </div><!-- /.container -->
+
+        </div><!-- /.wrapper -->
+
+    </div><!-- /.item -->
 
     <div class=" item padding-top-60 padding-bottom-50" id="content-area-3">
 
@@ -256,9 +442,9 @@
 
                 <div class="row">
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h5 class="">incredible Travel Experiences</h5>
+                        <h5 class=""><b>Affordable Custom Tours one click away</b></h5>
                         <div class="sec-title-div-1"></div>
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+                        <p class="">Finally can you enjoy of superb personalized service and exclusive itineraries as renowned world travel agencies do. With PERUVIAN DESTINATIONS Tour operator you cut off the middlemen, thus saving lots of money. To get a Quick Quote just fill in the form above and you will get a free quote in less than 24 Hours guaranteed.</p>
                     </div>
                 </div>
 
@@ -268,10 +454,11 @@
                         <div class="content-area-3">
 
                             <div class="content-area-title-1 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
-                                <h5>All you have to know<br> about Our TRAVEL</h5>
+                                <h5>WORDS FROM <br> OUR CEO:</h5>
                             </div>
                             <div class="feature-disc-1 margin-top-10 margin-bottom-20 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.2s">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+                                <p>It is my personal mission to make every trip a memorable, once-in-a-lifetime experience for our guests. Because the only thing we love more than travel is customer satisfaction, we anticipate our clients’ needs at every opportunity. For this reason, I gladly search for those exceptional experiences in the world of art, cuisine, culture, and conservation. This allows our guests to find the trip that is tailored to their needs and embark on adventures that exceed their wildest expectations.</p>
+                                <p><i><b>Marco Herrera – CEO.</b></i></p>
                             </div>
 
 
@@ -306,7 +493,7 @@
 
                 <div class="row">
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h5 class="">What it can do for you</h5>
+                        <h5 class="">Machu Picchu Travel Packages</h5>
                         <div class="sec-title-div-1"></div>
                         <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
                     </div>
@@ -314,66 +501,43 @@
 
                 <div class="row">
 
-                    <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <div class="content-area-2 clearfix">
-                            <div class="content-area-figure-1">
-                                <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
-                            </div>
-                            <div class=" col-md-12 ">
-                                <div class="travel-duration tx-center">
-                                    <p class="date color-white">22</p>
-                                    <p class="days color-white">days</p>
-                                </div>
-                            </div>
-                            <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                <h6 class="tx-left">Austrian Alps</h6>
-                            </div>
-                            <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                <h6>$200.00</h6>
-                            </div>
+                    @foreach($paquete->take(3) as $paquetes)
 
-                        </div>
-                    </div><!-- /.col-md-4 col -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                        <div class="content-area-2 clearfix">
-                            <div class="content-area-figure-1">
-                                <img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">
-                            </div>
-                            <div class=" col-md-12 ">
-                                <div class="travel-duration tx-center">
-                                    <p class="date color-white">22</p>
-                                    <p class="days color-white">days</p>
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                            <div class="content-area-2 clearfix">
+                                <div class="content-area-figure-1">
+                                    <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                 </div>
-                            </div>
-                            <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                <h6 class="tx-left">Austrian Alps</h6>
-                            </div>
-                            <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                <h6>$200.00</h6>
-                            </div>
-
-                        </div>
-                    </div><!-- /.col-md-4 col -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
-                        <div class="content-area-2 clearfix">
-                            <div class="content-area-figure-1">
-                                <img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">
-                            </div>
-                            <div class=" col-md-12 ">
-                                <div class="travel-duration tx-center">
-                                    <p class="date color-white">22</p>
-                                    <p class="days color-white">days</p>
+                                <div class=" col-md-12 ">
+                                    <div class="travel-duration tx-center">
+                                        <p class="date color-white">{{$paquetes->duracion}}</p>
+                                        <p class="days color-white">days</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                <h6 class="tx-left">Austrian Alps</h6>
-                            </div>
-                            <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                <h6>$200.00</h6>
-                            </div>
+                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                    <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
+                                    <h6>
+                                        @foreach($paquetes->precio_paquetes as $precio)
+                                            @if($precio->estrellas == 2)
+                                                ${{$precio->precio_d}}
+                                            @endif
+                                        @endforeach
+                                    </h6>
+                                </div>
 
-                        </div>
-                    </div><!-- /.col-md-4 col -->
+                                <div class="col-md-12 text-left color-green-1 text-12">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)
+                                        {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                    @endforeach
+                                    ...
+                                </div>
+
+                            </div>
+                        </div><!-- /.col-md-4 col -->
+                    @endforeach
                 </div><!-- /.row -->
 
             </div><!-- /.container -->
@@ -389,28 +553,28 @@
             <div class="container">
 
                 {{--<div class="row">--}}
-                    {{--<div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
-                        {{--<h5 class="">LAND OF THE INCAS</h5>--}}
-                        {{--<div class="sec-title-div-1"></div>--}}
-                        {{--<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>--}}
-                    {{--</div>--}}
+                {{--<div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
+                {{--<h5 class="">LAND OF THE INCAS</h5>--}}
+                {{--<div class="sec-title-div-1"></div>--}}
+                {{--<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>--}}
+                {{--</div>--}}
                 {{--</div>--}}
 
                 <div class="row">
 
                     {{--<div class="col-md-6 col-sm-6 col-xs-12">--}}
-                        {{--<div class="content-area-3">--}}
+                    {{--<div class="content-area-3">--}}
 
-                            {{--<div class="content-area-title-1 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">--}}
-                                {{--<h5>All you have to know<br> about Our TRAVEL</h5>--}}
-                            {{--</div>--}}
-                            {{--<div class="feature-disc-1 margin-top-10 margin-bottom-20 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.2s">--}}
-                                {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>--}}
-                            {{--</div>--}}
+                    {{--<div class="content-area-title-1 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">--}}
+                    {{--<h5>All you have to know<br> about Our TRAVEL</h5>--}}
+                    {{--</div>--}}
+                    {{--<div class="feature-disc-1 margin-top-10 margin-bottom-20 os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.2s">--}}
+                    {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>--}}
+                    {{--</div>--}}
 
 
 
-                        {{--</div>--}}
+                    {{--</div>--}}
 
                     {{--</div><!-- /.col-md-6 col -->--}}
                     <div class="col-md-5 col-sm-6 col-xs-12 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
@@ -436,6 +600,7 @@
         </div><!-- /.wrapper -->
 
     </div><!-- /.item -->
+
 
     <div class="padding-top-60 padding-bottom-20" id="feature-2">
 
@@ -522,37 +687,7 @@
 
     </div><!-- /.item -->
 
-    {{--<div class="item testimonial-2 padding-top-50 padding-bottom-50" id="testimonial-2">--}}
-        {{--<div class="container">--}}
 
-            {{--<div id="owl-testimonial-1" class="testimonials-ct">--}}
-
-                {{--<div class="item">--}}
-                    {{--<div class="col-md-6 col-sm-6 col-xs-12">--}}
-                        {{--<div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>--}}
-                        {{--<div class="testi-cap-2">--}}
-                            {{--<img src="images/travel/testi-1.png" alt="testimonial">--}}
-                            {{--<div class="cap-content-2">--}}
-                                {{--<h6>Sarah Schmidt</h6>--}}
-                                {{--<p>CEO Digitalcraft</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-6 col-sm-6 col-xs-12">--}}
-                        {{--<div class="testi-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</div>--}}
-                        {{--<div class="testi-cap-2">--}}
-                            {{--<img src="images/travel/testi-1.png" alt="testimonial">--}}
-                            {{--<div class="cap-content-2">--}}
-                                {{--<h6>Sarah Schmidt</h6>--}}
-                                {{--<p>CEO Digitalcraft</p>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
     <div class="item callout-7" id="callout-7">
 
         <div class="row"><!--.row -->
@@ -586,11 +721,12 @@
                     </div>
                 </div>
                 {{--<div class="callout-btn-6 tx-center">--}}
-                    {{--<a href="#">CALL TO ACTION</a>--}}
+                {{--<a href="#">CALL TO ACTION</a>--}}
                 {{--</div>--}}
             </div><!-- /.container -->
         </div><!-- /.row -->
     </div><!-- /.item -->
+
     <div class=" item padding-top-60 padding-bottom-50" id="contact-form-1">
         <div class="row wrapper">
             <div class="container">
@@ -867,70 +1003,8 @@
                         </div>
                     </div>
                 </div>
-        </div>
-    </div><!-- /.item -->
+            </div>
+        </div><!-- /.item -->
     </div>
-    <footer class="item footer  footer-2" id="footer-2">
-        <div class="row"><!--.row -->
 
-            <div class="container"><!-- container -->
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-2-box tx-center">
-                            <div class="footer-2-icon"><i class="fa fa-map-marker"></i></div>
-                            <div class="footer-title-1">
-                                <h5>ADDRESS</h5>
-                            </div>
-                            <div class="footer-disc-1">
-                                <p>250 Elizabeth Str., Melbourne, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-2-box tx-center">
-                            <div class="footer-2-icon"><i class="fa fa-map-marker"></i></div>
-                            <div class="footer-title-1">
-                                <h5>ADDRESS</h5>
-                            </div>
-                            <div class="footer-disc-1">
-                                <p>250 Elizabeth Str., Melbourne, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-2-box tx-center">
-                            <div class="footer-2-icon"><i class="fa fa-map-marker"></i></div>
-                            <div class="footer-title-1">
-                                <h5>ADDRESS</h5>
-                            </div>
-                            <div class="footer-disc-1">
-                                <p>250 Elizabeth Str., Melbourne, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-social-2 tx-center">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    </ul>
-                </div>
-                <div class="copyright-text-1 tx-center">
-                    <p>© Travel 2017, All Rights Reserved, Developed by Hidalgo</p>
-                </div>
-            </div><!-- /.container -->
-        </div><!-- /.row -->
-    </footer><!-- /.item -->
-</div><!-- /#page -->
-
-
-<!--====================== JAVA SCRIPTS =============================-->
-
-<script src="{{asset("js/app.js")}}"></script>
-<script src="{{asset("js/admin/plugins.js")}}"></script>
-
-
-
-</body>
-</html>
+@stop
