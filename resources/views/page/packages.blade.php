@@ -57,11 +57,11 @@
                         <h4 class="text-center margin-top-40">Peru Specials</h4>
                     </div>
                     <div class="row margin-top-40">
-                        @foreach($paquete->take(6) as $paquetes)
+                        @foreach($paquete as $paquetes)
 
                             <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                 <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
-                                    <div class="content-area-2 clearfix">
+                                    <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">
                                             <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                         </div>
@@ -102,11 +102,11 @@
                         <h4 class="text-center">Trekking Tours</h4>
                     </div>
                     <div class="row margin-top-40">
-                        @foreach($paquete->take(6) as $paquetes)
+                        @foreach($paquete as $paquetes)
 
                             <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                 <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
-                                    <div class="content-area-2 clearfix">
+                                    <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">
                                             <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                         </div>
@@ -147,11 +147,11 @@
                         <h4 class="text-center">Peru Offers</h4>
                     </div>
                     <div class="row margin-top-40">
-                        @foreach($paquete->take(6) as $paquetes)
+                        @foreach($paquete as $paquetes)
 
                             <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                 <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
-                                    <div class="content-area-2 clearfix">
+                                    <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">
                                             <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                         </div>
@@ -222,7 +222,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($paquete->take(6) as $paquetes)
+                                @foreach($paquete as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>Kilgore</td>
@@ -273,7 +273,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($paquete->take(6) as $paquetes)
+                                @foreach($paquete as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>Kilgore</td>
@@ -324,7 +324,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($paquete->take(6) as $paquetes)
+                                @foreach($paquete as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>Kilgore</td>

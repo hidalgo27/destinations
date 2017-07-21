@@ -919,7 +919,9 @@ header .navbar-white a {
 
 .content-area-2{border-bottom:2px solid #00b4e9;margin-bottom:30px;}
 .travel-price h6{color:#00b4e9;}
-
+.content-area-packages{
+  height: 360px;
+}
 .travel-duration{
   background:#00b4e9;
   border-radius: 6px;
@@ -2493,4 +2495,7 @@ figure.snip1139 .author h5 span {
   font-weight: 400;
   text-transform: none;
   padding-left: 5px;
+}
+.thumbnail-destination{
+  height: 560px;
 }

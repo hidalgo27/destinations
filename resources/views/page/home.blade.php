@@ -42,7 +42,7 @@
 
                                 <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                     <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
-                                    <div class="content-area-2 clearfix">
+                                    <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">
                                             <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                         </div>
@@ -82,7 +82,7 @@
                                 @foreach($paquete_f->take(6) as $paquetes)
 
                                     <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                                        <div class="content-area-2 clearfix">
+                                        <div class="content-area-2 content-area-packages clearfix">
                                             <div class="content-area-figure-1">
                                                 <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                             </div>
@@ -161,7 +161,7 @@
                                 @foreach($paquete_m->take(6) as $paquetes)
 
                                     <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                                        <div class="content-area-2 clearfix">
+                                        <div class="content-area-2 content-area-packages clearfix">
                                             <div class="content-area-figure-1">
                                                 <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                             </div>
@@ -504,7 +504,7 @@
                     @foreach($paquete->take(3) as $paquetes)
 
                         <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                            <div class="content-area-2 clearfix">
+                            <div class="content-area-2 content-area-packages clearfix">
                                 <div class="content-area-figure-1">
                                     <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
                                 </div>
