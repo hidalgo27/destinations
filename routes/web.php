@@ -21,4 +21,29 @@ Route::get('/packages/{titulo}', [
     'uses' => 'HomeController@show',
     'as' => 'show_path',
 ]);
+//---destinarions
+Route::get('/destinations', [
+    'uses' => 'HomeController@destinations',
+    'as' => 'destinations_path',
+]);
+Route::get('/destinations/{title}', [
+    'uses' => 'HomeController@destinations_sow',
+    'as' => 'destinations_show_path',
+]);
 
+//---packages
+Route::get('/packages', [
+    'uses' => 'HomeController@packages',
+    'as' => 'packages_path',
+]);
+
+//---About
+Route::get('/about', [
+    'uses' => 'HomeController@about',
+    'as' => 'about_path',
+]);
+//---Testimonisal
+Route::get('/testimonials', [
+    'uses' => 'HomeController@testimonials',
+    'as' => 'testimonials_path',
+]);

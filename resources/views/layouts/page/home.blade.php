@@ -169,13 +169,13 @@
 
                                     {{--</ul>--}}
                                 </li>
-                                <li><a href="#">DESTINATIONS</a></li>
-                                <li><a href="#">TOURS PACKAGES</a></li>
+                                <li><a href="{{route("destinations_path")}}">DESTINATIONS</a></li>
+                                <li><a href="{{route("packages_path")}}">TOURS PACKAGES</a></li>
                                 {{--<li><a href="#">TOURS</a></li>--}}
-                                <li><a href="#">TESTIMONIALS</a></li>
-                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="{{route("testimonials_path")}}">TESTIMONIALS</a></li>
+                                <li><a href="{{route("about_path")}}">ABOUT</a></li>
                                 {{--<li><a href="#">TRAVEL BLOG</a></li>--}}
-                                <li><a href="" class="btn btn-danger color-white">Inquire Now</a></li>
+                                <li><a href="#inquire" class="btn btn-danger color-white">Inquire Now</a></li>
 
                             </ul>
                         </div>

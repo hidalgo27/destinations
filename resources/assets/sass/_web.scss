@@ -185,6 +185,8 @@ h6 {
 .margin-top-270{margin-top:270px;}
 
 .padding-left-0{padding-left:0;}
+.padding-left-10{padding-left:10px;}
+.padding-left-5{padding-left:5px;}
 .padding-right-0{padding-right:0;}
 .padding-right-left-100{padding-left:100px;padding-right:100px;}
 
@@ -2237,4 +2239,258 @@ body,
 @media all and (max-width:724px){
   .card-itinerary .nav-tabs > li > a > span {display:none;}
   .card-itinerary .nav-tabs > li > a {padding: 5px 5px;}
+}
+
+//table
+
+.clickable{
+  cursor: pointer;
+}
+
+.panel-heading div {
+  margin-top: -18px;
+  font-size: 15px;
+}
+.panel-heading div span{
+  margin-left:5px;
+}
+.panel-body.panel-body-destinations{
+  display: none;
+}
+
+//about
+.bg-about-card{
+  background-color: #dadde6;
+}
+.card
+{
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #989898;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  position: relative
+}
+
+.card + .card{margin-left: 2%}
+
+.date.date-about
+{
+  display: table-cell;
+  width: 45%;
+  position: relative;
+  text-align: center;
+  border-right: 2px dashed #dadde6
+}
+
+.date.date-about:before,
+.date.date-about:after
+{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #DADDE6;
+  position: absolute;
+  top: -15px ;
+  right: -15px;
+  z-index: 1;
+  border-radius: 50%
+}
+
+.date.date-about:after
+{
+  top: auto;
+  bottom: -15px
+}
+
+.date.date-about time
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+.date.date-about time span{display: block}
+
+.date.date-about time span:first-child
+{
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.date.date-about time span:last-child
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -10px
+}
+
+.card-cont
+{
+  display: table-cell;
+  width: 55%;
+  font-size: 85%;
+  padding: 10px 10px 30px 50px
+}
+
+.card-cont h3
+{
+  color: #3C3C3C;
+  font-size: 130%
+}
+
+.row:last-child .card:last-of-type .card-cont h3
+{
+  text-decoration: line-through
+}
+
+.card-cont > div
+{
+  display: table-row
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i,
+.card-cont .even-date time,
+.card-cont .even-info p
+{
+  display: table-cell
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i
+{
+  padding: 5% 2% 0 0
+}
+
+.card-cont .even-info p
+{
+  padding: 30px 50px 0 0
+}
+
+.card-cont .even-date time span
+{
+  display: block
+}
+
+.card-cont a
+{
+  display: block;
+  text-decoration: none;
+  width: 80px;
+  height: 30px;
+  background-color: #D8DDE0;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px
+}
+
+.row:last-child .card:first-child .card-cont a
+{
+  background-color: #037FDD
+}
+
+.row:last-child .card:last-child .card-cont a
+{
+  background-color: #F8504C
+}
+
+@media screen and (max-width: 860px)
+{
+  .card
+  {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px
+  }
+
+  .card + .card{margin-left: 0}
+
+  .card-cont .even-date,
+  .card-cont .even-info
+  {
+    font-size: 75%
+  }
+}
+
+figure.snip1139 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+figure.snip1139 img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+figure.snip1139 blockquote {
+  position: relative;
+  background-color: #ffffff;
+  padding: 25px 50px 25px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+}
+figure.snip1139 blockquote:before,
+figure.snip1139 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1139 blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+figure.snip1139 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 0;
+}
+figure.snip1139 .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #ffffff;
+  margin: 0;
+  position: absolute;
+}
+figure.snip1139 .author {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 25px;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+figure.snip1139 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.snip1139 .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
 }
