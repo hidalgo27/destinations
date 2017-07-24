@@ -47,3 +47,18 @@ Route::get('/testimonials', [
     'uses' => 'HomeController@testimonials',
     'as' => 'testimonials_path',
 ]);
+
+//TOUR CONTROLERR
+//---tours
+Route::get('/peru-tours', [
+    'uses' => 'ToursController@index',
+    'as' => 'tours_path',
+]);
+Route::get('/peru-tours/{title}', [
+    'uses' => 'ToursController@show',
+    'as' => 'tours_show_path',
+]);
+Route::get('/peru-tours/destinations/{title}', [
+    'uses' => 'ToursController@destinations',
+    'as' => 'tours_destinations_show_path',
+]);
