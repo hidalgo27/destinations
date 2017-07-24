@@ -48,7 +48,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="text-info">Description</h4>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <table class="table table-bordered condensed">
                     {{--<caption>table title and/or explanatory text</caption>--}}
                     {{--<thead>--}}

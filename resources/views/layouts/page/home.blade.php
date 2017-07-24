@@ -169,7 +169,7 @@
 
                                     {{--</ul>--}}
                                 </li>
-                                <li><a href="{{route("destinations_path")}}">TRAVEL PACKAGES</a></li>
+                                <li><a href="{{route("packages_path")}}">TRAVEL PACKAGES</a></li>
                                 <li><a href="{{route("tours_path")}}">PERU TOURS</a></li>
                                 <li><a href="{{route("destinations_path")}}">DESTINATIONS</a></li>
                                 {{--<li><a href="#">TOURS</a></li>--}}

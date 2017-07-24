@@ -31,22 +31,25 @@
                 <p class="margin-bottom-10">Keep reading to see more Peru attractions and destinations and contact us to start planning your own exciting trip to Peru.</p>
             </div>
         </div>
+    </div>
+
+    <div class="container">
         <div class="row">
-            <blockquote>
-                <p class="text-20 text-center"><i class="fa fa-briefcase fa-2x color-green-1" aria-hidden="true"></i>  Our tours are Fully Customizable and leave 365 days a year!</p>
-            </blockquote>
-        </div>
-        <div class="row">
-            <h4 class="text-center">Today's Destinations</h4>
+            <div class="alert alert-warning" role="alert">
+                <h5 class="text-center"><a href="#packages">Peru Travel Packages</a> | <a href="#tours">Peru Tours</a></h5>
+            </div>
         </div>
     </div>
 
-    <div class="container margin-top-40">
+    <div class="container" id="packages">
         <div class="row">
+            <h4 class="text-center">Peru Travel Packages</h4>
+        </div>
+        <div class="row margin-top-30">
             <div class="col-md-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Peru Tours</h3>
+                        <h3 class="panel-title">Travel Packages</h3>
                         <div class="pull-right">
 							<span class="clickable filter">
 								<i class="glyphicon glyphicon-filter"></i>
@@ -89,6 +92,58 @@
                                     </tr>
                                 @endforeach
                             @endif
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container margin-top-20" id="tours">
+        <div class="row">
+            <h4 class="text-center">Peru Tours</h4>
+        </div>
+        <div class="row margin-top-30">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Travel Packages</h3>
+                        <div class="pull-right">
+							<span class="clickable filter">
+								<i class="glyphicon glyphicon-filter"></i>
+							</span>
+                        </div>
+                    </div>
+                    <div class="panel-body panel-body-destinations">
+                        <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-tours" placeholder="Filter Packages" />
+                    </div>
+                    <table class="table table-hover" id="dev-tours">
+                        <thead>
+                        <tr>
+                            <th>Tours Name</th>
+                            <th>Tour Schedule</th>
+                            <th>Tour Duration</th>
+                            <th class="text-right">Price per Person (Group Tour)</th>
+                            <th class="text-right">Price per Person (Private Tour)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($tours as $tour)
+                            <tr onClick="CrearEnlace('{{route('tours_show_path', str_replace(' ','-',strtolower($tour->titulo)))}}');" class="clickable">
+                                <td class="text-primary">{{$tour->titulo}}</td>
+                                <td>{{$tour->horario}}</td>
+                                <td>
+                                    {{$tour->duracion}}
+                                </td>
+                                <td class="text-right color-orange-2">
+                                    USD $ {{$tour->precio_g}}
+                                </td>
+                                <td class="text-right text-info">
+                                    USD $ {{$tour->precio_p}}
+                                </td>
+                            </tr>
                         @endforeach
                         </tbody>
                     </table>

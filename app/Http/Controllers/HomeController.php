@@ -8,6 +8,7 @@ use App\TPaquete;
 use App\TPaqueteCategoria;
 use App\TPaqueteDestino;
 use App\TPaqueteIncluyeIcono;
+use App\TTour;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -65,8 +66,12 @@ class HomeController extends Controller
 //        return view('page.category',['categoria'=>$categoria, 'paquete_categoria'=>$paquete_categoria, 'paquete_destinos'=>$paquete_destinos, 'incluye_i'=>$incluye_i]);
 
 
+        $destination = str_replace('-', ' ', $title);
+        $tours = TTour::get()->where('ubicacion', $destination);
+
+
 //        dd($paquetes_de);
-        return view('page.destinations-show', ['paquetes_de'=>$paquetes_de, 'paquete'=>$paquete, 'paquete_destinos'=>$paquete_destinos, 'destinos'=>$destinos, 'title'=>$destinations, 'incluye_i'=>$incluye_i, 'categoria'=>$categoria, 'paquete_categoria'=>$paquete_categoria]);
+        return view('page.destinations-show', ['paquetes_de'=>$paquetes_de, 'paquete'=>$paquete, 'paquete_destinos'=>$paquete_destinos, 'destinos'=>$destinos, 'title'=>$destinations, 'incluye_i'=>$incluye_i, 'categoria'=>$categoria, 'paquete_categoria'=>$paquete_categoria, 'page.tours-show', 'tours'=>$tours]);
     }
     /**
      * Show the form for creating a new resource.

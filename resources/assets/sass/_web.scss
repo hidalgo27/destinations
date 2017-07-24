@@ -4,7 +4,7 @@ iframe{border:none;}
 body{
   overflow-x:hidden;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.72222;
   color: #777;
   background-color: #ffffff;}
@@ -920,7 +920,7 @@ header .navbar-white a {
 .content-area-2{border-bottom:2px solid #00b4e9;margin-bottom:30px;}
 .travel-price h6{color:#00b4e9;}
 .content-area-packages{
-  height: 360px;
+  height: 410px;
 }
 .travel-duration{
   background:#00b4e9;
@@ -2049,7 +2049,7 @@ body,
 
 .jain_container .navbar-default{position: absolute;    top: 50px;     background-color: rgba(255, 255, 255, 0.72);}
 
-.jain_container .nav>li>a{padding: 15px 10px;color:#4c1f1e;}
+.jain_container .nav>li>a{padding: 15px 10px;color:#4c1f1e;font-size: 14px;}
 
 .jain_container .navbar-nav{    margin-top: 20px;}
 
@@ -2269,7 +2269,7 @@ body,
   display: block;
   width: 100%;
   background-color: #fff;
-  color: #989898;
+  //color: #989898;
   margin-bottom: 10px;
   border-radius: 4px;
   position: relative
