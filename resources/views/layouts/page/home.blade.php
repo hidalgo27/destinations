@@ -372,9 +372,126 @@
         }
     }
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+
+    function design(){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('[name="_token"]').val()
+            }
+        });
+
+        $("#d_send").attr("disabled", true);
+
+        var filter=/^[A-Za-z][A-Za-z0-9_]*@[A-Za-z0-9_]+.[A-Za-z0-9_.]+[A-za-z]$/;
+
+
+        var s_destinations = document.getElementsByName('destinations[]');
+        var $destinations = "";
+        for (var i = 0, l = s_destinations.length; i < l; i++) {
+            if (s_destinations[i].checked) {
+                $destinations += s_destinations[i].value+' , ';
+            }
+        }
+        s_destinations = $destinations.substring(0,$destinations.length-3);
+
+
+        var s_category = document.getElementsByName('category[]');
+        var $category = "";
+        for (var i = 0, l = s_category.length; i < l; i++) {
+            if (s_category[i].checked) {
+                $category += s_category[i].value+' , ';
+            }
+        }
+        s_category = $category.substring(0,$category.length-3);
+
+        var s_duration = document.getElementsByName('duration[]');
+        var $duration = "";
+        for (var i = 0, l = s_duration.length; i < l; i++) {
+            if (s_duration[i].checked) {
+                $duration += s_duration[i].value+' , ';
+            }
+        }
+        s_duration = $duration.substring(0,$duration.length-3);
+
+        var s_number = document.getElementsByName('number[]');
+        var $number = "";
+        for (var i = 0, l = s_number.length; i < l; i++) {
+            if (s_number[i].checked) {
+                $number += s_number[i].value+' , ';
+            }
+        }
+
+        s_number = $number.substring(0,$number.length-3);
+
+
+        var s_date = $('#d_date').val();
+        var s_name = $('#d_name').val();
+        var s_email = $('#d_email').val();
+        var s_tel = $('#d_tel').val();
+        var s_comment = $('#d_comment').val();
+
+
+        if (filter.test(s_email)){
+            sendMail = "true";
+        } else{
+            $('#d_email').css("border-bottom", "2px solid #FF0000");
+            sendMail = "false";
+        }
+        if (s_name.length == 0 ){
+            $('#d_name').css("border-bottom", "2px solid #FF0000");
+            var sendMail = "false";
+        }
+        if (s_date.length == 0 ){
+            $('#d_date').css("border-bottom", "2px solid #FF0000");
+            var sendMail = "false";
+        }
+
+        if(sendMail == "true"){
+            var datos = {
+
+                "txt_destinations" : s_destinations,
+                "txt_category" : s_category,
+                "txt_duration" : s_duration,
+                "txt_number" : s_number,
+
+                "txt_date" : s_date,
+                "txt_name" : s_name,
+                "txt_email" : s_email,
+                "txt_tel" : s_tel,
+                "txt_comment" : s_comment,
+
+            };
+            $.ajax({
+                data:  datos,
+                url:   "{{route('design_path')}}",
+                type:  'post',
+
+                beforeSend: function () {
+                    $('#d_send').removeClass('show');
+                    $("#d_send").addClass('hide');
+                    $("#loader2").removeClass('hide');
+                    $("#loader2").addClass('show');
+                },
+                success:  function (response) {
+                    $('#d_form')[0].reset();
+                    $('#d_send').removeClass('show');
+                    $('#d_send').addClass('hide');
+                    $("#loader2").removeClass('show');
+                    $("#loader2").addClass('hide');
+                    $('#d_check').removeClass('hidden');
+                    $("#d_check").addClass('show');
+                    $("#d_congratulation b").html(response);
+                    $("#d_congratulation").fadeIn('slow');
+                    $('#d_congratulation').removeClass('hide');
+                    $("#d_send").removeAttr("disabled");
+                }
+            });
+        } else{
+            $("#d_send").removeAttr("disabled");
+        }
+    }
+
+
 </script>
 
 </body>

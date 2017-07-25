@@ -199,233 +199,233 @@
                     </div>
                 </div>
 
-                <div class="row hide">
-                    <div class="col-md-3">
+                {{--<div class="row hide">--}}
+                    {{--<div class="col-md-3">--}}
 
-                        <div class="row">
-                            <div class="process hide">
-                                <div class="process-row nav nav-tabs">
-                                    <div class="process-step">
-                                        <button type="button" class="btn btn-info btn-circle" data-toggle="tab" href="#step1"><i class="fa fa-map-marker fa-3x"></i></button>
-                                        <p><small>Choose<br/>destinations</small></p>
-                                    </div>
+                        {{--<div class="row">--}}
+                            {{--<div class="process hide">--}}
+                                {{--<div class="process-row nav nav-tabs">--}}
+                                    {{--<div class="process-step">--}}
+                                        {{--<button type="button" class="btn btn-info btn-circle" data-toggle="tab" href="#step1"><i class="fa fa-map-marker fa-3x"></i></button>--}}
+                                        {{--<p><small>Choose<br/>destinations</small></p>--}}
+                                    {{--</div>--}}
 
-                                    <div class="process-step">
-                                        <button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#step2"><i class="fa fa-check fa-3x"></i></button>
-                                        <p><small>Personal<br />information</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content">
-                                <div id="step1" class="tab-pane fade active in">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title text-30 text-center">Destinations</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="margin-top-20 margin-bottom-20" data-toggle="buttons">
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Machu Picchu
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Amazon
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Lima
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Nazca
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Inca Trail
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Cuzco
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Lake Titicaca
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Colca Canyon
-                                                </label>
-                                                <label class="btn btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Other
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="btn-search">
-                                        <li><button type="button" class="btn btn-lg btn-primary next-step">Next <i class="fa fa-chevron-right"></i></button></li>
-                                    </ul>
-                                </div>
+                                    {{--<div class="process-step">--}}
+                                        {{--<button type="button" class="btn btn-default btn-circle" data-toggle="tab" href="#step2"><i class="fa fa-check fa-3x"></i></button>--}}
+                                        {{--<p><small>Personal<br />information</small></p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="tab-content">--}}
+                                {{--<div id="step1" class="tab-pane fade active in">--}}
+                                    {{--<div class="panel panel-default">--}}
+                                        {{--<div class="panel-heading">--}}
+                                            {{--<h3 class="panel-title text-30 text-center">Destinations</h3>--}}
+                                        {{--</div>--}}
+                                        {{--<div class="panel-body">--}}
+                                            {{--<div class="margin-top-20 margin-bottom-20" data-toggle="buttons">--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Machu Picchu--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Amazon--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Lima--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Nazca--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Inca Trail--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Cuzco--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Lake Titicaca--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Colca Canyon--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Other--}}
+                                                {{--</label>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{--<ul class="btn-search">--}}
+                                        {{--<li><button type="button" class="btn btn-lg btn-primary next-step">Next <i class="fa fa-chevron-right"></i></button></li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
 
-                                <div id="step2" class="tab-pane fade">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading text-center">
-                                            <h3 class="panel-title text-30">TRIP LENGTH (days)</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="margin-top-20 margin-bottom-20" data-toggle="buttons">
-                                                <label class="btn btn-lg btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off">4 - 7
-                                                </label>
-                                                <label class="btn btn-lg btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off">8 - 10
-                                                </label>
-                                                <label class="btn btn-lg btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off">11 - 14
-                                                </label>
-                                                <label class="btn btn-lg btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off">15 - 17
-                                                </label>
-                                                <label class="btn btn-lg btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off">18+
-                                                </label>
-                                                <label class="btn btn-lg btn-default spacer-10">
-                                                    <input type="checkbox" autocomplete="off"> Undecided
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="list-unstyled list-inline pull-right">
-                                        <li><button type="button" class="btn btn-lg btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
-                                        <li><button type="button" class="btn btn-lg btn-success"><i class="fa fa-check"></i> Done!</button></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                {{--<div id="step2" class="tab-pane fade">--}}
+                                    {{--<div class="panel panel-default">--}}
+                                        {{--<div class="panel-heading text-center">--}}
+                                            {{--<h3 class="panel-title text-30">TRIP LENGTH (days)</h3>--}}
+                                        {{--</div>--}}
+                                        {{--<div class="panel-body">--}}
+                                            {{--<div class="margin-top-20 margin-bottom-20" data-toggle="buttons">--}}
+                                                {{--<label class="btn btn-lg btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off">4 - 7--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-lg btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off">8 - 10--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-lg btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off">11 - 14--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-lg btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off">15 - 17--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-lg btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off">18+--}}
+                                                {{--</label>--}}
+                                                {{--<label class="btn btn-lg btn-default spacer-10">--}}
+                                                    {{--<input type="checkbox" autocomplete="off"> Undecided--}}
+                                                {{--</label>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{--<ul class="list-unstyled list-inline pull-right">--}}
+                                        {{--<li><button type="button" class="btn btn-lg btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>--}}
+                                        {{--<li><button type="button" class="btn btn-lg btn-success"><i class="fa fa-check"></i> Done!</button></li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
 
 
-                        <div id="app">
-                            <router-link to="/">Home</router-link>
-                        </div>
+                        {{--<div id="app">--}}
+                            {{--<router-link to="/">Home</router-link>--}}
+                        {{--</div>--}}
 
-                    </div>
-                    <div class="col-md-9">
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">22</p>
-                                        <p class="days color-white">days</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left">Austrian Alps</h6>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                    <h6>$200.00</h6>
-                                </div>
+                    {{--</div>--}}
+                    {{--<div class="col-md-9">--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
+                            {{--<div class="content-area-2 clearfix">--}}
+                                {{--<div class="content-area-figure-1">--}}
+                                    {{--<img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">--}}
+                                {{--</div>--}}
+                                {{--<div class=" col-md-12 ">--}}
+                                    {{--<div class="travel-duration tx-center">--}}
+                                        {{--<p class="date color-white">22</p>--}}
+                                        {{--<p class="days color-white">days</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
+                                    {{--<h6 class="tx-left">Austrian Alps</h6>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
+                                    {{--<h6>$200.00</h6>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">22</p>
-                                        <p class="days color-white">days</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left">Austrian Alps</h6>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                    <h6>$200.00</h6>
-                                </div>
+                            {{--</div>--}}
+                        {{--</div><!-- /.col-md-4 col -->--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">--}}
+                            {{--<div class="content-area-2 clearfix">--}}
+                                {{--<div class="content-area-figure-1">--}}
+                                    {{--<img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">--}}
+                                {{--</div>--}}
+                                {{--<div class=" col-md-12 ">--}}
+                                    {{--<div class="travel-duration tx-center">--}}
+                                        {{--<p class="date color-white">22</p>--}}
+                                        {{--<p class="days color-white">days</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
+                                    {{--<h6 class="tx-left">Austrian Alps</h6>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
+                                    {{--<h6>$200.00</h6>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">22</p>
-                                        <p class="days color-white">days</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left">Austrian Alps</h6>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                    <h6>$200.00</h6>
-                                </div>
+                            {{--</div>--}}
+                        {{--</div><!-- /.col-md-4 col -->--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">--}}
+                            {{--<div class="content-area-2 clearfix">--}}
+                                {{--<div class="content-area-figure-1">--}}
+                                    {{--<img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">--}}
+                                {{--</div>--}}
+                                {{--<div class=" col-md-12 ">--}}
+                                    {{--<div class="travel-duration tx-center">--}}
+                                        {{--<p class="date color-white">22</p>--}}
+                                        {{--<p class="days color-white">days</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
+                                    {{--<h6 class="tx-left">Austrian Alps</h6>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
+                                    {{--<h6>$200.00</h6>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">22</p>
-                                        <p class="days color-white">days</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left">Austrian Alps</h6>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                    <h6>$200.00</h6>
-                                </div>
+                            {{--</div>--}}
+                        {{--</div><!-- /.col-md-4 col -->--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
+                            {{--<div class="content-area-2 clearfix">--}}
+                                {{--<div class="content-area-figure-1">--}}
+                                    {{--<img src="{{asset('images/packages/img-1.jpg')}}" alt="content area">--}}
+                                {{--</div>--}}
+                                {{--<div class=" col-md-12 ">--}}
+                                    {{--<div class="travel-duration tx-center">--}}
+                                        {{--<p class="date color-white">22</p>--}}
+                                        {{--<p class="days color-white">days</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
+                                    {{--<h6 class="tx-left">Austrian Alps</h6>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
+                                    {{--<h6>$200.00</h6>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">22</p>
-                                        <p class="days color-white">days</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left">Austrian Alps</h6>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                    <h6>$200.00</h6>
-                                </div>
+                            {{--</div>--}}
+                        {{--</div><!-- /.col-md-4 col -->--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">--}}
+                            {{--<div class="content-area-2 clearfix">--}}
+                                {{--<div class="content-area-figure-1">--}}
+                                    {{--<img src="{{asset('images/packages/img-2.jpg')}}" alt="content area">--}}
+                                {{--</div>--}}
+                                {{--<div class=" col-md-12 ">--}}
+                                    {{--<div class="travel-duration tx-center">--}}
+                                        {{--<p class="date color-white">22</p>--}}
+                                        {{--<p class="days color-white">days</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
+                                    {{--<h6 class="tx-left">Austrian Alps</h6>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
+                                    {{--<h6>$200.00</h6>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div><!-- /.col-md-4 col -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">22</p>
-                                        <p class="days color-white">days</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left">Austrian Alps</h6>
-                                </div>
-                                <div class="col-md-3 col-sm-12 col-xs-4 travel-price">
-                                    <h6>$200.00</h6>
-                                </div>
+                            {{--</div>--}}
+                        {{--</div><!-- /.col-md-4 col -->--}}
+                        {{--<div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">--}}
+                            {{--<div class="content-area-2 clearfix">--}}
+                                {{--<div class="content-area-figure-1">--}}
+                                    {{--<img src="{{asset('images/packages/img-3.jpg')}}" alt="content area">--}}
+                                {{--</div>--}}
+                                {{--<div class=" col-md-12 ">--}}
+                                    {{--<div class="travel-duration tx-center">--}}
+                                        {{--<p class="date color-white">22</p>--}}
+                                        {{--<p class="days color-white">days</p>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
+                                    {{--<h6 class="tx-left">Austrian Alps</h6>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
+                                    {{--<h6>$200.00</h6>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div><!-- /.col-md-4 col -->
-                    </div>
+                            {{--</div>--}}
+                        {{--</div><!-- /.col-md-4 col -->--}}
+                    {{--</div>--}}
 
-                </div><!-- /.row -->
+                {{--</div><!-- /.row -->--}}
 
             </div><!-- /.container -->
 

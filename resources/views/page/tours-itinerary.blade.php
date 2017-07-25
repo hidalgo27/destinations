@@ -14,6 +14,7 @@
                         @foreach($tours as $tour)
                             <h3 class="color-white">{{$tour->titulo}}</h3>
                         @endforeach
+
                     </div>
                 </div>
             </div>
@@ -120,36 +121,55 @@
                     <h5 class="color-orange-2 text-center">{{$tour->titulo}}</h5>
                     <p><b>Personal Information</b></p>
                 </div>
+                <form role="form" id="t_form">
+                    {{csrf_field()}}
+                    <div class="col-md-12 header-form-2">
+                        <div id="contact_form">
+                            <div class="row">
+                                <input class="" required="required" id="t_name" name="t_name" placeholder="NAME" type="text">
+                                <input class="" id="t_tours" name="t_tours" type="hidden" value="{{$tour->titulo}}">
+                            </div>
+                        </div>
 
-                <div class="col-md-12 header-form-2">
-                    <div id="contact_form">
-                        <div class="row">
-                            <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
+                        <div id="contact_form">
+                            <div class="row">
+                                <input class="" required="required" id="t_email" name="t_email" placeholder="EMAIL" type="email">
+                            </div>
+                        </div>
+
+                        <div id="contact_form">
+                            <div class="row">
+                                <input class="" required="required" id="t_tel" name="t_tel" placeholder="TELEPHONE" type="tel">
+                            </div>
+                        </div>
+
+                        <div id="contact_form">
+                            <div class="row">
+                                <textarea class="" id="t_comment" name="t_comment" placeholder="MESSAGE"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 margin-bottom-20">
+                        {{--<a href="" class="btn btn-primary btn-lg btn-avalavility">Request Information</a>--}}
+                        <button class="btn btn-primary btn-lg btn-avalavility" id="t_send" type="button" onclick="tours()"> Request Information
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                        <ul class="fa-ul pull-right hide" id="loader3">
+                            <li><i class="fa-li fa fa-spinner fa-spin"></i> <i>Sending...</i></li>
+                        </ul>
+
+                        <div class="col-md-12 margin-top-30 hide" id="t_congratulation">
+                            <div class="alert alert-dismissible show custom-alert info-alert" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <p><strong><i class="fa fa-thumbs-up"></i> <b></b></strong></p>
+                            </div>
+
                         </div>
                     </div>
-
-                    <div id="contact_form">
-                        <div class="row">
-                            <input class="" required="required" id="name" name="name" placeholder="EMAIL" type="email">
-                        </div>
-                    </div>
-
-                    <div id="contact_form">
-                        <div class="row">
-                            <input class="" required="required" id="name" name="name" placeholder="TELEPHONE" type="tel">
-                        </div>
-                    </div>
-
-                    <div id="contact_form">
-                        <div class="row">
-                            <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-12 margin-bottom-20">
-                    <a href="" class="btn btn-primary btn-lg btn-avalavility">Request Information</a>
-                </div>
+                </form>
             </div>
         </div>
     </div>

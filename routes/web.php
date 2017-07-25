@@ -64,7 +64,17 @@ Route::get('/peru-tours/destinations/{title}', [
 ]);
 
 //---form
-Route::post('/design', [
+Route::post('/inquire', [
     'uses' => 'HomeController@inquire',
     'as' => 'inquire_path',
+]);
+
+Route::post('/design', [
+    'uses' => 'HomeController@design',
+    'as' => 'design_path',
+]);
+
+Route::post('/tours', [
+    'uses' => 'HomeController@tours',
+    'as' => 'tours_path',
 ]);
