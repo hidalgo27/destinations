@@ -1,9 +1,10 @@
 @extends('layouts.notifications.inquire')
 @section('content')
+
     <tr>
-        <td style="padding:0px 50px 0px 50px">
-            <p style="font-size:18px">{{$name}}</p>
-            <p>Este usuario envio un mensaje de GotoPeru.Travel del formulario "Design Your TRIP".</p>
+        <td style="padding:20px 0px 20px 50px">
+            <p style="font-size:18px"><b>Mensaje de</b>: {{$name}}</p>
+            <p>Mensaje del formulario principal.</p>
             <center style="background:#f6f6f6; padding:10px;">
                 <table>
                     <tbody>
@@ -14,7 +15,7 @@
                             <p><strong>Date: {{$date}}</strong></p>
                             <p><strong>Travelers: {{$travelers}}</strong></p>
                             <p><strong>Days: {{$days}}</strong></p>
-                            <p><strong>Comment: {{$message}}</strong></p>
+                            <p><strong>Comment: {{$message2}}</strong></p>
                         </td>
                     </tr>
                     </tbody>
@@ -22,4 +23,5 @@
             </center>
         </td>
     </tr>
+
 @stop

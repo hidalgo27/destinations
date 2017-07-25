@@ -98,12 +98,24 @@
                                 <textarea class="" id="f_message" name="f_message" placeholder="MESSAGE"></textarea>
                             </div>
                             <div class="row">
-                                <input class="color-white" value="INQUIRE NOW"  type="submit" id="f_send" onclick="sendDesign()">
-                                {{--<button class="btn btn-info pull-right" id="f_send" type="button" onclick="sendDesign()">INQUIRE NOW--}}
-                                    {{--<i class="fa fa-paper-plane" aria-hidden="true"></i>--}}
-                                {{--</button>--}}
+                                {{--<input class="color-white" value="INQUIRE NOW" type="" id="f_send" onclick="sendDesign()">--}}
+                                <button class="btn-inquire-form pull-right" id="f_send" type="button" onclick="sendDesign()">INQUIRE NOW
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+                                <ul class="fa-ul pull-right hide" id="loader">
+                                    <li><i class="fa-li fa fa-spinner fa-spin"></i> <i>Sending...</i></li>
+                                </ul>
                             </div>
                             <div id="contact_results"></div>
+                            <div class="col-md-12 margin-top-30 hide" id="f_congratulation">
+                                <div class="alert alert-dismissible show custom-alert info-alert" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <p><strong><i class="fa fa-thumbs-up"></i> <b></b></strong></p>
+                                </div>
+
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -289,6 +301,11 @@
 <script>
     function sendDesign(){
 
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('[name="_token"]').val()
+            }
+        });
 
         $("#f_send").attr("disabled", true);
 
@@ -340,15 +357,14 @@
                 },
                 success:  function (response) {
                     $('#f_form')[0].reset();
-                    $('#f_send').removeClass('show');
-                    $('#f_send').addClass('hide');
                     $("#loader").removeClass('show');
                     $("#loader").addClass('hide');
-                    $('#f_check').removeClass('hidden');
-                    $("#f_check").addClass('show');
                     $("#f_congratulation b").html(response);
                     $("#f_congratulation").fadeIn('slow');
+                    $('#f_congratulation').removeClass('hide');
                     $("#f_send").removeAttr("disabled");
+                    $('#f_send').removeClass('hide');
+                    $('#f_send').addClass('show');
                 }
             });
         } else{

@@ -155,7 +155,7 @@ class HomeController extends Controller
 
     public function inquire()
     {
-        $from = 'hidalgochpnce@gmail.com';
+        $from = 'mhmarcoale@gmail.com';
 
         $name = $_POST['txt_name'];
         $email = $_POST['txt_email'];
@@ -163,7 +163,7 @@ class HomeController extends Controller
         $date = $_POST['txt_date'];
         $travelers = $_POST['txt_travelers'];
         $days = $_POST['txt_days'];
-        $message = $_POST['txt_message'];
+        $message2 = $_POST['txt_message'];
 
 //        dd($category, $number, $days, $date, $description, $name, $email, $phone);
 
@@ -183,7 +183,7 @@ class HomeController extends Controller
                 'date' => $date,
                 'travelers' => $travelers,
                 'days' => $days,
-                'message' => $message
+                'message2' => $message2
             ], function ($messaje) use ($from) {
                 $messaje->to($from, 'Peruvian Destinations')
                     ->subject('Inquire peruviandestinations.com')
