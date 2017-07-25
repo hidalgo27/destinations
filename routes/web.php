@@ -76,5 +76,5 @@ Route::post('/design', [
 
 Route::post('/tours', [
     'uses' => 'HomeController@tours',
-    'as' => 'tours_path',
+    'as' => 'tours_form_path',
 ]);

@@ -234,7 +234,7 @@
             };
             $.ajax({
                 data:  datos,
-                url:   "{{route('tours_path')}}",
+                url:   "{{route('tours_form_path')}}",
                 type:  'post',
 
                 beforeSend: function () {
