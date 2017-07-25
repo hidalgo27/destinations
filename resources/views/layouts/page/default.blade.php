@@ -128,7 +128,7 @@
         </div><!-- /.row -->
     </div><!-- /.item -->
 
-    @include("layouts.page.default-from")
+    @include("layouts.page.form.default-from")
 
     <footer class="item footer  footer-2" id="footer-2">
         <div class="row"><!--.row -->

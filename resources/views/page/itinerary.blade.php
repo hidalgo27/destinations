@@ -62,15 +62,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <!-- Nav tabs -->
                 <div class="card card-itinerary">
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i>  <span>Overview</span></a></li>
-                        <li role="presentation"><a href="#itinerary" aria-controls="itinerary" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>  <span>Itinerary</span></a></li>
-                        <li role="presentation"><a href="#prices" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-user"></i>  <span>Prices</span></a></li>
-                        <li role="presentation"><a href="#optional" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-plus-square-o"></i>  <span>Optional</span></a></li>
-                        {{--<li role="presentation"><a href="#gallery" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-cog"></i>  <span>Photo Gallery</span></a></li>--}}
+                        <li role="presentation"><a href="#itinerary" aria-controls="itinerary" role="tab" data-toggle="tab"><i class="fa fa-list" aria-hidden="true"></i>  <span>Itinerary</span></a></li>
+                        <li role="presentation"><a href="#prices" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-usd" aria-hidden="true"></i>  <span>Prices</span></a></li>
+                        <li role="presentation"><a href="#optional" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-columns" aria-hidden="true"></i>  <span>Optional</span></a></li>
+                        <li role="presentation"><a href="#destinations" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-location-arrow"></i>  <span>Destinations</span></a></li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane clearfix" id="itinerary">
-                            <div class="col-md-8">
+                            <div class="col-md-12">
                                 @foreach($paquete as $paquetes)
                                     @foreach($paquetes->itinerario as $itinerario)
                                         {{--<div class="panel panel-default">--}}
@@ -127,12 +127,12 @@
 
 
                             </div>
-                            <div class="col-md-4">
-                                <img src="{{asset('images/packages/maps/1.jpg')}}" alt="" class="img-responsive">
-                            </div>
+                            {{--<div class="col-md-4">--}}
+                                {{--<img src="{{asset('images/packages/maps/1.jpg')}}" alt="" class="img-responsive">--}}
+                            {{--</div>--}}
                         </div>
                         <div role="tabpanel" class="tab-pane clearfix" id="prices">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <table class="table">
                                     {{--<caption>Price per person</caption>--}}
                                     <thead>
@@ -168,9 +168,38 @@
                                 @php echo $paquetes->opcional; @endphp
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane clearfix" id="gallery">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
+                        <div role="tabpanel" class="tab-pane clearfix" id="destinations">
+
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <p class="text-20"><b>{{$paquetes->duracion}} days</b></p>
+                    <h5 class="text-50"><sup class="text-10">from</sup> <b class="color-orange-2">
+                            @foreach($paquetes->precio_paquetes as $precio)
+                                @if($precio->estrellas == 2)
+                                    @if($precio->precio_d == 0)
+                                        Ask for a quote
+                                    @else
+                                        ${{$precio->precio_d}}
+                                    @endif
+                                @endif
+                            @endforeach
+                        </b> <span class="text-10">USD</span></h5>
+                    <p>Trip Code: {{$paquetes->codigo}}</p>
+                    {{--<a href="" class="btn btn-primary btn-lg btn-avalavility margin-top-10">Check Availability</a>--}}
+                    <a  href="#inquire" type="button" class="btn btn-primary btn-lg btn-avalavility margin-top-10">
+                        Check Availability
+                    </a>
+                </div>
+                {{--<div class="itinerary-destination">--}}
+                    {{--<ul>--}}
+                        {{--<li></li>--}}
+                    {{--</ul>--}}
+                {{--</div>--}}
+
             </div>
         </div>
     </div>

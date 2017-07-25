@@ -1,4 +1,4 @@
-@extends("layouts.page.itinerary")
+@extends("layouts.page.default")
 @section("content")
     {{--<div id="carousel-example-generic" class="carousel slide carousel-fade position-relative" data-ride="carousel">--}}
     <div id="carousel-example-generic" class="carousel slide position-relative" data-ride="carousel">
@@ -40,6 +40,7 @@
                             </strong>
                         </h2>
                         <div class="sec-title-div-1"></div>
+                        <button type="button" class="btn btn-lg btn-primary margin-top-20" data-toggle="modal" data-target=".bs-example-modal-lg">Request Information</button>
                     </div>
                 </div>
             </div>
@@ -111,5 +112,46 @@
         </div>
     </div>
 
+    <div class="col-md-12">
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content clearfix">
+                <div class="col-md-12 margin-top-10">
+                    <h5 class="color-orange-2 text-center">{{$tour->titulo}}</h5>
+                    <p><b>Personal Information</b></p>
+                </div>
 
+                <div class="col-md-12 header-form-2">
+                    <div id="contact_form">
+                        <div class="row">
+                            <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
+                        </div>
+                    </div>
+
+                    <div id="contact_form">
+                        <div class="row">
+                            <input class="" required="required" id="name" name="name" placeholder="EMAIL" type="email">
+                        </div>
+                    </div>
+
+                    <div id="contact_form">
+                        <div class="row">
+                            <input class="" required="required" id="name" name="name" placeholder="TELEPHONE" type="tel">
+                        </div>
+                    </div>
+
+                    <div id="contact_form">
+                        <div class="row">
+                            <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 margin-bottom-20">
+                    <a href="" class="btn btn-primary btn-lg btn-avalavility">Request Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 @stop

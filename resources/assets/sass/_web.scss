@@ -67,6 +67,9 @@ h6 {
   font-weight:400;
   line-height:1.6;
 }
+.modal-open .modal{
+  height: 100%;
+}
 .bg-fixed{background-attachment:fixed !important;}
 .row{padding:0;margin:0;}
 .container{padding-left:0;padding-right:0;}
@@ -2512,4 +2515,10 @@ figure.snip1139 .author h5 span {
   color: #4c1f1e;
   font-size: 16px;
   position: absolute;
+}
+.btn-avalavility{
+  width: 100%;
+}
+.modal{
+  display: none;
 }
