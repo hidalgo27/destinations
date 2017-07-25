@@ -718,6 +718,7 @@
                         <a href="" class="display-block color-orange-2">Testimonials</a>
                     </div>
                 </div>
+
                 {{--<div class="callout-btn-6 tx-center">--}}
                 {{--<a href="#">CALL TO ACTION</a>--}}
                 {{--</div>--}}
@@ -725,6 +726,7 @@
         </div><!-- /.row -->
     </div><!-- /.item -->
 
-    @include("layouts.page.form.default-from")
+
+
 
 @stop

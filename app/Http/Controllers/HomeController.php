@@ -10,6 +10,7 @@ use App\TPaqueteDestino;
 use App\TPaqueteIncluyeIcono;
 use App\TTour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -150,5 +151,54 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function inquire()
+    {
+        $from = 'hidalgochpnce@gmail.com';
+
+        $name = $_POST['txt_name'];
+        $email = $_POST['txt_email'];
+        $country = $_POST['txt_country'];
+        $date = $_POST['txt_date'];
+        $travelers = $_POST['txt_travelers'];
+        $days = $_POST['txt_days'];
+        $message = $_POST['txt_message'];
+
+//        dd($category, $number, $days, $date, $description, $name, $email, $phone);
+
+        try {
+            Mail::send(['html' => 'notifications.page.client-form-design'], ['name' => $name], function ($messaje) use ($email, $name) {
+                $messaje->to($email, $name)
+                    ->subject('Inquire Peruvian Destinations')
+                    /*->attach('ruta')*/
+                    ->from('info@peruviandestinations.com', 'Peruvian Destinations');
+            });
+
+
+            Mail::send(['html' => 'notifications.page.admin-form-design'], [
+                'name' => $name,
+                'email' => $email,
+                'country' => $country,
+                'date' => $date,
+                'travelers' => $travelers,
+                'days' => $days,
+                'message' => $message
+            ], function ($messaje) use ($from) {
+                $messaje->to($from, 'Peruvian Destinations')
+                    ->subject('Inquire peruviandestinations.com')
+                    /*->attach('ruta')*/
+                    ->from('info@peruviandestinations.com', 'peruviandestinations.com');
+            });
+
+
+            return 'Thank you.';
+
+        }
+        catch (Exception $e){
+            return $e;
+        }
+
+//        return view('page.itinerary', ['paquete'=>$paquete, 'paquete_destinos'=>$paquete_destinos]);
     }
 }

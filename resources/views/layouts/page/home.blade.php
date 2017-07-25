@@ -20,11 +20,11 @@
     {{--<div id="carousel-example-generic" class="carousel slide carousel-fade position-relative" data-ride="carousel">--}}
     <div id="carousel-example-generic" class="carousel slide position-relative" data-ride="carousel">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
+        {{--<ol class="carousel-indicators">--}}
+            {{--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>--}}
+            {{--<li data-target="#carousel-example-generic" data-slide-to="1"></li>--}}
+            {{--<li data-target="#carousel-example-generic" data-slide-to="2"></li>--}}
+        {{--</ol>--}}
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
@@ -71,35 +71,41 @@
                     <h5 class="color-orange-2 tx-center">INQUIRE NOW</h5>
                 </div>
                 <div class="row">
-                    <div id="contact_form" >
-                        <div class="row">
-                            <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
-                        </div>
-                        <div class="row">
-                            <input class="" required="required" id="email" name="email" placeholder="EMAIL" type="email">
-                        </div>
-                        <div class="row">
-                            <input class="" required="required" id="country" name="country" placeholder="COUNTRY" type="email">
-                        </div>
-                        <div class="row">
-                            <input class="" required="required" id="travel-date" name="travel-date" placeholder="TRAVEL DATE" type="date">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input class="" required="required" id="travel-date" name="travel-date" placeholder="TRAVELERS" min="0" type="number">
+                    <form role="form" id="f_form">
+                        {{csrf_field()}}
+                        <div id="contact_form" >
+                            <div class="row">
+                                <input class="" required="required" id="f_name" name="f_name" placeholder="NAME (Required)" type="text">
                             </div>
-                            <div class="col-md-6">
-                                <input class="" required="required" id="days" name="days" placeholder="DAYS" min="0" type="number">
+                            <div class="row">
+                                <input class="" required="required" id="f_email" name="f_email" placeholder="EMAIL" type="email">
                             </div>
+                            <div class="row">
+                                <input class="" required="required" id="f_country" name="f_country" placeholder="COUNTRY" type="text">
+                            </div>
+                            <div class="row">
+                                <input class="" required="required" id="f_travel_date" name="f_travel_date" placeholder="TRAVEL DATE" type="date">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="" required="required" id="f_travelers" name="f_travelers" placeholder="TRAVELERS" min="0" type="number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="" required="required" id="f_days" name="f_days" placeholder="DAYS" min="0" type="number">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <textarea class="" id="f_message" name="f_message" placeholder="MESSAGE"></textarea>
+                            </div>
+                            <div class="row">
+                                <input class="color-white" value="INQUIRE NOW"  type="submit" id="f_send" onclick="sendDesign()">
+                                {{--<button class="btn btn-info pull-right" id="f_send" type="button" onclick="sendDesign()">INQUIRE NOW--}}
+                                    {{--<i class="fa fa-paper-plane" aria-hidden="true"></i>--}}
+                                {{--</button>--}}
+                            </div>
+                            <div id="contact_results"></div>
                         </div>
-                        <div class="row">
-                            <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
-                        </div>
-                        <div class="row">
-                            <input class="color-white" value="INQUIRE NOW"  type="submit" id="submit_btn">
-                        </div>
-                        <div id="contact_results"></div>
-                    </div>
+                    </form>
                 </div>
 
             </div>
@@ -216,6 +222,8 @@
 
     @yield('content')
 
+    @include("layouts.page.form.default-from")
+
     <footer class="item footer  footer-2" id="footer-2">
         <div class="row"><!--.row -->
 
@@ -277,6 +285,81 @@
 <script src="{{asset("js/admin/plugins.js")}}"></script>
 
 
+
+<script>
+    function sendDesign(){
+
+
+        $("#f_send").attr("disabled", true);
+
+        var filter=/^[A-Za-z][A-Za-z0-9_]*@[A-Za-z0-9_]+.[A-Za-z0-9_.]+[A-za-z]$/;
+
+
+        var s_name = $('#f_name').val();
+        var s_email = $('#f_email').val();
+        var s_country = $('#f_country').val();
+        var s_date = $('#f_travel_date').val();
+        var s_travelers = $('#f_travelers').val();
+        var s_days = $('#f_days').val();
+        var s_message = $('#f_message').val();
+
+
+        if (filter.test(s_email)){
+            sendMail = "true";
+        } else{
+            $('#f_email').css("border-bottom", "2px solid #FF0000");
+            sendMail = "false";
+        }
+        if (s_name.length == 0 ){
+            $('#f_name').css("border-bottom", "2px solid #FF0000");
+            var sendMail = "false";
+        }
+
+        if(sendMail == "true"){
+            var datos = {
+
+                "txt_name" : s_name,
+                "txt_email" : s_email,
+                "txt_country" : s_country,
+                "txt_date" : s_date,
+                "txt_travelers" : s_travelers,
+                "txt_days" : s_days,
+                "txt_message" : s_message
+
+            };
+            $.ajax({
+                data:  datos,
+                url:   "{{route('inquire_path')}}",
+                type:  'post',
+
+                beforeSend: function () {
+                    $('#f_send').removeClass('show');
+                    $("#f_send").addClass('hide');
+                    $("#loader").removeClass('hide');
+                    $("#loader").addClass('show');
+                },
+                success:  function (response) {
+                    $('#f_form')[0].reset();
+                    $('#f_send').removeClass('show');
+                    $('#f_send').addClass('hide');
+                    $("#loader").removeClass('show');
+                    $("#loader").addClass('hide');
+                    $('#f_check').removeClass('hidden');
+                    $("#f_check").addClass('show');
+                    $("#f_congratulation b").html(response);
+                    $("#f_congratulation").fadeIn('slow');
+                    $("#f_send").removeAttr("disabled");
+                }
+            });
+        } else{
+            $("#f_send").removeAttr("disabled");
+        }
+    }
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 
 </body>
 </html>
