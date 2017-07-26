@@ -191,7 +191,7 @@
 <script src="{{asset("js/admin/plugins.js")}}"></script>
 
 <script>
-    function packages() {
+    function packagesfrom() {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('[name="_token"]').val()
@@ -210,6 +210,8 @@
                 $category += s_category[i].value + ' , ';
             }
         }
+
+        s_category = $category.substring(0,$category.length-3);
 
         var s_number = document.getElementsByName('number[]');
         var $number = "";
@@ -255,12 +257,12 @@
                 "txt_name": s_name,
                 "txt_email": s_email,
                 "txt_tel": s_tel,
-                "txt_comment": s_comment,
+                "txt_comment": s_comment
 
             };
             $.ajax({
                 data: datos,
-                url: "{{route('design_path')}}",
+                url: "{{route('packages_form_path')}}",
                 type: 'post',
 
                 beforeSend: function () {

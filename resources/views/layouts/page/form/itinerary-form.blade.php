@@ -29,6 +29,7 @@
                         </div>
                     </div>
                     <form role="form" id="p_form">
+                        {{csrf_field()}}
                     <div class="tab-content">
                         <div id="menu1" class="tab-pane fade active in">
                             <div class="box-your-details">
@@ -128,7 +129,7 @@
                                 {{--</div>--}}
 
                                 <div class="process-step">
-                                    <button type="button" class="btn btn-default btn-lg next-step" data-toggle="tab" href="#menu2">Next <i class="fa fa-chevron-right"></i></button>
+                                    <button type="button" class="btn btn-default btn-lg" data-toggle="tab" href="#menu2">Next <i class="fa fa-chevron-right"></i></button>
                                 </div>
 
                             </ul>
@@ -170,16 +171,14 @@
 
                             </div>
                             <div class="process-step pull-right">
-                                <button type="button" class="btn btn-default btn-lg prev-step" data-toggle="tab" href="#menu1"><i class="fa fa-chevron-left"></i> Back</button>
-                                {{--<button type="button" class="btn btn-success btn-lg"><i class="fa fa-check"></i> Done!</button>--}}
-
-                                <button class="btn btn-success btn-lg pull-right" id="p_send" type="button" onclick="packages()"><i class="fa fa-check"></i> Done!
+                                <button type="button" class="btn btn-default btn-lg" data-toggle="tab" href="#menu1"><i class="fa fa-chevron-left"></i> Back</button>
+                                {{--<button type="button" class="btn btn-success btn-lg" data-toggle="tab" href="#menu3"><i class="fa fa-check"></i> Done!</button>--}}
+                                <button class="btn btn-success btn-lg pull-right" id="p_send" type="button" onclick="packagesfrom()"><i class="fa fa-check"></i> Done!
                                     <i class="fa fa-paper-plane" aria-hidden="true"></i>
                                 </button>
                                 <ul class="fa-ul pull-right hide" id="loader4">
                                     <li><i class="fa-li fa fa-spinner fa-spin"></i> <i>Sending...</i></li>
                                 </ul>
-
                             </div>
 
                             <div class="col-md-12 margin-top-30 hide" id="p_congratulation">

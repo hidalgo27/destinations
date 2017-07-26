@@ -302,7 +302,7 @@ class HomeController extends Controller
 
     public function packages_form()
     {
-        $from = 'hidalgochpnce@gmail.com';
+        $from = 'mhmarcoale@gmail.com';
 
         $package = $_POST['txt_package'];
         $category = $_POST['txt_category'];

@@ -6,14 +6,20 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="{{asset('images/packages/banners/1.jpg')}}" alt="...">
+                @foreach($tours->unique('ubicacion') as $tour)
+                    @php
+                        $ubicacion = explode(",", $tour->ubicacion);
+                    @endphp
+                    {{--<h3 class="color-white">{{ucwords(strtolower($tour->ubicacion))}} <b>Tours</b></h3>--}}
+                    <img src="{{asset('images/destinations/banners/'.$ubicacion[0].'.jpg')}}" alt="...">
+                @endforeach
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
                         {{--<h1 class="color-goto-orange"><strong>Peru Packages: {{ucwords(strtolower($paquetes->titulo))}}</strong></h1>--}}
-                        @foreach($tours->unique('ubicacion') as $tour)
+
                             <h3 class="color-white">{{ucwords(strtolower($tour->ubicacion))}} <b>Tours</b></h3>
-                        @endforeach
+
                     </div>
                 </div>
             </div>
