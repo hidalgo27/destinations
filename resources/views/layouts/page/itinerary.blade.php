@@ -190,7 +190,102 @@
 <script src="{{asset("js/app.js")}}"></script>
 <script src="{{asset("js/admin/plugins.js")}}"></script>
 
+<script>
+    function packages() {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('[name="_token"]').val()
+            }
+        });
 
+        $("#p_send").attr("disabled", true);
+
+        var filter = /^[A-Za-z][A-Za-z0-9_]*@[A-Za-z0-9_]+.[A-Za-z0-9_.]+[A-za-z]$/;
+
+
+        var s_category = document.getElementsByName('category[]');
+        var $category = "";
+        for (var i = 0, l = s_category.length; i < l; i++) {
+            if (s_category[i].checked) {
+                $category += s_category[i].value + ' , ';
+            }
+        }
+
+        var s_number = document.getElementsByName('number[]');
+        var $number = "";
+        for (var i = 0, l = s_number.length; i < l; i++) {
+            if (s_number[i].checked) {
+                $number += s_number[i].value + ' , ';
+            }
+        }
+
+        s_number = $number.substring(0, $number.length - 3);
+
+        var s_package = $('#p_package').val();
+        var s_date = $('#p_date').val();
+        var s_name = $('#p_name').val();
+        var s_email = $('#p_email').val();
+        var s_tel = $('#p_tel').val();
+        var s_comment = $('#p_comment').val();
+
+
+        if (filter.test(s_email)) {
+            sendMail = "true";
+        } else {
+            $('#p_email').css("border-bottom", "2px solid #FF0000");
+            sendMail = "false";
+        }
+        if (s_name.length == 0) {
+            $('#p_name').css("border-bottom", "2px solid #FF0000");
+            var sendMail = "false";
+        }
+        if (s_date.length == 0) {
+            $('#p_date').css("border-bottom", "2px solid #FF0000");
+            var sendMail = "false";
+        }
+
+        if (sendMail == "true") {
+            var datos = {
+
+                "txt_package": s_package,
+                "txt_category": s_category,
+                "txt_number": s_number,
+
+                "txt_date": s_date,
+                "txt_name": s_name,
+                "txt_email": s_email,
+                "txt_tel": s_tel,
+                "txt_comment": s_comment,
+
+            };
+            $.ajax({
+                data: datos,
+                url: "{{route('design_path')}}",
+                type: 'post',
+
+                beforeSend: function () {
+                    $('#p_send').removeClass('show');
+                    $("#p_send").addClass('hide');
+                    $("#loader4").removeClass('hide');
+                    $("#loader4").addClass('show');
+                },
+                success: function (response) {
+                    $('#p_form')[0].reset();
+                    $('#p_send').removeClass('show');
+                    $('#p_send').addClass('hide');
+                    $("#loader4").removeClass('show');
+                    $("#loader4").addClass('hide');
+                    $("#p_congratulation b").html(response);
+                    $("#p_congratulation").fadeIn('slow');
+                    $('#p_congratulation').removeClass('hide');
+                    $("#p_send").removeAttr("disabled");
+                }
+            });
+        } else {
+            $("#p_send").removeAttr("disabled");
+        }
+    }
+</script>
 
 </body>
 </html>

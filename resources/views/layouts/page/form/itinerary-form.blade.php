@@ -28,6 +28,7 @@
                             </div>
                         </div>
                     </div>
+                    <form role="form" id="p_form">
                     <div class="tab-content">
                         <div id="menu1" class="tab-pane fade active in">
                             <div class="box-your-details">
@@ -36,25 +37,25 @@
                                 </div>
                                 <div class="btn-group col-md-12" data-toggle="buttons">
                                     <label class="btn btn-details col-md-3">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="category[]" value="Budget 2">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Budget 2 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-3">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="category[]" value="Best Value 3">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Best Value 3 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-3">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="category[]" value="Superior 4">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Superior 4 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-3">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="category[]" value="Luxury 5">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Luxury 5 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
@@ -67,37 +68,37 @@
 
                                 <div class="btn-group col-md-12 margin-top-10" data-toggle="buttons">
                                     <label class="btn btn-details col-md-2">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="number[]" value="1 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>1 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-2">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="number[]" value="2 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>2 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-2">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="number[]" value="3 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>3 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-2">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="number[]" value="4 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>4 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-2">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="number[]" value="5 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>5 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
                                     <label class="btn btn-details col-md-2">
-                                        <input type="checkbox" autocomplete="off">
+                                        <input type="checkbox" autocomplete="off" name="number[]" value="Undecided">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Undecided</b>
@@ -111,7 +112,7 @@
                                     <div class="col-md-12 header-form-2">
                                         <div id="contact_form">
                                             <div class="row">
-                                                <input class="" required="required" id="name" name="name" placeholder="TRAVEL DATE" type="date">
+                                                <input class="" required="required" id="p_date" name="p_date" placeholder="TRAVEL DATE" type="date">
                                             </div>
                                         </div>
                                     </div>
@@ -142,25 +143,26 @@
                                 <div class="col-md-12 header-form-2">
                                     <div id="contact_form">
                                         <div class="row">
-                                            <input class="" required="required" id="name" name="name" placeholder="NAME" type="text">
+                                            <input class="" required="required" id="p_name" name="p_name" placeholder="NAME" type="text">
+                                            <input type="hidden" id="p_package" name="p_package" value="{{$paquetes->codigo}} {{$paquetes->titulo}}">
                                         </div>
                                     </div>
 
                                     <div id="contact_form">
                                         <div class="row">
-                                            <input class="" required="required" id="name" name="name" placeholder="EMAIL" type="email">
+                                            <input class="" required="required" id="p_email" name="p_email" placeholder="EMAIL" type="email">
                                         </div>
                                     </div>
 
                                     <div id="contact_form">
                                         <div class="row">
-                                            <input class="" required="required" id="name" name="name" placeholder="TELEPHONE" type="tel">
+                                            <input class="" required="required" id="p_tel" name="p_tel" placeholder="TELEPHONE" type="tel">
                                         </div>
                                     </div>
 
                                     <div id="contact_form">
                                         <div class="row">
-                                            <textarea class="" id="message" name="message" placeholder="MESSAGE"></textarea>
+                                            <textarea class="" id="p_comment" name="p_comment" placeholder="MESSAGE"></textarea>
                                         </div>
                                     </div>
 
@@ -169,11 +171,30 @@
                             </div>
                             <div class="process-step pull-right">
                                 <button type="button" class="btn btn-default btn-lg prev-step" data-toggle="tab" href="#menu1"><i class="fa fa-chevron-left"></i> Back</button>
-                                <button type="button" class="btn btn-success btn-lg"><i class="fa fa-check"></i> Done!</button>
+                                {{--<button type="button" class="btn btn-success btn-lg"><i class="fa fa-check"></i> Done!</button>--}}
+
+                                <button class="btn btn-success btn-lg pull-right" id="p_send" type="button" onclick="packages()"><i class="fa fa-check"></i> Done!
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+                                <ul class="fa-ul pull-right hide" id="loader4">
+                                    <li><i class="fa-li fa fa-spinner fa-spin"></i> <i>Sending...</i></li>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-md-12 margin-top-30 hide" id="p_congratulation">
+                                <div class="alert alert-dismissible show custom-alert info-alert" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <p><strong><i class="fa fa-thumbs-up"></i> <b></b></strong></p>
+                                </div>
+
                             </div>
                                 {{--<li><button type="button" class="btn btn-default btn-lg prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>--}}
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -299,4 +299,55 @@ class HomeController extends Controller
 
 //        return view('page.itinerary', ['paquete'=>$paquete, 'paquete_destinos'=>$paquete_destinos]);
     }
+
+    public function packages_form()
+    {
+        $from = 'hidalgochpnce@gmail.com';
+
+        $package = $_POST['txt_package'];
+        $category = $_POST['txt_category'];
+        $number = $_POST['txt_number'];
+
+        $date = $_POST['txt_date'];
+        $name = $_POST['txt_name'];
+        $email = $_POST['txt_email'];
+        $tel = $_POST['txt_tel'];
+        $comment = $_POST['txt_comment'];
+
+        try {
+            Mail::send(['html' => 'notifications.page.client-form-design'], ['name' => $name], function ($messaje) use ($email, $name) {
+                $messaje->to($email, $name)
+                    ->subject('Inquire Peruvian Destinations')
+                    /*->attach('ruta')*/
+                    ->from('info@peruviandestinations.com', 'Peruvian Destinations');
+            });
+
+
+            Mail::send(['html' => 'notifications.page.admin-form-package'], [
+                'package' => $package,
+                'category' => $category,
+                'number' => $number,
+                'date' => $date,
+                'name' => $name,
+                'email' => $email,
+                'tel' => $tel,
+                'comment' => $comment
+            ], function ($messaje) use ($from) {
+                $messaje->to($from, 'Peruvian Destinations')
+                    ->subject('Inquire peruviandestinations.com')
+                    /*->attach('ruta')*/
+                    ->from('info@peruviandestinations.com', 'peruviandestinations.com');
+            });
+
+
+            return 'Thank you.';
+
+        }
+        catch (Exception $e){
+            return $e;
+        }
+
+//        return view('page.itinerary', ['paquete'=>$paquete, 'paquete_destinos'=>$paquete_destinos]);
+    }
+
 }

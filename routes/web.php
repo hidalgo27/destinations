@@ -78,3 +78,8 @@ Route::post('/tours', [
     'uses' => 'HomeController@tours',
     'as' => 'tours_form_path',
 ]);
+
+Route::post('/packages-form', [
+    'uses' => 'HomeController@packages_form',
+    'as' => 'packages_form_path',
+]);
