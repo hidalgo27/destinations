@@ -20,7 +20,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #fff;
+  //color: #fff;
   text-decoration: none;
 }
 a:focus {
@@ -70,6 +70,9 @@ h6 {
 .modal-open .modal{
   height: 100%;
 }
+.list-none{
+  list-style:none;
+}
 .bg-fixed{background-attachment:fixed !important;}
 .row{padding:0;margin:0;}
 .container{padding-left:0;padding-right:0;}
@@ -86,6 +89,17 @@ h6 {
 .color-black-1{color:#adadad;}
 .color-orange-1{color:#f2625a;}
 .color-orange-2{color:#f56800;}
+
+.color-facebook{
+  background: #3b5998;
+}
+.color-instagram{
+  background: #4c1f1e;
+}
+.color-youtube{
+  background: #e62117;
+}
+
 /* background colors */
 .bg-color-white{background:#fff;}
 .bg-color-rgba-1{background:rgba(17,17,17,0.6);}
@@ -96,6 +110,13 @@ h6 {
 .bg-color-solid-orange-2{background:#f56800;}
 .bg-color-solid-black-1{background:#111;}
 .bg-color-solid-blue-1{background:#00aee0;}
+
+.bg-orange{
+  background: #f56901;
+}
+.bg-blue-2{
+  background: #01b4e9;
+}
 /* headings */
 .header-big-text-1{}
 .header-small-text-1{}
@@ -105,7 +126,12 @@ h6 {
 .color-black{
   color: #333333;
 }
-
+.no-padding{
+  padding: 0;
+}
+.no-margin{
+  margin: 0;
+}
 .padding-5{padding:5px;}
 .padding-10{padding:10px;}
 .padding-15{padding:15px;}
@@ -2061,7 +2087,7 @@ body,
   width: 30px;
   border: 1px solid #fff;
   line-height: 30px;
-  background: #4c1f1e;
+  //background: #4c1f1e;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -2508,12 +2534,12 @@ figure.snip1139 .author h5 span {
   display: block;
 }
 .box-tours a span{
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.8);
   display: block;
   bottom: 0;
   width: 100%;
   color: #4c1f1e;
-  font-size: 16px;
+  font-size: 17px;
   position: absolute;
 }
 .btn-avalavility{

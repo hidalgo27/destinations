@@ -74,8 +74,8 @@
                                 <thead>
                                 <tr>
                                     <th>Package Name</th>
-                                    <th>Description</th>
-                                    <th>Category</th>
+                                    <th>Destinations</th>
+                                    {{--<th>Category</th>--}}
                                     <th class="text-right">Price from</th>
                                 </tr>
                                 </thead>
@@ -83,14 +83,18 @@
                                 @foreach($paquete as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
-                                        <td>Kilgore</td>
                                         <td>
-
-                                            @foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)
-                                                <a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                - {{ucwords(strtolower($paquete_destino->destinos->nombre))}}
                                             @endforeach
-
                                         </td>
+                                        {{--<td>--}}
+
+                                            {{--@foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)--}}
+                                                {{--<a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |--}}
+                                            {{--@endforeach--}}
+
+                                        {{--</td>--}}
                                         <td class="text-right color-orange-2">
                                             @foreach($paquetes->precio_paquetes as $precio)
                                                 @if($precio->estrellas == 2)

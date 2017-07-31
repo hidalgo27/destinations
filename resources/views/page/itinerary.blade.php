@@ -46,13 +46,13 @@
                             </strong>
                         </h2>
 
-                        <h4>
-                            @foreach($paquete as $paquetes_d)
-                                @foreach($paquete_destinos->where('idpaquetes',$paquetes_d->id)->take(2) as $paquete_destino)
-                                    <b>{{ucwords(strtolower($paquete_destino->destinos->nombre))}}/</b>
-                                @endforeach
-                            @endforeach
-                        <h4>
+                        {{--<h4>--}}
+                            {{--@foreach($paquete as $paquetes_d)--}}
+                                {{--@foreach($paquete_destinos->where('idpaquetes',$paquetes_d->id)->take(2) as $paquete_destino)--}}
+                                    {{--<b>{{ucwords(strtolower($paquete_destino->destinos->nombre))}}/</b>--}}
+                                {{--@endforeach--}}
+                            {{--@endforeach--}}
+                        {{--<h4>--}}
                         <div class="sec-title-div-1"></div>
                     </div>
                 </div>
@@ -70,13 +70,13 @@
                         <li role="presentation"><a href="#itinerary" aria-controls="itinerary" role="tab" data-toggle="tab"><i class="fa fa-list" aria-hidden="true"></i>  <span>Itinerary</span></a></li>
                         <li role="presentation"><a href="#prices" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-usd" aria-hidden="true"></i>  <span>Prices</span></a></li>
                         <li role="presentation"><a href="#optional" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-columns" aria-hidden="true"></i>  <span>Optional</span></a></li>
-                        <li role="presentation"><a href="#destinations" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-location-arrow"></i>  <span>Destinations</span></a></li>
+                        {{--<li role="presentation"><a href="#destinations" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-location-arrow"></i>  <span>Destinations</span></a></li>--}}
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active clearfix" id="overview">
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <h4>Route</h4>
                                 @foreach($paquete as $paquetes)
                                     @foreach($paquetes->itinerario as $itinerario)
@@ -89,8 +89,52 @@
                                 <h4 class="margin-top-20">Not Include</h4>
                                 @php echo $paquetes->noincluye; @endphp
                             </div>
-                            <div class="col-md-4">
-                                <img src="{{asset('images/packages/maps/1.jpg')}}" alt="" class="img-responsive">
+                            <div class="col-md-6">
+{{--                                <img src="{{asset('images/packages/maps/1.jpg')}}" alt="" class="img-responsive">--}}
+                                <a href="#" class="" data-toggle="modal" data-target=".bs-example-modal-lg">
+                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(1) as $paquete_destino)
+{{--                                        <li><i class="fa fa-map-marker"></i> {{ucwords(strtolower($paquete_destino->destinos->nombre))}}</li>--}}
+                                        {{--<img src="{{asset('images/destinations/banners/hola.jpg}}" alt="">--}}
+{{--                                        {{str_replace(" ", "-", strtolower($paquete_destino->destinos->nombre))}}--}}
+                                        <img src="{{asset('images/destinations/banners/'.str_replace(" ", "-", strtolower($paquete_destino->destinos->nombre)).'.jpg')}}" alt="...">
+                                    @endforeach
+                                </a>
+
+                                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div id="carousel-destinations" class="carousel slide" data-ride="carousel">
+
+                                                <!-- Wrapper for slides -->
+                                                <div class="carousel-inner">
+                                                    @php
+                                                        $i = 0;
+                                                    @endphp
+                                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+
+                                                        <div class="item @if ($i == 0) active @endif">
+                                                            <img class="img-responsive" src="{{asset('images/destinations/banners/'.str_replace(" ", "-", strtolower($paquete_destino->destinos->nombre)).'.jpg')}}" alt="...">
+                                                            <div class="carousel-caption">
+                                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}}
+                                                            </div>
+                                                        </div>
+                                                        @php
+                                                            $i++;
+                                                        @endphp
+                                                    @endforeach
+                                                </div>
+
+                                                <!-- Controls -->
+                                                <a class="left carousel-control" href="#carousel-destinations" role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel-destinations" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane clearfix" id="itinerary">
@@ -191,14 +235,26 @@
                     <p>Trip Code: {{$paquetes->codigo}}</p>
                     {{--<a href="" class="btn btn-primary btn-lg btn-avalavility margin-top-10">Check Availability</a>--}}
                     <a  href="#inquire" type="button" class="btn btn-primary btn-lg btn-avalavility margin-top-10">
-                        Check Availability
+                        Book
                     </a>
                 </div>
-                {{--<div class="itinerary-destination">--}}
-                    {{--<ul>--}}
-                        {{--<li></li>--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
+                <div class="itinerary-destination">
+                    <h4>Destinations</h4>
+                    <ul class="list-none no-padding">
+                        @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                            <li><i class="fa fa-map-marker"></i> {{ucwords(strtolower($paquete_destino->destinos->nombre))}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+
+                <div class="itinerary-destination">
+                    <h4>What sets us apart</h4>
+                    <ul class="list-none no-padding">
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Personalized service</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> 24/7 in trip assistance</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i> Better tours</li>
+                    </ul>
+                </div>
 
             </div>
         </div>

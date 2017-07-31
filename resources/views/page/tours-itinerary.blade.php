@@ -47,7 +47,6 @@
                             </strong>
                         </h2>
                         <div class="sec-title-div-1"></div>
-                        <button type="button" class="btn btn-lg btn-primary margin-top-20" data-toggle="modal" data-target=".bs-example-modal-lg">Request Information</button>
                     </div>
                 </div>
             </div>
@@ -78,15 +77,15 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-info">Itinerary</h4>
-                        @foreach($tour->itinerario_tours as $itinerario)
-                            <h5>{{$itinerario->titulo}}</h5>
-                            @php echo $itinerario->descripcion @endphp
-                        @endforeach
-                    </div>
-                </div>
+                {{--<div class="row">--}}
+                    {{--<div class="col-md-12">--}}
+                        {{--<h4 class="text-info">Itinerary</h4>--}}
+                        {{--@foreach($tour->itinerario_tours as $itinerario)--}}
+                            {{--<h5>{{$itinerario->titulo}}</h5>--}}
+                            {{--@php echo $itinerario->descripcion @endphp--}}
+                        {{--@endforeach--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
             <div class="col-md-5">
                 <table class="table table-bordered condensed">
@@ -115,6 +114,10 @@
                     </tr>
                     </tbody>
                 </table>
+
+                <div>
+                    <button type="button" class="btn btn-lg btn-danger btn-avalavility margin-top-20" data-toggle="modal" data-target=".bs-example-modal-lg">BOOK THIS TOUR</button>
+                </div>
             </div>
         </div>
     </div>

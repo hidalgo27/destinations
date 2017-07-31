@@ -19,10 +19,10 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                            <li class="active"><a href="#vtab1" data-toggle="tab" class="text-20">Peru Specials</a></li>
-                            <li><a href="#vtab3" data-toggle="tab" class="text-20">Peru Offers</a></li>
-                            <li><a href="#vtab2" data-toggle="tab" class="text-20">Peru Trekking</a></li>
-                            <li><a href="#vtab4" data-toggle="tab" class="text-20">How to Book</a></li>
+                            <li class="active"><a href="#vtab1" data-toggle="tab" class="text-20">Peru Packages</a></li>
+                            <li><a href="#vtab3" data-toggle="tab" class="text-20">Inca Trail Packages</a></li>
+                            <li><a href="#vtab2" data-toggle="tab" class="text-20">International Extensions</a></li>
+                            <li><a href="#inquire" class="text-20">Customize your Trip</a></li>
                         </ul>
 
                         <div class="panel panel-primary">

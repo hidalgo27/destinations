@@ -129,3 +129,5 @@ $(function(){
 function CrearEnlace(url) {
     location.href=url;
 }
+
+$('#carousel-destinations').carousel();

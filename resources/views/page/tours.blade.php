@@ -44,11 +44,11 @@
                 @php
                     $ubicacion = explode(",", $tour->ubicacion);
                 @endphp
-                <div class="col-md-3 margin-bottom-30">
+                <div class="col-md-4 margin-bottom-30">
                     <div class="box-tours position-relative text-center">
                         <a href="{{route('tours_destinations_show_path', str_replace(' ', '-', strtolower($tour->ubicacion)))}}">
                             <img src="{{asset('images/destinations/'.$ubicacion[0].'.jpg')}}" alt="" class="img-responsive">
-                            <span>{{ucwords($tour->ubicacion)}} Tours</span>
+                            <span><i>{{ucwords($tour->ubicacion)}} Tours</i></span>
                         </a>
                     </div>
                 </div>

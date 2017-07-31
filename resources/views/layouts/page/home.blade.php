@@ -30,8 +30,8 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="{{asset('images/slider/slider-1.jpg')}}" alt="...">
-                <div class="carousel-caption col-md-4 text-left">
-                    <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                <div class="carousel-caption col-md-12">
+                    <div class="header-big-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
                     </div>
                 </div>
@@ -39,10 +39,10 @@
             <div class="item">
                 <img src="{{asset('images/slider/slider-2.jpg')}}" alt="...">
                 <div class="carousel-caption">
-                    <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                    <div class="header-big-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
                     </div>
-                    <div class="header-small-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
+                    <div class="header-small-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
                         <h6 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendis sefaucibus risus sit amet auctor sodales<br> justo erat tempor eros, non </h6>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
             <span class="sr-only">Next</span>
         </a>
 
-        <div class="col-md-4 col-sm-5 col-xs-12 os-animation form-header" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+        <div class="col-md-4 col-sm-5 col-xs-12 os-animation form-header hide" data-os-animation="fadeInUp" data-os-animation-delay="0s">
             <div class="header-form-2 bg-color-white">
                 <div class="row">
                     <h5 class="color-orange-2 tx-center">INQUIRE NOW</h5>
@@ -205,16 +205,18 @@
                 <div class="col-md-2 medias">
 
                     <ul>
-                        <li> <a href=""> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li> <a href=""> <i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li> <a href=""> <i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li> <a href="mailto:travel@latinamericaforless.com" class="bg-orange"> <i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                        <li> <a href="" class="bg-blue-2"> <i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>
+                        <li>|</li>
+                        <li> <a href="" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li> <a href="" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li> <a href="" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
                     </ul>
 
                     <div class="classus">
 
-                        <p> Call us +91 22 39178077</p>
+                        <p><a href="tel:+18172304971"><b>Call us +91 22 39178077</b></a></p>
 
                     </div>
 
