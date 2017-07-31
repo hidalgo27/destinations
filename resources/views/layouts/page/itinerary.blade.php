@@ -60,10 +60,12 @@
                 <div class="col-md-2 medias">
 
                     <ul>
-                        <li> <a href=""> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li> <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li> <a href=""> <i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li> <a href=""> <i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li> <a href="mailto:info@peruviandestinations.com" class="bg-orange"> <i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                        <li> <a href="#" onclick="startOlark()" class="bg-blue-2"> <i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>
+                        <li>|</li>
+                        <li> <a href="" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li> <a href="" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li> <a href="" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
                     </ul>
 
@@ -288,6 +290,26 @@
         }
     }
 </script>
+<!-- begin olark code -->
+<script type="text/javascript" async>
+    ;(function(o,l,a,r,k,y){if(o.olark)return;
+        r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0];
+        y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r);
+        y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};
+        y.extend=function(i,j){y("extend",i,j)};
+        y.identify=function(i){y("identify",k.i=i)};
+        y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
+        k=y._={s:[],t:[+new Date],c:{},l:a};
+    })(window,document,"static.olark.com/jsclient/loader.js");
+    /* Add configuration calls below this comment */
+    olark.identify('7112-623-10-4666');
 
+    //jQuery for page scrolling feature - requires jQuery Easing plugin
+    function startOlark() {
+        olark('api.box.expand');
+    }
+
+</script>
+<!-- end olark code -->
 </body>
 </html>
