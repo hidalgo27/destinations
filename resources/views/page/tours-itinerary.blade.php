@@ -7,10 +7,11 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                @foreach($tours as $tour)
+                @foreach($tours->unique('ubicacion') as $tour)
                     @php
                         $ubicacion = explode(",", $tour->ubicacion);
                     @endphp
+
                     <img src="{{asset('images/destinations/banners/'.$ubicacion[0].'.jpg')}}" alt="...">
                 @endforeach
 {{--                <img src="{{asset('images/packages/banners/1.jpg')}}" alt="...">--}}
