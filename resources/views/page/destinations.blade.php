@@ -11,7 +11,7 @@
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
                             {{--<h1 class="color-goto-orange"><strong>Peru Packages: {{ucwords(strtolower($paquetes->titulo))}}</strong></h1>--}}
-                        <h3 class="color-white">Traveler to <b>Traveler</b></h3>
+                        <h3 class="color-white">TOP <b>DESTINATIONS</b></h3>
                     </div>
                 </div>
             </div>
@@ -23,17 +23,18 @@
     <div class="container margin-top-60">
         <div class="row margin-bottom-20">
             <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                <h2 class="color-orange-2"><strong>Peru Destinations</strong></h2>
+                <h2 class="color-orange-2"><strong>Top Destinations</strong></h2>
                 {{--<h4><b>“Better Hotels and superior Service at the best price”</b></h4>--}}
                 <div class="sec-title-div-1"></div>
-                <p class="margin-bottom-10">Travel to Peru and fuel your imagination on a diet of ancient treasures and wonderful landscapes. Surrounded by majestic Andean peaks, world wonder Machu Picchu and the historic city of Cusco highlight Peru’s dramatic birth from the encounter between Incas and Spaniards.</p>
-                <p class="margin-bottom-10">Just as thrilling are the lush expanses of Amazon rainforest, the breathtaking vastness of Lake Titicaca, the fantastic food scene in Lima, and the enduring enigma of the Nazca Lines. One thing is certain. Peru has something for everyone. All you have to do is choose where to go and when.</p>
-                <p class="margin-bottom-10">Keep reading to see more Peru attractions and destinations and contact us to start planning your own exciting trip to Peru.</p>
+                <p class="margin-bottom-10">Click on each destination to learn more about the place, recommended stay and available tours and packages.</p>
+                {{--<p class="margin-bottom-10">Just as thrilling are the lush expanses of Amazon rainforest, the breathtaking vastness of Lake Titicaca, the fantastic food scene in Lima, and the enduring enigma of the Nazca Lines. One thing is certain. Peru has something for everyone. All you have to do is choose where to go and when.</p>--}}
+                {{--<p class="margin-bottom-10"> and we will help you build your dream package.</p>--}}
+
             </div>
         </div>
         <div class="row">
             <blockquote>
-                <p class="text-20 text-center"><i class="fa fa-briefcase fa-2x color-green-1" aria-hidden="true"></i>  Our tours are Fully Customizable and leave 365 days a year!</p>
+                <p class="text-20 text-center"><a href="" class="btn btn-success">Contact Us</a>  and we will help you build your dream package.</p>
             </blockquote>
         </div>
         <div class="row">

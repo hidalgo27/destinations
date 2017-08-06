@@ -17,9 +17,11 @@
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
-                        @foreach($tours as $tour)
-                            <h3 class="color-white">{{$tour->titulo}}</h3>
-                        @endforeach
+                        {{--@foreach($tours as $tour)--}}
+                            {{--<h3 class="color-white">{{$tour->titulo}}</h3>--}}
+                        {{--@endforeach--}}
+
+                        <h3 class="color-white">Tours in {{ucwords($ubicacion[0])}}</h3>
 
                     </div>
                 </div>
@@ -56,6 +58,43 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="carousel-{{$tour->id}}" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                        {{--<ol class="carousel-indicators">--}}
+                        {{--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>--}}
+                        {{--<li data-target="#carousel-example-generic" data-slide-to="1"></li>--}}
+                        {{--<li data-target="#carousel-example-generic" data-slide-to="2"></li>--}}
+                        {{--</ol>--}}
+
+                        <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                @php
+                                    $i = 0;
+                                @endphp
+                                @foreach($imagen->where('idtours', $tour->id) as $img)
+                                    <div class="item @if ($i == 0) active @endif">
+                                        <img src="{{asset('images/tours/slider/'.$img->imagen.'')}}" alt="" class="img-responsive">
+                                    </div>
+                                    @php
+                                        $i++;
+                                    @endphp
+                                @endforeach
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-{{$tour->id}}" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-{{$tour->id}}" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="text-info">Description</h4>

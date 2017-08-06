@@ -1,4 +1,16 @@
 <div class=" item padding-top-60 padding-bottom-50" id="inquire">
+
+    <div class="row margin-bottom-20">
+        <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+            <h2 class="color-orange-2"><strong>Customize Your Trip</strong></h2>
+            <h4><b>Get a FREE Quote</b></h4>
+            <div class="sec-title-div-1"></div>
+            {{--<p class="margin-bottom-10">We have designed a collection of Travel Packages based on the must see destinations in Peru and South America.</p>--}}
+            {{--<p>As a Tour Operator Company, at Peruvian Destinations we can always build your own exclusive tailor-made Itinerary based on your needs, preferences and budget.</p>--}}
+            {{--<p class="margin-bottom-10">With tours available 365 days a year and in-travel assistance 24/7, we represent the best option!</p>--}}
+        </div>
+    </div>
+
     <div class="row wrapper">
         <div class="container">
             <div class="col-md-6 col-md-offset-3">

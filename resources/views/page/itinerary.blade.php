@@ -84,9 +84,9 @@
                                     @endforeach
                                 @endforeach
 
-                                <h4 class="margin-top-20">Include</h4>
+                                <h4 class="margin-top-20">Included</h4>
                                 @php echo $paquetes->incluye; @endphp
-                                <h4 class="margin-top-20">Not Include</h4>
+                                <h4 class="margin-top-20">Not Included</h4>
                                 @php echo $paquetes->noincluye; @endphp
                             </div>
                             <div class="col-md-6">

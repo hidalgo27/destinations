@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\TDestino;
+use App\TImagenTour;
 use App\TItinerarioTour;
 use App\TTour;
 use Illuminate\Http\Request;
@@ -31,8 +33,10 @@ class ToursController extends Controller
     public function destinations($title)
     {
         $destination = str_replace('-', ' ', $title);
+        $destino = TDestino::get()->where('nombre', strtoupper($destination));
+        $imagen = TImagenTour::all();
         $tours = TTour::get()->where('ubicacion', $destination);
-        return view('page.tours-show', ['tours'=>$tours]);
+        return view('page.tours-show', ['tours'=>$tours, 'imagen'=>$imagen, 'destino'=>$destino]);
     }
 
     /**
@@ -55,9 +59,10 @@ class ToursController extends Controller
     public function show($title)
     {
         $title = str_replace('-', ' ', strtoupper($title));
+        $imagen = TImagenTour::all();
         $tours = TTour::with('itinerario_tours')->where('titulo', $title)->get();
 //        dd($tours);
-        return view('page.tours-itinerary', ['tours'=>$tours]);
+        return view('page.tours-itinerary', ['tours'=>$tours, 'imagen'=>$imagen]);
     }
 
     /**

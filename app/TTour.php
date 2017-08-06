@@ -12,4 +12,9 @@ class TTour extends Model
     {
         return $this->hasMany(TItinerarioTour::class, 'idtours');
     }
+
+    public function imagen_tours()
+    {
+        return $this->hasMany(TImagenTour::class, 'idtours');
+    }
 }
