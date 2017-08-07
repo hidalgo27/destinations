@@ -81,7 +81,7 @@
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>
                                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                - {{ucwords(strtolower($paquete_destino->destinos->nombre))}}
+                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
                                             @endforeach
                                         </td>
                                         {{--<td>--}}
