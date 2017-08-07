@@ -57,11 +57,10 @@
                                         </div>
 
                                         <div class="col-md-12 text-left color-green-1 margin-bottom-10">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(2) as $paquete_destino)
-                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                            {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
                                             @endforeach
-                                            ...
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
                                             <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -96,11 +95,10 @@
                                                 <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
                                             </div>
                                             <div class="col-md-12 text-left color-green-1 margin-bottom-10">
-                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
                                                 @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(2) as $paquete_destino)
-                                                    {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                                    *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
                                                 @endforeach
-                                                ...
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
                                                 <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -145,10 +143,9 @@
 
                                             <div class="col-md-12 text-left color-green-1 text-12">
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)
+                                                @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
                                                     {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
                                                 @endforeach
-                                                ...
                                             </div>
 
                                         </div>

@@ -81,12 +81,12 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($paquete as $paquetes)
+                                @foreach($paquete->where('estado',1) as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>
                                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                - {{ucwords(strtolower($paquete_destino->destinos->nombre))}}
+                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
                                             @endforeach
                                         </td>
                                         {{--<td>--}}
@@ -130,23 +130,27 @@
                                 <thead>
                                 <tr>
                                     <th>Package Name</th>
-                                    <th>Description</th>
-                                    <th>Category</th>
+                                    <th>Destinations</th>
+                                    {{--<th>Category</th>--}}
                                     <th class="text-right">Price from</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($paquete as $paquetes)
+                                @foreach($paquete->where('estado',2) as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
-                                        <td>Kilgore</td>
                                         <td>
-
-                                            @foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)
-                                                <a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
                                             @endforeach
-
                                         </td>
+                                        {{--<td>--}}
+
+                                        {{--@foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)--}}
+                                        {{--<a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |--}}
+                                        {{--@endforeach--}}
+
+                                        {{--</td>--}}
                                         <td class="text-right color-orange-2">
                                             @foreach($paquetes->precio_paquetes as $precio)
                                                 @if($precio->estrellas == 2)
@@ -187,7 +191,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($paquete as $paquetes)
+                                @foreach($paquete->where('estado',3) as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>Kilgore</td>
@@ -242,11 +246,10 @@
                                             <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
                                         </div>
                                         <div class="col-md-12 text-left color-green-1 margin-bottom-10">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(2) as $paquete_destino)
-                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                            {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}},
                                             @endforeach
-                                            ...
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
                                             <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
