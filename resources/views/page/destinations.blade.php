@@ -50,8 +50,11 @@
                     <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}"><img src="{{asset('images/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'.jpg')}}" alt="..."></a>
                     <div class="caption clearfix">
                         <h5>{{ucwords(strtolower($destino->nombre))}}</h5>
-                        @php echo substr($destino->tours, 0,190); @endphp...
+                        <div class="box-destinations-t">
+                            @php echo substr($destino->tours, 0,160); @endphp...
+                        </div>
                         <p><a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="btn btn-primary pull-right" role="button">View More</a></p>
+
                     </div>
                 </div>
             </div>

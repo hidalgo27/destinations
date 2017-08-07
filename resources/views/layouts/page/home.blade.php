@@ -30,28 +30,28 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="{{asset('images/slider/slider-1.jpg')}}" alt="...">
-                <div class="carousel-caption col-md-12">
-                    <div class="header-big-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
-                    </div>
-                </div>
+                {{--<div class="carousel-caption col-md-12">--}}
+                    {{--<div class="header-big-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
+                        {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
             <div class="item">
                 <img src="{{asset('images/slider/slider-2.jpg')}}" alt="...">
-                <div class="carousel-caption">
-                    <div class="header-big-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>
-                    </div>
-                    <div class="header-small-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">
-                        <h6 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendis sefaucibus risus sit amet auctor sodales<br> justo erat tempor eros, non </h6>
-                    </div>
-                </div>
+                {{--<div class="carousel-caption">--}}
+                    {{--<div class="header-big-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
+                        {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
+                    {{--</div>--}}
+                    {{--<div class="header-small-text-1 os-animation text-center" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">--}}
+                        {{--<h6 class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Suspendis sefaucibus risus sit amet auctor sodales<br> justo erat tempor eros, non </h6>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
             <div class="item">
                 <img src="{{asset('images/slider/slider-3.jpg')}}" alt="...">
-                <div class="carousel-caption">
+                {{--<div class="carousel-caption">--}}
 
-                </div>
+                {{--</div>--}}
             </div>
         </div>
 
@@ -223,8 +223,8 @@
                     <div class="classus margin-top-10">
                         {{--<a href="mailto:info@peruviandestinations.com"> <b>info@peruviandestinations.com</b></a>--}}
                         {{--<p class="text-12"><a href="tel:+51956235133" class="color-white"><b><i class="fa fa-phone" aria-hidden="true"></i> PERÚ:+51 956-235-133</b></a> | <a href="tel:+18134028042" class="color-white"><b><i class="fa fa-phone" aria-hidden="true"></i> USA:+1(813)402-8042</b></a></p>--}}
-                        <p class="no-margin"><a href="tel:+51956235133"><b>PERÚ:+51 956-235-133</b></a></p>
-                        <p class="no-margin"><a href="tel:+18172304971"><b>USA:+1(813)402-8042</b></a></p>
+                        <p class="no-margin"><a href="tel:+51956235133"><b class="color-black">PERÚ:+51 956-235-133</b></a></p>
+                        <p class="no-margin"><a href="tel:+18172304971"><b class="color-black">USA:+1(813)402-8042</b></a></p>
                     </div>
 
                     {{--<div class="why_bookonline">--}}

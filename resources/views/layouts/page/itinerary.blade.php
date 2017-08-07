@@ -75,8 +75,8 @@
                     </ul>
 
                     <div class="classus margin-top-10">
-                        <p class="no-margin"><a href="tel:+51956235133"><b>PERÚ:+51 956-235-133</b></a></p>
-                        <p class="no-margin"><a href="tel:+18172304971"><b>USA:+1(813)402-8042</b></a></p>
+                        <p class="no-margin"><a href="tel:+51956235133"><b class="color-black">PERÚ:+51 956-235-133</b></a></p>
+                        <p class="no-margin"><a href="tel:+18172304971"><b class="color-black">USA:+1(813)402-8042</b></a></p>
                     </div>
 
                     {{--<div class="why_bookonline">--}}
