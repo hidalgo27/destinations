@@ -108,11 +108,11 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h4 class="text-info">Include</h4>
+                        <h4 class="text-info">Included</h4>
                         @php echo $tour->incluye @endphp
                     </div>
                     <div class="col-md-6">
-                        <h4 class="text-info">Not Include</h4>
+                        <h4 class="text-info">Not Included</h4>
                         @php echo $tour->noincluye @endphp
                     </div>
                 </div>

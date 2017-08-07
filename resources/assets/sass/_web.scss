@@ -84,11 +84,11 @@ h6 {
 .color-white{
   color:#fff !important;
 }
-.color-red-1{color:#f00a77;}
-.color-green-1{color:#008363;}
+.color-red-1{color:#f00a77 !important;}
+.color-green-1{color:#008363 !important;}
 .color-black-1{color:#adadad;}
 .color-orange-1{color:#f2625a;}
-.color-orange-2{color:#f56800;}
+.color-orange-2{color:#f56800 !important;}
 
 .color-facebook{
   background: #3b5998;
@@ -2095,7 +2095,7 @@ body,
   color: #fff;
   font-size: 12px;
 }
-.classus p{color:#4c1f1e;padding-top: 10px;}
+//.classus p{color:#4c1f1e;padding-top: 10px;}
 .why_bookonline p{color:#4c1f1e;   font-family: RadikalW01-Medium; font-size:18px;}
 .medias ul li a:hover {    background: #000;}
 

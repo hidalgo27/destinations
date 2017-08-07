@@ -145,8 +145,8 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <div class="col-md-12 text-center margin-top-20">
-                            <a href="" class="btn btn-danger"><i class="fa fa-envelope-o"></i> Chat</a>
-                            <a href="" class="btn btn-primary">Help me plan my trip</a>
+                            <a href="#" onclick="startOlark()" class="btn btn-danger"><i class="fa fa-commenting-o"></i> Chat</a>
+                            <a href="#inquire" class="btn btn-primary">Help me plan my trip</a>
                             {{--<a href="" class="btn btn-danger">Contact Us</a>--}}
                         </div>
                         {{--<div class="col-md-12 text-center phone-box">--}}
@@ -200,7 +200,7 @@
                                 {{--<li><a href="{{route("testimonials_path")}}">TESTIMONIALS</a></li>--}}
                                 <li><a href="{{route("about_path")}}">ABOUT</a></li>
                                 {{--<li><a href="#">TRAVEL BLOG</a></li>--}}
-                                <li><a href="#inquire" class="color-green-1">EMAIL</a></li>
+                                <li><a href="mailto:info@peruviandestinations.com" class="color-red-1 text-menu-email"><b><i class="fa fa-envelope-o"></i> EMAIL</b></a></li>
 
                             </ul>
                         </div>
@@ -221,7 +221,10 @@
                     </ul>
 
                     <div class="classus margin-top-10">
-                        <a href="mailto:info@peruviandestinations.com"> <b>info@peruviandestinations.com</b></a>
+                        {{--<a href="mailto:info@peruviandestinations.com"> <b>info@peruviandestinations.com</b></a>--}}
+                        {{--<p class="text-12"><a href="tel:+51956235133" class="color-white"><b><i class="fa fa-phone" aria-hidden="true"></i> PERÚ:+51 956-235-133</b></a> | <a href="tel:+18134028042" class="color-white"><b><i class="fa fa-phone" aria-hidden="true"></i> USA:+1(813)402-8042</b></a></p>--}}
+                        <p class="no-margin"><a href="tel:+51956235133"><b>PERÚ:+51 956-235-133</b></a></p>
+                        <p class="no-margin"><a href="tel:+18172304971"><b>USA:+1(813)402-8042</b></a></p>
                     </div>
 
                     {{--<div class="why_bookonline">--}}

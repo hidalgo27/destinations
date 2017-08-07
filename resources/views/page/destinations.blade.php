@@ -26,7 +26,7 @@
                 <h2 class="color-orange-2"><strong>Top Destinations</strong></h2>
                 {{--<h4><b>“Better Hotels and superior Service at the best price”</b></h4>--}}
                 <div class="sec-title-div-1"></div>
-                <p class="margin-bottom-10">Click on each destination to learn more about the place, recommended stay and available tours and packages.</p>
+                <p class="margin-bottom-10 text-20">Click on each destination to learn more about the place, recommended stay and available tours and packages.</p>
                 {{--<p class="margin-bottom-10">Just as thrilling are the lush expanses of Amazon rainforest, the breathtaking vastness of Lake Titicaca, the fantastic food scene in Lima, and the enduring enigma of the Nazca Lines. One thing is certain. Peru has something for everyone. All you have to do is choose where to go and when.</p>--}}
                 {{--<p class="margin-bottom-10"> and we will help you build your dream package.</p>--}}
 
@@ -34,11 +34,11 @@
         </div>
         <div class="row">
             <blockquote>
-                <p class="text-20 text-center"><a href="" class="btn btn-success">Contact Us</a>  and we will help you build your dream package.</p>
+                <p class="text-20 text-center"><a href="#inquire" class="btn btn-success">Contact Us</a>  and we will help you build your dream package.</p>
             </blockquote>
         </div>
         <div class="row">
-            <h4 class="text-center">Today's Destinations</h4>
+            <h4 class="text-center">Peru Destinations</h4>
         </div>
     </div>
 
