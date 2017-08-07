@@ -44,7 +44,7 @@
 
     <div class="container margin-top-60">
         <div class="row">
-            @foreach($destinos->sortBy('nombre') as $destino)
+            @foreach($destinos->where('estado', 1)->sortBy('nombre') as $destino)
             <div class="col-sm-6 col-md-3">
                 <div class="thumbnail thumbnail-destination">
                     <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}"><img src="{{asset('images/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'.jpg')}}" alt="..."></a>
