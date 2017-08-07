@@ -50,7 +50,7 @@
                     <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}"><img src="{{asset('images/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'.jpg')}}" alt="..."></a>
                     <div class="caption clearfix">
                         <h5>{{ucwords(strtolower($destino->nombre))}}</h5>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        @php echo substr($destino->tours, 0,190); @endphp...
                         <p><a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="btn btn-primary pull-right" role="button">View More</a></p>
                     </div>
                 </div>

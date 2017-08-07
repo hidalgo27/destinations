@@ -12,7 +12,7 @@
                         <h2 class="color-orange-2"><strong>Affordable Custom Tours one click away</strong></h2>
                         <h4><b>“Better Hotels and superior Service at the best price”</b></h4>
                         <div class="sec-title-div-1"></div>
-                        <p class="">Finally can you enjoy of superb personalized service and exclusive itineraries as renowned world travel agencies do. With PERUVIAN DESTINATIONS Tour operator you cut off the middlemen, thus saving lots of money. To get a Quick Quote just fill in the form above and you will get a free quote in less than 24 Hours guaranteed..</p>
+                        <p class="text-20">Finally can you enjoy of superb personalized service and exclusive itineraries as renowned world travel agencies do. With <strong>PERUVIAN DESTINATIONS</strong> Tour operator you cut off the middlemen, thus saving lots of money. To get a Quick Quote just fill in the form above and you will get a free quote in less than 24 Hours guaranteed..</p>
                     </div>
                 </div>
 
@@ -20,9 +20,9 @@
                     <div class="col-sm-3">
                         <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
                             <li class="active"><a href="#vtab1" data-toggle="tab" class="text-20">Peru Packages</a></li>
-                            <li><a href="#vtab3" data-toggle="tab" class="text-20">Inca Trail Packages</a></li>
-                            <li><a href="#vtab2" data-toggle="tab" class="text-20">International Extensions</a></li>
-                            <li><a href="#inquire" class="text-20">Customize your Trip</a></li>
+                            <li><a href="#vtab2" data-toggle="tab" class="text-20">Inca Trail Packages</a></li>
+                            <li><a href="#vtab3" data-toggle="tab" class="text-20">International Extensions</a></li>
+                            <li><a href="#inquire" class="text-20 bg-orange color-white">Customize your Trip</a></li>
                         </ul>
 
                         <div class="panel panel-primary">
@@ -503,37 +503,40 @@
                     @foreach($paquete->take(3) as $paquetes)
 
                         <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                            <div class="content-area-2 clearfix">
-                                <div class="content-area-figure-1">
-                                    <img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">
-                                </div>
-                                <div class=" col-md-12 ">
-                                    <div class="travel-duration tx-center">
-                                        <p class="date color-white">{{$paquetes->duracion}}</p>
-                                        <p class="days color-white">days</p>
+                            <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
+                                <div class="content-area-2 clearfix">
+                                    <div class="content-area-figure-1">
+                                        <img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">
                                     </div>
-                                </div>
-                                <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
-                                    <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
-                                </div>
-                                <div class="col-md-12 text-left color-green-1 margin-bottom-10">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(2) as $paquete_destino)
-                                        {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
-                                    @endforeach
-                                    ...
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
-                                    <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                        @foreach($paquetes->precio_paquetes as $precio)
-                                            @if($precio->estrellas == 2)
-                                                <b>${{$precio->precio_d}}</b>
-                                            @endif
-                                        @endforeach
-                                    </h5>
-                                </div>
+                                    <div class=" col-md-12 ">
+                                        <div class="travel-duration tx-center">
+                                            <p class="date color-white">{{$paquetes->duracion}}</p>
+                                            <p class="days color-white">days</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-8 content-area-title-1">
+                                        <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                    </div>
 
-                            </div>
+                                    <div class="col-md-12 text-left color-green-1 margin-bottom-10">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        @foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(2) as $paquete_destino)
+                                            {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                        @endforeach
+                                        ...
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
+                                        <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                            @foreach($paquetes->precio_paquetes as $precio)
+                                                @if($precio->estrellas == 2)
+                                                    <b>${{$precio->precio_d}}</b>
+                                                @endif
+                                            @endforeach
+                                        </h5>
+                                    </div>
+
+                                </div>
+                            </a>
                         </div><!-- /.col-md-4 col -->
                     @endforeach
                 </div><!-- /.row -->
@@ -608,9 +611,9 @@
 
                 <div class="row">
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h5>What it can do for you</h5>
+                        <h5>WHY PERUVIAN DESTINATIONS (PD)?</h5>
                         <div class="sec-title-div-1"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>--}}
                     </div>
                 </div>
 
@@ -625,7 +628,7 @@
                                 <h6>Destinations</h6>
                             </div>
                             <div class="feature-disc-1">
-                                <p>Sed bibendum, arcu ac rhoncu nullalectus dictum mauris massa ipsum in nibh.</p>
+                                <p>At PD we have tours for all destinations in Peru.</p>
                             </div>
 
                         </div>
@@ -640,7 +643,7 @@
                                 <h6>Hot Tours</h6>
                             </div>
                             <div class="feature-disc-1">
-                                <p>Sed bibendum, arcu ac rhoncu nullalectus dictum mauris massa ipsum in nibh.</p>
+                                <p>We are continously improving our Tours for a greater experience.</p>
                             </div>
 
                         </div>
@@ -652,10 +655,10 @@
                                 <img src="{{asset('images/icons/hotel.png')}}" alt="feature">
                             </div>
                             <div class="feature-title-1">
-                                <h6>Hotel Info</h6>
+                                <h6>High Quality Hotels</h6>
                             </div>
                             <div class="feature-disc-1">
-                                <p>Sed bibendum, arcu ac rhoncu nullalectus dictum mauris massa ipsum in nibh.</p>
+                                <p>At PD we offer better Hotels for a more pleasant stay.</p>
                             </div>
 
                         </div>
@@ -667,10 +670,10 @@
                                 <img src="{{asset('images/icons/honeymon.png')}}" alt="feature">
                             </div>
                             <div class="feature-title-1">
-                                <h6>Honeymoons</h6>
+                                <h6>24/7 Tn Trip Assistance</h6>
                             </div>
                             <div class="feature-disc-1">
-                                <p>Sed bibendum, arcu ac rhoncu nullalectus dictum mauris massa ipsum in nibh.</p>
+                                <p>At PD you enjoy 24/7 – 365 in trip travel assistance.</p>
                             </div>
 
                         </div>
@@ -695,11 +698,11 @@
                 <div class="callout-title-2 tx-center color-white">
                     <div class="col-md-2">
                         <i class="fa fa-thumb-tack fa-5x" aria-hidden="true"></i>
-                        <a href="" class="display-block color-orange-2">Destinations</a>
+                        <a href="{{route("destinations_path")}}" class="display-block color-orange-2">Destinations</a>
                     </div>
                     <div class="col-md-2">
                         <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
-                        <a href="" class="display-block color-orange-2">Tours</a>
+                        <a href="{{route("tours_path")}}" class="display-block color-orange-2">Tours</a>
                     </div>
                     <div class="col-md-2">
                         <i class="fa fa-th-large fa-5x" aria-hidden="true"></i>
@@ -707,15 +710,15 @@
                     </div>
                     <div class="col-md-2">
                         <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
-                        <a href="" class="display-block color-orange-2">Travel Packages</a>
+                        <a href="{{route("packages_path")}}" class="display-block color-orange-2">Travel Packages</a>
                     </div>
                     <div class="col-md-2">
                         <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
-                        <a href="" class="display-block color-orange-2">About Us</a>
+                        <a href="{{route("about_path")}}" class="display-block color-orange-2">About Us</a>
                     </div>
                     <div class="col-md-2">
                         <i class="fa fa-comment-o fa-5x" aria-hidden="true"></i>
-                        <a href="" class="display-block color-orange-2">Testimonials</a>
+                        <a href="#inquire" class="display-block color-orange-2">Design my trip</a>
                     </div>
                 </div>
 

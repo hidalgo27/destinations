@@ -67,9 +67,9 @@
                         <li> <a href="mailto:info@peruviandestinations.com" class="bg-orange"> <i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
                         <li> <a href="#" onclick="startOlark()" class="bg-blue-2"> <i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>
                         <li>|</li>
-                        <li> <a href="" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li> <a href="" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                        <li> <a href="" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li> <a href="https://www.facebook.com/peruviandestinations/" target="_blank" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li> <a href="https://www.youtube.com/channel/UCLYoki8IRrP5BoU2PkUc_xA" target="_blank" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li> <a href="https://www.instagram.com/peruviandestinations/" target="_blank" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
                     </ul>
 

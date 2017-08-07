@@ -6,7 +6,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="{{asset('images/packages/banners/1.jpg')}}" alt="...">
+                <img src="{{asset('images/destinations/banners/'.str_replace(' ', '-', strtolower($title)).'.jpg')}}" alt="...">
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
@@ -26,9 +26,15 @@
                 <h2 class="color-orange-2"><strong>{{ucwords(strtolower($title))}}</strong></h2>
                 {{--<h4><b>“Better Hotels and superior Service at the best price”</b></h4>--}}
                 <div class="sec-title-div-1"></div>
-                <p class="margin-bottom-10">Travel to Peru and fuel your imagination on a diet of ancient treasures and wonderful landscapes. Surrounded by majestic Andean peaks, world wonder Machu Picchu and the historic city of Cusco highlight Peru’s dramatic birth from the encounter between Incas and Spaniards.</p>
-                <p class="margin-bottom-10">Just as thrilling are the lush expanses of Amazon rainforest, the breathtaking vastness of Lake Titicaca, the fantastic food scene in Lima, and the enduring enigma of the Nazca Lines. One thing is certain. Peru has something for everyone. All you have to do is choose where to go and when.</p>
-                <p class="margin-bottom-10">Keep reading to see more Peru attractions and destinations and contact us to start planning your own exciting trip to Peru.</p>
+                {{--<p class="margin-bottom-10">Travel to Peru and fuel your imagination on a diet of ancient treasures and wonderful landscapes. Surrounded by majestic Andean peaks, world wonder Machu Picchu and the historic city of Cusco highlight Peru’s dramatic birth from the encounter between Incas and Spaniards.</p>--}}
+                {{--<p class="margin-bottom-10">Just as thrilling are the lush expanses of Amazon rainforest, the breathtaking vastness of Lake Titicaca, the fantastic food scene in Lima, and the enduring enigma of the Nazca Lines. One thing is certain. Peru has something for everyone. All you have to do is choose where to go and when.</p>--}}
+                {{--<p class="margin-bottom-10">Keep reading to see more Peru attractions and destinations and contact us to start planning your own exciting trip to Peru.</p>--}}
+                <div class="text-left">
+                    @foreach($destinos->where('nombre', str_replace(' ','-', strtoupper($title))) as $des)
+                            @php echo $des->tours; @endphp
+
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -63,8 +69,7 @@
                         <thead>
                         <tr>
                             <th>Package Name</th>
-                            <th>Description</th>
-                            <th>Category</th>
+                            <th>Destinations</th>
                             <th class="text-right">Price from</th>
                         </tr>
                         </thead>
@@ -74,14 +79,18 @@
                                 @foreach($paquete->where('id',$paquetes_des->paquetes->id)->sortBy("duracion") as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
-                                        <td>Kilgore</td>
                                         <td>
-
-                                                @foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)
-                                                <a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |
-                                                @endforeach
-
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                - {{ucwords(strtolower($paquete_destino->destinos->nombre))}}
+                                            @endforeach
                                         </td>
+                                        {{--<td>--}}
+
+                                                {{--@foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)--}}
+                                                {{--<a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |--}}
+                                                {{--@endforeach--}}
+
+                                        {{--</td>--}}
                                         <td class="text-right color-orange-2">
                                             @foreach($paquetes->precio_paquetes as $precio)
                                                 @if($precio->estrellas == 2)
@@ -103,7 +112,7 @@
 
     <div class="container margin-top-20" id="tours">
         <div class="row">
-            <h4 class="text-center">Peru Tours</h4>
+            <h4 class="text-center">{{ucwords(strtolower($title))}} Tours</h4>
         </div>
         <div class="row margin-top-30">
             <div class="col-md-12">
