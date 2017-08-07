@@ -30,7 +30,7 @@
                 {{--<p class="margin-bottom-10">Just as thrilling are the lush expanses of Amazon rainforest, the breathtaking vastness of Lake Titicaca, the fantastic food scene in Lima, and the enduring enigma of the Nazca Lines. One thing is certain. Peru has something for everyone. All you have to do is choose where to go and when.</p>--}}
                 {{--<p class="margin-bottom-10">Keep reading to see more Peru attractions and destinations and contact us to start planning your own exciting trip to Peru.</p>--}}
                 <div class="text-left">
-                    @foreach($destinos->where('nombre', str_replace(' ','-', strtoupper($title))) as $des)
+                    @foreach($destinos->where('nombre', str_replace('-',' ', strtoupper($title))) as $des)
                             @php echo $des->tours; @endphp
 
                     @endforeach
