@@ -2070,11 +2070,11 @@ body,
 
 
 .jain_container{ margin:0px; padding:0px;}
-.jain_container .medias{margin-top: 15px;}
+//.jain_container .medias{margin-top: 15px;}
 .jain_container .medias ul{ padding:0px; margin:0px; }
 .jain_container .medias ul li{  display:inline;  padding:7px 0px;}
 /* .jain_container .medias i {    font-size: 18px;} */
-.jain_container  .navbar-brand{ height:inherit;}
+.jain_container  .navbar-brand{ height:inherit; padding: 5px !important;}
 
 
 .jain_container .navbar-default{position: absolute;    top: 50px;     background-color: rgba(255, 255, 255, 0.72);}
@@ -2084,10 +2084,10 @@ body,
 //.jain_container .navbar-nav{    margin-top: 20px;}
 
 .medias ul li a {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   border: 1px solid #fff;
-  line-height: 30px;
+  line-height: 25px;
   //background: #4c1f1e;
   border-radius: 50%;
   display: inline-block;
@@ -2137,9 +2137,9 @@ body,
 
 .phone-box{
   background: #535354;
-  padding: 2px;
-  margin-bottom: 8px;
-  border-radius: 0 0 5px 5px;
+  padding: 5px 0;
+  //margin-bottom: 8px;
+  //border-radius: 0 0 5px 5px;
 }
 //----------web
 //BANNER OFFERS

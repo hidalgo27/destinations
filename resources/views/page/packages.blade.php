@@ -25,14 +25,14 @@
                 <h2 class="color-orange-2"><strong>Tour Packages</strong></h2>
                 {{--<h4><b>“Better Hotels and superior Service at the best price”</b></h4>--}}
                 <div class="sec-title-div-1"></div>
-                <p class="margin-bottom-10">We have designed a collection of Travel Packages based on the must see destinations in Peru and South America.</p>
-                <p>As a Tour Operator Company, at Peruvian Destinations we can always build your own exclusive tailor-made Itinerary based on your needs, preferences and budget.</p>
-                <p class="margin-bottom-10">With tours available 365 days a year and in-travel assistance 24/7, we represent the best option!</p>
+                <p class="margin-bottom-10 text-20">We have designed a collection of Travel Packages based on the must see destinations in Peru and South America.</p>
+                <p class="text-20">As a Tour Operator Company, at Peruvian Destinations we can always build your own exclusive tailor-made Itinerary based on your needs, preferences and budget.</p>
+                <p class="margin-bottom-10 text-20">With tours available 365 days a year and in-travel assistance 24/7, we represent the best option!</p>
             </div>
         </div>
         <div class="row">
             <blockquote>
-                <p class="text-20 text-center">"Our tours leave 365 days a year! We sell virtually all services available in Peru.”</p>
+                <p class="text-25 text-center">"Our tours leave 365 days a year! We sell virtually all services available in Peru.”</p>
             </blockquote>
         </div>
     </div>
@@ -43,7 +43,7 @@
         <!-- Nav tabs -->
             <div class="text-center margin-bottom-20">
                 <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="btn btn-info"><i class="fa fa-list" aria-hidden="true"></i> List</a>
-                <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="btn btn-success"><i class="fa fa-th" aria-hidden="true"></i> Desing</a>
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="btn btn-success"><i class="fa fa-th" aria-hidden="true"></i> Design</a>
             </div>
 
         <!-- Tab panes -->

@@ -26,19 +26,19 @@
                 <h2 class="color-orange-2"><strong>CITY TOURS</strong></h2>
                 {{--<h4><b>“Better Hotels and superior Service at the best price”</b></h4>--}}
                 <div class="sec-title-div-1"></div>
-                <p class="margin-bottom-10">Get the most out of your stay with this selection of tours and experience each destination to the fullest.</p>
-                <p class="margin-bottom-10">For your convenience and base on your preferences you can opt to be part of a small group or alternatively go on a private tour.</p>
+                <p class="margin-bottom-10 text-20">Get the most out of your stay with this selection of tours and experience each destination to the fullest.</p>
+                <p class="margin-bottom-10 text-20">For your convenience and base on your preferences you can opt to be part of a small group or alternatively go on a private tour.</p>
             </div>
         </div>
         <div class="row">
             <blockquote>
-                <p class="text-20 text-center">All tours are available 365 days a year.</p>
+                <p class="text-25 text-center">All tours are available 365 days a year.</p>
             </blockquote>
         </div>
     </div>
 
 
-    <div class="container">
+    <div class="container margin-top-20">
         <div class="row">
             @foreach($tours->unique('ubicacion') as $tour)
                 @php
@@ -48,7 +48,7 @@
                     <div class="box-tours position-relative text-center">
                         <a href="{{route('tours_destinations_show_path', str_replace(' ', '-', strtolower($tour->ubicacion)))}}">
                             <img src="{{asset('images/destinations/'.$ubicacion[0].'.jpg')}}" alt="" class="img-responsive">
-                            <span><i>{{ucwords($tour->ubicacion)}} Tours</i></span>
+                            <span><b><i>{{ucwords($tour->ubicacion)}} Tours</i></b></span>
                         </a>
                     </div>
                 </div>

@@ -10,9 +10,10 @@
                 <div class="row margin-bottom-20">
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <h2 class="color-orange-2"><strong>Affordable Custom Tours one click away</strong></h2>
-                        <h4><b>“Better Hotels and superior Service at the best price”</b></h4>
+                        <h4 class="text-primary"><b>“Better Hotels and superior Service at the best price”</b></h4>
                         <div class="sec-title-div-1"></div>
-                        <p class="text-20">Finally can you enjoy of superb personalized service and exclusive itineraries as renowned world travel agencies do. With <strong>PERUVIAN DESTINATIONS</strong> Tour operator you cut off the middlemen, thus saving lots of money. To get a Quick Quote just fill in the form above and you will get a free quote in less than 24 Hours guaranteed..</p>
+                        <p class="text-20">Finally can you enjoy of superb personalized service and exclusive itineraries as renowned world travel agencies do. With <strong>PERUVIAN DESTINATIONS</strong> Tour operator you cut off the middlemen, thus saving lots of money. To get a
+                            <a href="#inquire"><b>Quick Quote</b></a> just fill in the form below and you will get a free quote in less than 24 Hours guaranteed.</p>
                     </div>
                 </div>
 
@@ -59,7 +60,7 @@
                                         <div class="col-md-12 text-left color-green-1 margin-bottom-10">
                                             {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
                                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
                                             @endforeach
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
@@ -491,7 +492,7 @@
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <h5 class="">Machu Picchu Travel Packages</h5>
                         <div class="sec-title-div-1"></div>
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+                        {{--<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>--}}
                     </div>
                 </div>
 
@@ -694,27 +695,27 @@
 
                 <div class="callout-title-2 tx-center color-white">
                     <div class="col-md-2">
-                        <i class="fa fa-thumb-tack fa-5x" aria-hidden="true"></i>
+                        <a href="{{route("destinations_path")}}" class="color-white"><i class="fa fa-thumb-tack fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("destinations_path")}}" class="display-block color-orange-2">Destinations</a>
                     </div>
                     <div class="col-md-2">
-                        <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
+                        <a href="{{route("tours_path")}}" class="color-white"><i class="fa fa-flag fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("tours_path")}}" class="display-block color-orange-2">Tours</a>
                     </div>
                     <div class="col-md-2">
-                        <i class="fa fa-th-large fa-5x" aria-hidden="true"></i>
-                        <a href="" class="display-block color-orange-2">Travel Blog</a>
+                        <a href="http://peruviandestinations1.blogspot.pe/" class="color-white"><i class="fa fa-th-large fa-5x" aria-hidden="true"></i></a>
+                        <a href="http://peruviandestinations1.blogspot.pe/" class="display-block color-orange-2">Travel Blog</a>
                     </div>
                     <div class="col-md-2">
-                        <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
+                        <a href="{{route("packages_path")}}" class="color-white"><i class="fa fa-globe fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("packages_path")}}" class="display-block color-orange-2">Travel Packages</a>
                     </div>
                     <div class="col-md-2">
-                        <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+                        <a href="{{route("about_path")}}" class="color-white"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("about_path")}}" class="display-block color-orange-2">About Us</a>
                     </div>
                     <div class="col-md-2">
-                        <i class="fa fa-comment-o fa-5x" aria-hidden="true"></i>
+                        <a href="#inquire" class="color-white"><i class="fa fa-pencil fa-5x" aria-hidden="true"></i></a>
                         <a href="#inquire" class="display-block color-orange-2">Design my trip</a>
                     </div>
                 </div>

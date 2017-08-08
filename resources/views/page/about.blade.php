@@ -64,7 +64,7 @@
                             </div>
                             <div class="even-date">
                                 <i class="fa fa-envelope"></i>
-                                <p>salesd@peruviandestinations.com</p>
+                                <p>sales@peruviandestinations.com</p>
                             </div>
                             <div class="even-date">
                                 <i class="fa fa-skype"></i>
@@ -91,8 +91,8 @@
                     <div class="arrow"></div>
                 </blockquote>
                 <img src="{{asset("images/marco.jpg")}}" alt="sample3" class="img-responsive"/>
-                <div class="author">
-                    <h5>MARCO HERRERA <span>- CEO</span></h5>
+                <div class="author text-center">
+                    <h5>MARCO HERRERA <span class="display-block text-18">CEO</span></h5>
                 </div>
             </figure>
             <figure class="snip1139 col-md-6 hover">
@@ -102,8 +102,8 @@
                     <div class="arrow"></div>
                 </blockquote>
                 <img src="{{asset("images/betty.jpg")}}" alt="sample3" class="img-responsive"/>
-                <div class="author">
-                    <h5>BETTY LEYVA<span>- Group Organization Manager</span></h5>
+                <div class="author text-center">
+                    <h5>BETTY LEYVA <span class="display-block text-18">Group Organization Manager</span></h5>
                 </div>
             </figure>
         </div>
