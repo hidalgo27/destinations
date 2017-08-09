@@ -22,6 +22,7 @@ mix.scripts([
     'resources/assets/js/vendors/jquery-ui.js',
     'resources/assets/js/vendors/viedolightbox/video.js',
     'resources/assets/js/vendors/jquery.waypoints.min.js',
+    'resources/assets/js/vendors/masonry.pkgd.js',
     //Customized
     'resources/assddssets/js/vendors/function-admin.js',
     'resources/assets/js/vendors/function.js',

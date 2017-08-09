@@ -51,9 +51,9 @@
                     <div class="caption clearfix">
                         <h5>{{ucwords(strtolower($destino->nombre))}}</h5>
                         <div class="box-destinations-t">
-                            @php echo substr($destino->tours, 0,160); @endphp...
+                            @php echo substr($destino->tours, 0,150); @endphp...
                         </div>
-                        <p><a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="btn btn-primary pull-right" role="button">View More</a></p>
+                        <p class="margin-top-20"><a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="btn btn-primary pull-right" role="button">View More</a></p>
 
                     </div>
                 </div>

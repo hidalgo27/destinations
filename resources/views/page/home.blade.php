@@ -38,10 +38,10 @@
                     </div>
                     <div class="col-sm-9">
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
+                            <div role="tabpanel" class="tab-pane fade in active grid" id="vtab1">
                                 @foreach($paquete->take(6) as $paquetes)
 
-                                <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation grid-item" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                     <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
                                     <div class="content-area-2 clearfix">
                                         <div class="content-area-figure-1">
@@ -59,8 +59,14 @@
 
                                         <div class="col-md-12 text-left color-green-1 margin-bottom-10">
                                             {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
+
+                                            @php
+                                                $i = 1;
+                                                $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                            @endphp
                                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@endif
+                                                @php $i++; @endphp
                                             @endforeach
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-4 travel-price">

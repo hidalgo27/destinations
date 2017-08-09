@@ -32,7 +32,6 @@
                 <div class="text-left">
                     @foreach($destinos->where('nombre', str_replace('-',' ', strtoupper($title))) as $des)
                             @php echo $des->tours; @endphp
-
                     @endforeach
                 </div>
             </div>
@@ -42,75 +41,13 @@
     <div class="container">
         <div class="row">
             <div class="alert alert-warning" role="alert">
-                <h5 class="text-center"><a href="#packages">Peru Travel Packages</a> | <a href="#tours">Peru Tours</a></h5>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="packages">
-        <div class="row">
-            <h4 class="text-center">Peru Travel Packages</h4>
-        </div>
-        <div class="row margin-top-30">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Travel Packages</h3>
-                        <div class="pull-right">
-							<span class="clickable filter">
-								<i class="glyphicon glyphicon-filter"></i>
-							</span>
-                        </div>
-                    </div>
-                    <div class="panel-body panel-body-destinations">
-                        <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Packages" />
-                    </div>
-                    <table class="table table-hover" id="dev-table">
-                        <thead>
-                        <tr>
-                            <th>Package Name</th>
-                            <th>Destinations</th>
-                            <th class="text-right">Price from</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($paquetes_de as $paquetes_des)
-                            @if(isset($paquetes_des->destinos))
-                                @foreach($paquete->where('id',$paquetes_des->paquetes->id)->sortBy("duracion") as $paquetes)
-                                    <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
-                                        <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
-                                        <td>
-                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
-                                            @endforeach
-                                        </td>
-                                        {{--<td>--}}
-
-                                                {{--@foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)--}}
-                                                {{--<a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |--}}
-                                                {{--@endforeach--}}
-
-                                        {{--</td>--}}
-                                        <td class="text-right color-orange-2">
-                                            @foreach($paquetes->precio_paquetes as $precio)
-                                                @if($precio->estrellas == 2)
-                                                    ${{$precio->precio_d}}
-                                                @endif
-                                            @endforeach
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            @endif
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                <h5 class="text-center"><a href="#tours">{{ucwords(strtolower($title))}} Tours</a> | <a href="#packages">Tours Packages</a></h5>
             </div>
         </div>
     </div>
 
 
-    <div class="container margin-top-20" id="tours">
+    <div class="container" id="tours">
         <div class="row">
             <h4 class="text-center">{{ucwords(strtolower($title))}} Tours</h4>
         </div>
@@ -161,5 +98,70 @@
         </div>
     </div>
 
+    <div class="container margin-top-20" id="packages">
+        <div class="row">
+            <h4 class="text-center">Tours Packages</h4>
+        </div>
+        <div class="row margin-top-30">
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tours Packages</h3>
+                        <div class="pull-right">
+							<span class="clickable filter">
+								<i class="glyphicon glyphicon-filter"></i>
+							</span>
+                        </div>
+                    </div>
+                    <div class="panel-body panel-body-destinations">
+                        <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Packages" />
+                    </div>
+                    <table class="table table-hover" id="dev-table">
+                        <thead>
+                        <tr>
+                            <th>Package Name</th>
+                            <th>Destinations</th>
+                            <th class="text-right">Price from</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($paquetes_de as $paquetes_des)
+                            @if(isset($paquetes_des->destinos))
+                                @foreach($paquete->where('id',$paquetes_des->paquetes->id)->sortBy("duracion") as $paquetes)
+                                    <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
+                                        <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
+                                        <td>
+                                            @php
+                                                $i = 1;
+                                                $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                            @endphp
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@endif
+                                                @php $i++; @endphp
+                                            @endforeach
+                                        </td>
+                                        {{--<td>--}}
 
+                                        {{--@foreach($paquete_categoria->where('idpaquetes',$paquetes->id) as $paquete_categorias)--}}
+                                        {{--<a href="#">{{ucfirst(strtolower($paquete_categorias->categoria->nombre))}}</a> |--}}
+                                        {{--@endforeach--}}
+
+                                        {{--</td>--}}
+                                        <td class="text-right color-orange-2">
+                                            @foreach($paquetes->precio_paquetes as $precio)
+                                                @if($precio->estrellas == 2)
+                                                    ${{$precio->precio_d}}
+                                                @endif
+                                            @endforeach
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop

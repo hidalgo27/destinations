@@ -200,58 +200,7 @@
 
     @include("layouts.page.form.default-from")
 
-    <footer class="item footer  footer-2" id="footer-2">
-        <div class="row"><!--.row -->
-
-            <div class="container"><!-- container -->
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-2-box tx-center">
-                            <div class="footer-2-icon"><i class="fa fa-map-marker"></i></div>
-                            <div class="footer-title-1">
-                                <h5>ADDRESS</h5>
-                            </div>
-                            <div class="footer-disc-1">
-                                <p>250 Elizabeth Str., Melbourne, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-2-box tx-center">
-                            <div class="footer-2-icon"><i class="fa fa-map-marker"></i></div>
-                            <div class="footer-title-1">
-                                <h5>ADDRESS</h5>
-                            </div>
-                            <div class="footer-disc-1">
-                                <p>250 Elizabeth Str., Melbourne, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-2-box tx-center">
-                            <div class="footer-2-icon"><i class="fa fa-map-marker"></i></div>
-                            <div class="footer-title-1">
-                                <h5>ADDRESS</h5>
-                            </div>
-                            <div class="footer-disc-1">
-                                <p>250 Elizabeth Str., Melbourne, Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-social-2 tx-center">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    </ul>
-                </div>
-                <div class="copyright-text-1 tx-center">
-                    <p>© Travel 2017, All Rights Reserved, Developed by Hidalgo</p>
-                </div>
-            </div><!-- /.container -->
-        </div><!-- /.row -->
-    </footer><!-- /.item -->
+    @include("layouts.page.footer")
 </div><!-- /#page -->
 
 

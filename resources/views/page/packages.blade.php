@@ -85,9 +85,19 @@
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>
-                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
-                                            @endforeach
+
+                                                @php
+                                                    $i = 1;
+                                                    $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                                @endphp
+                                                @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                    {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@endif
+                                                    @php $i++; @endphp
+                                                @endforeach
+
+                                            {{--@foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)--}}
+                                                {{--*{{ucwords(strtolower($paquete_destino->destinos->nombre))}}--}}
+                                            {{--@endforeach--}}
                                         </td>
                                         {{--<td>--}}
 
@@ -140,8 +150,13 @@
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
                                         <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
                                         <td>
+                                            @php
+                                                $i = 1;
+                                                $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                            @endphp
                                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}}
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@endif
+                                                @php $i++; @endphp
                                             @endforeach
                                         </td>
                                         {{--<td>--}}
@@ -247,8 +262,13 @@
                                         </div>
                                         <div class="col-md-12 text-left color-green-1 margin-bottom-10">
                                             {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
+                                            @php
+                                                $i = 1;
+                                                $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                            @endphp
                                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                *{{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@endif
+                                                @php $i++; @endphp
                                             @endforeach
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-4 travel-price">

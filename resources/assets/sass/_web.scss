@@ -950,7 +950,7 @@ header .navbar-white a {
 .content-area-2{border-bottom:2px solid #00b4e9;margin-bottom:30px;}
 .travel-price h6{color:#00b4e9;}
 .content-area-packages{
-  height: 410px;
+  height: 470px;
 }
 .travel-duration{
   background:#00b4e9;
@@ -1299,7 +1299,7 @@ header .navbar-white a {
 
 /*FOOTER 2 travel*/
 
-.footer-2{background:#222;padding:120px 15px 70px;}
+.footer-2{background:#222;padding:60px 15px 20px;}
 .footer-2-box{border:1px solid #444;padding-bottom:20px;margin-bottom:70px;}
 .footer-2-icon{color:#777;font-size:40px;border:1px solid #444;margin:-50px auto 30px;width:100px;height:100px;background:#222;line-height:2.4;}
 .footer-2-icon i{line-height:2.4;}
@@ -2094,6 +2094,16 @@ body,
   text-align: center;
   color: #fff;
   font-size: 12px;
+}
+.medias-footer ul li{
+  display: inline-block;
+  list-style: none;
+}
+.medias-footer ul li a{
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  font-size: 18px;
 }
 //.classus p{color:#4c1f1e;padding-top: 10px;}
 .why_bookonline p{color:#4c1f1e;   font-family: RadikalW01-Medium; font-size:18px;}
