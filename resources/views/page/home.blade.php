@@ -26,7 +26,7 @@
                             <li><a href="#inquire" class="text-20 bg-orange color-white">Customize your Trip</a></li>
                         </ul>
 
-                        <div class="panel panel-primary">
+                        <div class="panel panel-primary hidden-xs">
                             <div class="panel-heading">
                                 <h3 class="panel-title text-center">Our Promise</h3>
                             </div>
@@ -47,13 +47,13 @@
                                         <div class="content-area-figure-1">
                                             <img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">
                                         </div>
-                                        <div class=" col-md-12 ">
+                                        <div class=" col-md-12">
                                             <div class="travel-duration tx-center">
                                                 <p class="date color-white">{{$paquetes->duracion}}</p>
                                                 <p class="days color-white">days</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-8 content-area-title-1">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 content-area-title-1">
                                             <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
                                         </div>
 
@@ -69,7 +69,7 @@
                                                 @php $i++; @endphp
                                             @endforeach
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 travel-price">
                                             <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                                 @foreach($paquetes->precio_paquetes as $precio)
                                                     @if($precio->estrellas == 2)
@@ -518,7 +518,7 @@
                                             <p class="days color-white">days</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-8 content-area-title-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 content-area-title-1">
                                         <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
                                     </div>
 
@@ -529,7 +529,7 @@
                                         @endforeach
                                         ...
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 travel-price">
                                         <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                             @foreach($paquetes->precio_paquetes as $precio)
                                                 @if($precio->estrellas == 2)
@@ -693,7 +693,7 @@
     </div><!-- /.item -->
 
 
-    <div class="item callout-7" id="callout-7">
+    <div class="item callout-7 hidden-xs" id="callout-7">
 
         <div class="row"><!--.row -->
 

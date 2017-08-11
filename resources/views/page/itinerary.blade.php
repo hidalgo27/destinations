@@ -159,7 +159,7 @@
                                                     </h4>
                                                 </div>
                                                 <div id="{{$itinerario->id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
+                                                    <div class="panel-body tour-description">
                                                         @php echo $itinerario->descripcion; @endphp
                                                     </div>
                                                 </div>

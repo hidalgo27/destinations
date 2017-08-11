@@ -58,7 +58,7 @@
                         @endforeach
                     </strong></h2>
                 <div class="sec-title-div-1"></div>
-                <div class="text-justify">
+                <div class="text-justify tour-description">
                     @foreach($destino as $destinations)
                         @php echo $destinations->tours; @endphp
                     @endforeach
@@ -69,7 +69,7 @@
 
 
     <div class="container margin-top-40">
-        @foreach($tours as $tour)
+        @foreach($tours->where('estado', 1) as $tour)
             <div class="row margin-bottom-20 box-tours-d">
 
                     <div class="col-md-7">
@@ -119,7 +119,11 @@
                                     <p class="text-center no-padding"><b>Group Tour</b></p>
                                 </div>
                                 <div class="panel-body text-center">
-                                    <p class="no-padding text-25"><strong>USD <sup>$</sup>{{$tour->precio_g}}</strong></p>
+                                    @if($tour->precio_g == 0 OR $tour->precio_g == "" OR $tour->precio_g == NULL)
+                                        <b>UPON REQUEST</b>
+                                    @else
+                                        <p class="no-padding text-25"><strong>USD <sup>$</sup>{{$tour->precio_g}}</strong></p>
+                                    @endif
                                 </div>
                                 <ul class="list-group list-group-flush text-center">
                                     <li class="list-group-item color-black-1"><i class="fa fa-bell" aria-hidden="true"></i> <i>Price per Person</i></li>
@@ -129,10 +133,14 @@
                         <div class="col-md-6">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
-                                    <p class="text-center no-padding"><b>Group Tour</b></p>
+                                    <p class="text-center no-padding"><b>Private Tour</b></p>
                                 </div>
                                 <div class="panel-body text-center">
-                                    <p class="no-padding text-25"><strong>USD <sup>$</sup>{{$tour->precio_p}}</strong></p>
+                                    @if($tour->precio_p == 0 OR $tour->precio_p == "" OR $tour->precio_p == NULL)
+                                        <b>UPON REQUEST</b>
+                                    @else
+                                        <p class="no-padding text-25"><strong>USD <sup>$</sup>{{$tour->precio_p}}</strong></p>
+                                    @endif
                                 </div>
                                 <ul class="list-group list-group-flush text-center">
                                     <li class="list-group-item color-black-1"><i class="fa fa-bell" aria-hidden="true"></i> <i>Price per Person</i></li>

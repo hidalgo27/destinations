@@ -83,7 +83,7 @@
                                 <tbody>
                                 @foreach($paquete->where('estado',1) as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
-                                        <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
+                                        <td class="text-primary">{{$paquetes->duracion}} Days {{ucwords(strtolower($paquetes->titulo))}}</td>
                                         <td>
 
                                                 @php
@@ -148,7 +148,7 @@
                                 <tbody>
                                 @foreach($paquete->where('estado',2) as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
-                                        <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
+                                        <td class="text-primary">{{$paquetes->duracion}} Days {{ucwords(strtolower($paquetes->titulo))}}</td>
                                         <td>
                                             @php
                                                 $i = 1;
@@ -208,7 +208,7 @@
                                 <tbody>
                                 @foreach($paquete->where('estado',3) as $paquetes)
                                     <tr onClick="CrearEnlace('{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}');" class="clickable">
-                                        <td class="text-primary">{{$paquetes->duracion}} days {{ucfirst(strtolower($paquetes->titulo))}}</td>
+                                        <td class="text-primary">{{$paquetes->duracion}} Days {{ucwords(strtolower($paquetes->titulo))}}</td>
                                         <td>Kilgore</td>
                                         <td>
 

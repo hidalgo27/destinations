@@ -42,7 +42,7 @@
 
                 <div class="row margin-bottom-20">
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h2 class="color-orange-2">
+                        <h2 class="color-orange-2 text-40">
                             <strong>
                                 @foreach($tours as $tour)
                                     {{$tour->titulo}}
@@ -97,13 +97,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 margin-top-20">
                         <h4 class="text-info">Description</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        @php echo $tour->descripcion @endphp
+                        <div class="tour-description">
+                            @php echo $tour->descripcion @endphp
+                        </div>
                     </div>
                 </div>
                 <div class="row">

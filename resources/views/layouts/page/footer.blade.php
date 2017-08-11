@@ -5,12 +5,12 @@
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <h5 class="color-orange-2">PERUVIAN DESTINATIONS</h5>
-                    <p><i class="fa fa-location-arrow"></i> Av Segio Bernales 145 Int. 1002 - Surquillo</p>
+                    <p><i class="fa fa-location-arrow"></i> Av. Jose Larco 101 Oficina 006 Miraflores. LIMA</p>
                     <p><i class="fa fa-file-pdf-o"></i> Privacy Policy</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <h5 class="color-orange-2">SALES & TRAVEL SUPPORT</h5>
-                    <p><i class="fa fa-check"></i> EE.UU: (813) 402-8042</p>
+                    <p><i class="fa fa-check"></i> EE.UU: +1  813 336.22202</p>
                     <p><i class="fa fa-check"></i> PERU: (51) 956-235-133</p>
                     <p><i class="fa fa-envelope"></i> MAIL: sales@peruviandestinations.com</p>
                 </div>
