@@ -42,7 +42,7 @@
 
                 <div class="row margin-bottom-20">
                     <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
-                        <h2 class="color-orange-2 text-40">
+                        <h2 class="color-orange-2 text-30">
                             <strong>
                                 @foreach($tours as $tour)
                                     {{$tour->titulo}}
