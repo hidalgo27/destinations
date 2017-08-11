@@ -147,12 +147,21 @@
                         <td>{{$tour->duracion}}</td>
                     </tr>
                     <tr>
-                        <td><b>Price per Person (Group Tour):</b></td>
-                        <td>USD ${{$tour->precio_g}}</td>
+                        <td><b>Price per Person <br>(Group Tour):</b></td>
+                        @if($tour->precio_g == 0 OR $tour->precio_g == "" OR $tour->precio_g == NULL)
+                            <td>UPON REQUEST</td>
+                        @else
+                            <td>USD ${{$tour->precio_g}}</td>
+                        @endif
+
                     </tr>
                     <tr>
-                        <td><b>Price per Person (Private Tour):</b></td>
-                        <td>USD ${{$tour->precio_p}}</td>
+                        <td><b>Price per Person <br>(Group Tour):</b></td>
+                        @if($tour->precio_p == 0 OR $tour->precio_p == "" OR $tour->precio_p == NULL)
+                            <td><b>UPON REQUEST</b></td>
+                        @else
+                            <td>USD ${{$tour->precio_p}}</td>
+                        @endif
                     </tr>
                     </tbody>
                 </table>
