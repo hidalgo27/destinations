@@ -123,6 +123,7 @@
                     <div class="col-md-12 text-justify">
                         @foreach($tour->itinerario_tours->take(1) as $itinerario_i)
                             @if(isset($itinerario_i))
+                                
                                 <h4 class="text-info">Itinerary</h4>
                                 @foreach($tour->itinerario_tours as $itinerario)
                                     <h5><b>{{$itinerario->dia}}.</b> {{$itinerario->titulo}}</h5>
