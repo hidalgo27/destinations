@@ -177,8 +177,8 @@
                             {{--</div>--}}
                         </div>
                         <div role="tabpanel" class="tab-pane clearfix" id="prices">
-                            <div class="col-md-12">
-                                <table class="table table-responsive">
+                            <div class="col-md-12 table-responsive">
+                                <table class="table">
                                     {{--<caption>Price per person</caption>--}}
                                     <thead>
                                     <tr>
