@@ -119,15 +119,19 @@
                     </div>
                 </div>
 
-                {{--<div class="row">--}}
-                    {{--<div class="col-md-12">--}}
-                        {{--<h4 class="text-info">Itinerary</h4>--}}
-                        {{--@foreach($tour->itinerario_tours as $itinerario)--}}
-                            {{--<h5>{{$itinerario->titulo}}</h5>--}}
-                            {{--@php echo $itinerario->descripcion @endphp--}}
-                        {{--@endforeach--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+                <div class="row">
+                    <div class="col-md-12 text-justify">
+                        @foreach($tour->itinerario_tours->take(1) as $itinerario_i)
+                            @if(isset($itinerario_i))
+                                <h4 class="text-info">Itinerary</h4>
+                                @foreach($tour->itinerario_tours as $itinerario)
+                                    <h5><b>{{$itinerario->dia}}.</b> {{$itinerario->titulo}}</h5>
+                                    @php echo $itinerario->descripcion @endphp
+                                @endforeach
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
             </div>
             <div class="col-md-5">
                 <table class="table table-bordered condensed">
