@@ -37,25 +37,25 @@
                                     <h5>HOTEL CATEGORY</h5>
                                 </div>
                                 <div class="btn-group col-md-12" data-toggle="buttons">
-                                    <label class="btn btn-details col-md-3">
+                                    <label class="btn btn-details col-md-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Budget 2">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Budget 2 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-3">
+                                    <label class="btn btn-details col-md-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Best Value 3">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Best Value 3 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-3">
+                                    <label class="btn btn-details col-md-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Superior 4">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Superior 4 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-3">
+                                    <label class="btn btn-details col-md-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Luxury 5">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
@@ -68,37 +68,37 @@
                                 </div>
 
                                 <div class="btn-group col-md-12 margin-top-10" data-toggle="buttons">
-                                    <label class="btn btn-details col-md-2">
+                                    <label class="btn btn-details col-md-2 col-xs-4">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="1 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>1 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2">
+                                    <label class="btn btn-details col-md-2 col-xs-4">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="2 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>2 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2">
+                                    <label class="btn btn-details col-md-2 col-xs-4">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="3 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>3 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2">
+                                    <label class="btn btn-details col-md-2 col-xs-4">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="4 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>4 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2">
+                                    <label class="btn btn-details col-md-2 col-xs-4">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="5 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>5 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2">
+                                    <label class="btn btn-details col-md-2 col-xs-4">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="Undecided">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>

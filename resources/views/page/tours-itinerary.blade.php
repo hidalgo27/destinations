@@ -12,7 +12,9 @@
                         $ubicacion = explode(",", $tour->ubicacion);
                     @endphp
 
-                    <img src="{{asset('images/destinations/banners/'.$ubicacion[0].'.jpg')}}" alt="...">
+                    <img src="{{asset('images/destinations/banners/'.str_replace(' ','-',$ubicacion[0]).'.jpg')}}" alt="..." class="hidden-xs">
+                    <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
+
                 @endforeach
 {{--                <img src="{{asset('images/packages/banners/1.jpg')}}" alt="...">--}}
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
@@ -59,7 +61,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <div class="row">
+                <div class="row margin-bottom-20">
                     <div class="col-md-12">
                         <div id="carousel-{{$tour->id}}" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
@@ -96,6 +98,7 @@
                         </div>
                     </div>
                 </div>
+                @if(isset($tour->descripcion))
                 <div class="row">
                     <div class="col-md-12 margin-top-20">
                         <h4 class="text-info">Description</h4>
@@ -108,6 +111,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="row">
                     <div class="col-md-6">
                         <h4 class="text-info">Included</h4>
@@ -123,10 +127,10 @@
                     <div class="col-md-12 text-justify">
                         @foreach($tour->itinerario_tours->take(1) as $itinerario_i)
                             @if(isset($itinerario_i))
-                                
+
                                 <h4 class="text-info">Itinerary</h4>
                                 @foreach($tour->itinerario_tours as $itinerario)
-                                    <h5><b>{{$itinerario->dia}}.</b> {{$itinerario->titulo}}</h5>
+                                    <h6 class="color-orange-2"><b>Day {{$itinerario->dia}}:</b> {{$itinerario->titulo}}</h6>
                                     @php echo $itinerario->descripcion @endphp
                                 @endforeach
                             @endif
@@ -143,7 +147,12 @@
                     {{--</tr>--}}
                     {{--</thead>--}}
                     <tbody>
-                    <tr>
+                    @if($tour->ubicacion == 'inca trail')
+                        @php $estado = 'hide' @endphp
+                    @else
+                        @php $estado = '' @endphp
+                    @endif
+                    <tr class="{{$estado}}">
                         <td><b>Tour Schedule :</b></td>
                         <td>{{$tour->horario}}</td>
                     </tr>
@@ -151,7 +160,7 @@
                         <td><b>Tour Duration :</b></td>
                         <td>{{$tour->duracion}}</td>
                     </tr>
-                    <tr>
+                    <tr class="{{$estado}}">
                         <td><b>Price per Person <br>(Group Tour):</b></td>
                         @if($tour->precio_g == 0 OR $tour->precio_g == "" OR $tour->precio_g == NULL)
                             <td>UPON REQUEST</td>
@@ -160,7 +169,7 @@
                         @endif
 
                     </tr>
-                    <tr>
+                    <tr class="{{$estado}}">
                         <td><b>Price per Person <br>(Group Tour):</b></td>
                         @if($tour->precio_p == 0 OR $tour->precio_p == "" OR $tour->precio_p == NULL)
                             <td><b>UPON REQUEST</b></td>
@@ -168,6 +177,16 @@
                             <td>USD ${{$tour->precio_p}}</td>
                         @endif
                     </tr>
+                    @if($tour->ubicacion == 'inca trail')
+                    <tr>
+                        <td><b>Price</td>
+                        @if($tour->precio == 0 OR $tour->precio == "" OR $tour->precio == NULL)
+                            <td><b>UPON REQUEST</b></td>
+                        @else
+                            <td>USD ${{$tour->precio}}</td>
+                        @endif
+                    </tr>
+                    @endif
                     </tbody>
                 </table>
 

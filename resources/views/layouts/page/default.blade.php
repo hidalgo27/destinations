@@ -18,7 +18,7 @@
 <div id="page" class="page">
 
     <div class="jain_container">
-
+        {{--<img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">--}}
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="phone-box">
                 <div class="container">
@@ -27,14 +27,14 @@
                         {{--<a href="tel:+51956235133" class="color-white"><b>PE:+51 956-235-133</b></a>--}}
                         <div class="medias">
                             <ul>
-                                <a href="tel:+18172304971" class="color-white text-15">US:+1(813)402-8042</a> |
-                                <a href="tel:+51956235133" class="color-white text-15">PE:+51 956-235-133</a> |
-                                <li> <a href="http://peruviandestinations1.blogspot.pe/" class="bg-orange" target="_blank"> <i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
+                                <a href="tel:+18172304971" class="color-white text-14">US:+1(813)402-8042</a> |
+                                <a href="tel:+51956235133" class="color-white text-14">PE:+51 956-235-133</a> |
+                                <li class="hidden-xs"> <a href="http://peruviandestinations1.blogspot.pe/" class="bg-orange" target="_blank"> <i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
                                 {{--<li> <a href="#" onclick="startOlark()" class="bg-blue-2"> <i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>--}}
-                                <li>|</li>
-                                <li> <a href="https://www.facebook.com/peruviandestinations/" target="_blank" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li> <a href="https://www.youtube.com/channel/UCLYoki8IRrP5BoU2PkUc_xA" target="_blank" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                <li> <a href="https://www.instagram.com/peruviandestinations/" target="_blank" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li class="hidden-xs">|</li>
+                                <li class="hidden-xs"> <a href="https://www.facebook.com/peruviandestinations/" target="_blank" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="hidden-xs"> <a href="https://www.youtube.com/channel/UCLYoki8IRrP5BoU2PkUc_xA" target="_blank" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li class="hidden-xs"> <a href="https://www.instagram.com/peruviandestinations/" target="_blank" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
                             </ul>
                         </div>
@@ -43,12 +43,13 @@
 
             </div>
             <div class="container1 container-fluid">
-                <div class="col-md-3 no-padding">
+                <div class="col-md-3 col-xs-12 no-padding">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <i class="icon-menu"></i> Menu
                     </button>
-                    <a class="navbar-brand" href="{{route('home_path')}}"> <img src="{{asset('images/logo-peruvian.png')}}" width="270"/></a>
+                    <a class="navbar-brand hidden-xs" href="{{route('home_path')}}"> <img src="{{asset('images/logo-peruvian.png')}}" width="270"/></a>
+                    <a class="navbar-brand-xs hidden-sm hidden-md hidden-lg" href="{{route('home_path')}}"> <img src="{{asset('images/logo-peruvian.png')}}" width="270"/></a>
                 </div>
 
                 {{--<div class="col-md-4 well">--}}
@@ -121,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-xs-12 hidden-xs">
 
                     {{--<ul>--}}
                     {{--<li> <a href="http://peruviandestinations1.blogspot.pe/" class="bg-orange"> <i class="fa fa-rss-square" aria-hidden="true"></i></a></li>--}}
@@ -133,8 +134,8 @@
 
                     {{--</ul>--}}
                     <div class="margin-top-15">
-                        <a href="#" onclick="startOlark()" class="btn btn-danger"><i class="fa fa-commenting-o"></i> Chat</a>
-                        <a href="#inquire" class="btn btn-lg btn-primary">Help me plan my trip</a>
+                        <a href="#" onclick="startOlark()" class="btn btn-danger hidden-xs"><i class="fa fa-commenting-o"></i> Chat</a>
+                        <a href="#inquire" class="btn btn-lg btn-primary hidden-xs">Help me plan my trip</a>
                     </div>
                     {{--<div class="classus margin-top-10">--}}
                     {{--<a href="mailto:info@peruviandestinations.com"> <b>info@peruviandestinations.com</b></a>--}}
@@ -152,9 +153,12 @@
 
 
             </div>
+            <div class="col-md-12 box-action-xs text-center padding-10 hidden-md hidden-lg hidden-sm">
+                <a href="mailto:info@peruviandestinations.com" class="btn btn-danger"><i class="fa fa-envelope-o"></i></a>
+                <a href="#inquire" class="btn btn-primary">Help me plan my trip</a>
+            </div>
 
         </nav>
-
     </div>
 
     @yield('content')

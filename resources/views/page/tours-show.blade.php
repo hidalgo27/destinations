@@ -11,7 +11,8 @@
                         $ubicacion = explode(",", $tour->ubicacion);
                     @endphp
                     {{--<h3 class="color-white">{{ucwords(strtolower($tour->ubicacion))}} <b>Tours</b></h3>--}}
-                    <img src="{{asset('images/destinations/banners/'.$ubicacion[0].'.jpg')}}" alt="...">
+                    <img src="{{asset('images/destinations/banners/'.str_replace(' ','-',$ubicacion[0]).'.jpg')}}" alt="..." class="hidden-xs">
+                    <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
                 @endforeach
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
@@ -69,11 +70,11 @@
 
 
     <div class="container margin-top-40">
-        @foreach($tours->where('estado', 1) as $tour)
+        @foreach($tours as $tour)
             <div class="row margin-bottom-20 box-tours-d">
 
                     <div class="col-md-7">
-                        <div id="carousel-{{$tour->id}}" class="carousel slide" data-ride="carousel">
+                        <div id="carousel-{{$tour->id}}" class="carousel slide margin-bottom-10" data-ride="carousel">
                             <!-- Indicators -->
                             {{--<ol class="carousel-indicators">--}}
                                 {{--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>--}}
@@ -113,12 +114,34 @@
                         <p class="margin-top-10"><b>Tour Schedule:</b> {{$tour->horario}}</p>
                         <p class="margin-bottom-20"><b>Tour Duration:</b> {{$tour->duracion}}</p>
 
-                        <div class="col-md-6">
+                        @if($tour->ubicacion == 'inca trail')
+                        <div class="col-md-12">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <p class="text-center no-padding"><b>Price</b></p>
+                                </div>
+                                <div class="panel-body text-center">
+                                    {{--{{$tour->ubicacion}}--}}
+                                    @if($tour->precio == 0 OR $tour->precio == "" OR $tour->precio == NULL)
+                                        <b>UPON REQUEST</b>
+                                    @else
+                                        <p class="no-padding text-25"><strong>USD <sup>$</sup>{{$tour->precio}}</strong></p>
+                                    @endif
+                                </div>
+                                {{--<ul class="list-group list-group-flush text-center">--}}
+                                    {{--<li class="list-group-item color-black-1"><i class="fa fa-bell" aria-hidden="true"></i> <i>Price per Person</i></li>--}}
+                                {{--</ul>--}}
+                            </div>
+                        </div>
+                        @endif
+
+                        <div class="col-md-6 @if($tour->ubicacion == 'inca trail') hide @endif">
                             <div class="panel panel-danger">
                                 <div class="panel-heading">
                                     <p class="text-center no-padding"><b>Group Tour</b></p>
                                 </div>
                                 <div class="panel-body text-center">
+                                    {{--{{$tour->ubicacion}}--}}
                                     @if($tour->precio_g == 0 OR $tour->precio_g == "" OR $tour->precio_g == NULL)
                                         <b>UPON REQUEST</b>
                                     @else
@@ -130,7 +153,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 @if($tour->ubicacion == 'inca trail') hide @endif">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <p class="text-center no-padding"><b>Private Tour</b></p>

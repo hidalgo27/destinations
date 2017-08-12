@@ -10,7 +10,8 @@
                 @foreach($paquete as $paquetes)
                     {{--<h1 class="color-goto-orange"><strong>Peru Packages: {{ucwords(strtolower($paquetes->titulo))}}</strong></h1>--}}
 {{--                    <h3 class="color-white">{{$paquetes->duracion}} Days {{ucwords(strtolower($paquetes->titulo))}}</h3>--}}
-                    <img src="{{asset('images/packages/banners/'.$paquetes->codigo.'.jpg')}}" alt="...">
+                    <img src="{{asset('images/packages/banners/'.$paquetes->codigo.'.jpg')}}" alt="..." class="hidden-xs">
+                    <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
                 @endforeach
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
@@ -36,7 +37,7 @@
             <div class="container">
 
                 <div class="row margin-bottom-20">
-                    <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                    <div class="section-title-1 tx-center margin-bottom-30 os-animation col-md-12" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         <h2 class="color-orange-2">
                             <strong>
                                 @foreach($paquete as $paquetes)
@@ -177,7 +178,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane clearfix" id="prices">
                             <div class="col-md-12">
-                                <table class="table">
+                                <table class="table table-responsive">
                                     {{--<caption>Price per person</caption>--}}
                                     <thead>
                                     <tr>

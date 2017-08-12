@@ -6,7 +6,8 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="{{asset('images/destinations/banners/'.str_replace(' ', '-', strtolower($title)).'.jpg')}}" alt="...">
+                <img src="{{asset('images/destinations/banners/'.str_replace(' ', '-', strtolower($title)).'.jpg')}}" alt="..." class="hidden-xs">
+                <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
                 <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
@@ -22,7 +23,7 @@
 
     <div class="container margin-top-60">
         <div class="row margin-bottom-20">
-            <div class="section-title-1 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+            <div class="section-title-1 col-md-12 tx-center margin-bottom-30 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                 <h2 class="color-orange-2"><strong>{{ucwords(strtolower($title))}}</strong></h2>
                 {{--<h4><b>“Better Hotels and superior Service at the best price”</b></h4>--}}
                 <div class="sec-title-div-1"></div>
@@ -53,7 +54,7 @@
         </div>
         <div class="row margin-top-30">
             <div class="col-md-12">
-                <div class="panel panel-primary">
+                <div class="panel panel-primary table-responsive">
                     <div class="panel-heading">
                         <h3 class="panel-title">Travel Packages</h3>
                         <div class="pull-right">

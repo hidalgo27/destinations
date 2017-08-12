@@ -6,7 +6,8 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="{{asset('images/nosotros.jpg')}}" alt="...">
+                <img src="{{asset('images/nosotros.jpg')}}" alt="..." class="hidden-xs">
+                <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
                 {{--<div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">--}}
                     {{--<div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
@@ -42,7 +43,7 @@
         </div>
     </div>
 
-    <div class="bg-about-card padding-top-30 padding-bottom-30">
+    <div class="bg-about-card padding-top-30 padding-bottom-30 hidden-xs">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
