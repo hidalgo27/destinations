@@ -258,7 +258,7 @@
                                                 <p class="days color-white">days</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">
+                                        <div class="col-md-9 col-sm-12 col-xs-12 content-area-title-1">
                                             <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
                                         </div>
                                         <div class="col-md-12 text-left color-green-1 margin-bottom-10">
@@ -272,7 +272,7 @@
                                                 @php $i++; @endphp
                                             @endforeach
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-4 travel-price">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 travel-price">
                                             <h5 class="color-orange-2"><sup class="color-black-1">From</sup> <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                                 @foreach($paquetes->precio_paquetes as $precio)
                                                     @if($precio->estrellas == 2)
@@ -288,95 +288,93 @@
                         @endforeach
                     </div>
 
-                    {{--<div class="row margin-top-40" id="trekking">--}}
-                        {{--<h4 class="text-center">Trekking Tours</h4>--}}
-                    {{--</div>--}}
-                    {{--<div class="row margin-top-40">--}}
-                        {{--@foreach($paquete as $paquetes)--}}
+                    <div class="row margin-top-40" id="trekking">
+                        <h4 class="text-center">Trekking Tours</h4>
+                    </div>
+                    <div class="row margin-top-40">
+                        @foreach($paquete->where('estado',2) as $paquetes)
 
-                            {{--<div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
-                                {{--<a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">--}}
-                                    {{--<div class="content-area-2 content-area-packages clearfix">--}}
-                                        {{--<div class="content-area-figure-1">--}}
-                                            {{--<img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">--}}
-                                        {{--</div>--}}
-                                        {{--<div class=" col-md-12 ">--}}
-                                            {{--<div class="travel-duration tx-center">--}}
-                                                {{--<p class="date color-white">{{$paquetes->duracion}}</p>--}}
-                                                {{--<p class="days color-white">days</p>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
-                                            {{--<h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
-                                            {{--<h6>--}}
-                                                {{--@foreach($paquetes->precio_paquetes as $precio)--}}
-                                                    {{--@if($precio->estrellas == 2)--}}
-                                                        {{--<b>${{$precio->precio_d}}</b>--}}
-                                                    {{--@endif--}}
-                                                {{--@endforeach--}}
-                                            {{--</h6>--}}
-                                        {{--</div>--}}
+                            <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
+                                    <div class="content-area-2 content-area-packages clearfix">
+                                        <div class="content-area-figure-1">
+                                            <img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">
+                                        </div>
+                                        <div class=" col-md-12 ">
+                                            <div class="travel-duration tx-center">
+                                                <p class="date color-white">{{$paquetes->duracion}}</p>
+                                                <p class="days color-white">days</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-12 col-xs-12 content-area-title-1">
+                                            <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-xs-12 travel-price">
+                                            <h6>
+                                                @foreach($paquetes->precio_paquetes as $precio)
+                                                    @if($precio->estrellas == 2)
+                                                        <b>${{$precio->precio_d}}</b>
+                                                    @endif
+                                                @endforeach
+                                            </h6>
+                                        </div>
 
-                                        {{--<div class="col-md-12 text-left color-green-1 text-12 margin-bottom-10">--}}
-                                            {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
-                                            {{--@foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)--}}
-                                                {{--{{ucwords(strtolower($paquete_destino->destinos->nombre))}},--}}
-                                            {{--@endforeach--}}
-                                            {{--...--}}
-                                        {{--</div>--}}
+                                        <div class="col-md-12 text-left color-green-1 text-12 margin-bottom-10">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                            @endforeach
+                                        </div>
 
-                                    {{--</div>--}}
-                                {{--</a>--}}
-                            {{--</div><!-- /.col-md-4 col -->--}}
-                        {{--@endforeach--}}
-                    {{--</div>--}}
+                                    </div>
+                                </a>
+                            </div><!-- /.col-md-4 col -->
+                        @endforeach
+                    </div>
 
-                    {{--<div class="row margin-top-40" id="offers">--}}
-                        {{--<h4 class="text-center">Peru Offers</h4>--}}
-                    {{--</div>--}}
-                    {{--<div class="row margin-top-40">--}}
-                        {{--@foreach($paquete as $paquetes)--}}
+                    <div class="row margin-top-40" id="offers">
+                        <h4 class="text-center">Peru Offers</h4>
+                    </div>
+                    <div class="row margin-top-40">
+                        @foreach($paquete->where('estado',3) as $paquetes)
 
-                            {{--<div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">--}}
-                                {{--<a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">--}}
-                                    {{--<div class="content-area-2 content-area-packages clearfix">--}}
-                                        {{--<div class="content-area-figure-1">--}}
-                                            {{--<img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">--}}
-                                        {{--</div>--}}
-                                        {{--<div class=" col-md-12 ">--}}
-                                            {{--<div class="travel-duration tx-center">--}}
-                                                {{--<p class="date color-white">{{$paquetes->duracion}}</p>--}}
-                                                {{--<p class="days color-white">days</p>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="col-md-9 col-sm-12 col-xs-8 content-area-title-1">--}}
-                                            {{--<h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="col-md-3 col-sm-12 col-xs-4 travel-price">--}}
-                                            {{--<h6>--}}
-                                                {{--@foreach($paquetes->precio_paquetes as $precio)--}}
-                                                    {{--@if($precio->estrellas == 2)--}}
-                                                        {{--<b>${{$precio->precio_d}}</b>--}}
-                                                    {{--@endif--}}
-                                                {{--@endforeach--}}
-                                            {{--</h6>--}}
-                                        {{--</div>--}}
+                            <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
+                                    <div class="content-area-2 content-area-packages clearfix">
+                                        <div class="content-area-figure-1">
+                                            <img src="{{asset('images/packages/'.$paquetes->codigo.'.jpg')}}" alt="content area">
+                                        </div>
+                                        <div class=" col-md-12 ">
+                                            <div class="travel-duration tx-center">
+                                                <p class="date color-white">{{$paquetes->duracion}}</p>
+                                                <p class="days color-white">days</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-12 col-xs-12 content-area-title-1">
+                                            <h6 class="tx-left"><strong>{{ucwords(strtolower($paquetes->titulo))}}</strong></h6>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-xs-12 travel-price">
+                                            <h6>
+                                                @foreach($paquetes->precio_paquetes as $precio)
+                                                    @if($precio->estrellas == 2)
+                                                        <b>${{$precio->precio_d}}</b>
+                                                    @endif
+                                                @endforeach
+                                            </h6>
+                                        </div>
 
-                                        {{--<div class="col-md-12 text-left color-green-1 text-12 margin-bottom-10">--}}
-                                            {{--<i class="fa fa-map-marker" aria-hidden="true"></i>--}}
-                                            {{--@foreach($paquete_destinos->where('idpaquetes',$paquetes->id)->take(3) as $paquete_destino)--}}
-                                                {{--{{ucwords(strtolower($paquete_destino->destinos->nombre))}},--}}
-                                            {{--@endforeach--}}
-                                            {{--...--}}
-                                        {{--</div>--}}
+                                        <div class="col-md-12 text-left color-green-1 text-12 margin-bottom-10">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                {{ucwords(strtolower($paquete_destino->destinos->nombre))}},
+                                            @endforeach
+                                        </div>
 
-                                    {{--</div>--}}
-                                {{--</a>--}}
-                            {{--</div><!-- /.col-md-4 col -->--}}
-                        {{--@endforeach--}}
-                    {{--</div>--}}
+                                    </div>
+                                </a>
+                            </div><!-- /.col-md-4 col -->
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
