@@ -7,7 +7,7 @@
                 <div class="medias">
                     <ul>
                         <a href="tel:+18172304971" class="color-white text-14">US:+1(813) 336-22202</a> |
-                        <a href="tel:+51956235133" class="color-white text-14">PE:+51 956-235-133</a> |
+                        <a href="tel:+51956235133" class="color-white text-14">PE:+51 956-235-133</a>
                         <li class="hidden-xs"> <a href="http://peruviandestinations1.blogspot.pe/" class="bg-orange" target="_blank"> <i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
                         {{--<li> <a href="#" onclick="startOlark()" class="bg-blue-2"> <i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>--}}
                         <li class="hidden-xs">|</li>
