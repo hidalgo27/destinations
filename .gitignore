@@ -5,15 +5,11 @@
 /vendor
 /.idea
 /.vagrant
-<<<<<<< HEAD
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-=======
-.vendor.zip
-Homestead.json
-Homestead.yaml
-npm-debug.log
->>>>>>> origin/master
+vendor.zip
+destinations.zip
+node_modules.zip
 .env

@@ -587,12 +587,12 @@
                                 <div class="col-md-12">
                                     <h2 class="text-30 text-center">LAND OF THE INCAS</h2>
                                     <div class="sec-title-div-1"></div>
-                                    <p class="text-20 text-center color-black"><b>7 Days with air | from $1739*</b></p>
-                                    <p class="color-black"><b>Save $250 with promo code KTEK250.</b></p>
-                                    <p class="color-black"><b>Book by July 21, 2017.</b></p>
+                                    <p class="text-20 text-center color-black"><b>9 Days | from $1389*</b></p>
+                                    {{--<p class="color-black"><b>code KTEK250.</b></p>--}}
+                                    {{--<p class="color-black"><b>Book by July 21, 2017.</b></p>--}}
                                 </div>
                                 <div class="col-md-12 text-center margin-top-10">
-                                    <a href="" class="btn btn-danger">Discover More</a>
+                                    <a href="{{route('show_path','peru-:-land-of-the-incas')}}" class="btn btn-danger">Discover More</a>
                                 </div>
                             </div>
                         </div>
