@@ -73,7 +73,7 @@
         @foreach($tours as $tour)
             <div class="row margin-bottom-20 box-tours-d">
 
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-12">
                         <div id="carousel-{{$tour->id}}" class="carousel slide margin-bottom-10" data-ride="carousel">
                             <!-- Indicators -->
                             {{--<ol class="carousel-indicators">--}}
@@ -108,7 +108,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12">
                         <h5 class="no-margin color-orange-2"><b>{{$tour->titulo}}</b></h5>
                         <div class="divider-tours margin-top-10 margin-bottom-10"></div>
                         <p class="margin-top-10"><b>Tour Schedule:</b> {{$tour->horario}}</p>
@@ -135,7 +135,7 @@
                         </div>
                         @endif
 
-                        <div class="col-md-6 @if($tour->ubicacion == 'inca trail') hide @endif">
+                        <div class="col-md-6 col-sm-6 @if($tour->ubicacion == 'inca trail') hide @endif">
                             <div class="panel panel-danger">
                                 <div class="panel-heading">
                                     <p class="text-center no-padding"><b>Group Tour</b></p>
@@ -153,7 +153,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6 @if($tour->ubicacion == 'inca trail') hide @endif">
+                        <div class="col-md-6 col-sm-6 @if($tour->ubicacion == 'inca trail') hide @endif">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <p class="text-center no-padding"><b>Private Tour</b></p>

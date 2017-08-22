@@ -22,7 +22,7 @@
 
     </div>
     <div class="container1 container-fluid">
-        <div class="col-md-3 col-xs-12 no-padding">
+        <div class="col-md-3 col-sm-5 col-xs-12 no-padding">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <i class="icon-menu"></i> Menu
@@ -31,10 +31,15 @@
             <a class="navbar-brand-xs hidden-sm hidden-md hidden-lg" href="{{route('home_path')}}"> <img src="{{asset('images/logo-peruvian.png')}}" width="270"/></a>
         </div>
 
+        <div class="col-sm-7 hidden-xs hidden-md hidden-lg margin-top-20 text-right">
+            <a href="mailto:info@peruviandestinations.com" class="btn btn-primary"><i class="fa fa-envelope-o"></i></a>
+            <a href="#inquire" class="btn btn-danger btn-lg">Help me plan my trip</a>
+        </div>
+
         {{--<div class="col-md-4 well">--}}
         {{--hola--}}
         {{--</div>--}}
-        <div class="col-md-6 no-padding">
+        <div class="col-md-6 col-sm-12 no-padding">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 {{--<div class="col-md-12 text-center margin-top-20">--}}
@@ -112,7 +117,7 @@
             {{--<li> <a href="https://www.instagram.com/peruviandestinations/" target="_blank" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>--}}
 
             {{--</ul>--}}
-            <div class="margin-top-15">
+            <div class="margin-top-15 hidden-sm">
                 <a href="#" onclick="startOlark()" class="btn btn-primary hidden-xs"><i class="fa fa-commenting-o"></i> Chat</a>
                 <a href="#inquire" class="btn btn-lg btn-danger hidden-xs">Help me plan my trip</a>
             </div>
@@ -133,8 +138,8 @@
 
     </div>
     <div class="col-md-12 box-action-xs text-center padding-10 hidden-md hidden-lg hidden-sm">
-        <a href="mailto:info@peruviandestinations.com" class="btn btn-danger"><i class="fa fa-envelope-o"></i></a>
-        <a href="#inquire" class="btn btn-primary">Help me plan my trip</a>
+        <a href="mailto:info@peruviandestinations.com" class="btn btn-primary"><i class="fa fa-envelope-o"></i></a>
+        <a href="#inquire" class="btn btn-danger">Help me plan my trip</a>
     </div>
 
 </nav>

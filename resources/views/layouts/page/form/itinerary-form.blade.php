@@ -33,29 +33,29 @@
                     <div class="tab-content">
                         <div id="menu1" class="tab-pane fade active in">
                             <div class="box-your-details">
-                                <div class="col-md-12 margin-top-10">
+                                <div class="col-md-12 col-sm-12 margin-top-10">
                                     <h5>HOTEL CATEGORY</h5>
                                 </div>
-                                <div class="btn-group col-md-12" data-toggle="buttons">
-                                    <label class="btn btn-details col-md-3 col-xs-6">
+                                <div class="btn-group col-md-12 col-sm-12" data-toggle="buttons">
+                                    <label class="btn btn-details col-md-3 col-sm-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Budget 2">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Budget 2 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-3 col-xs-6">
+                                    <label class="btn btn-details col-md-3 col-sm-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Best Value 3">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Best Value 3 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-3 col-xs-6">
+                                    <label class="btn btn-details col-md-3 col-sm-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Superior 4">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>Superior 4 <i class="fa fa-star color-orange-2" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-3 col-xs-6">
+                                    <label class="btn btn-details col-md-3 col-sm-3 col-xs-6">
                                         <input type="checkbox" autocomplete="off" name="category[]" value="Luxury 5">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
@@ -63,42 +63,42 @@
                                     </label>
                                 </div>
 
-                                <div class="col-md-12 margin-top-10">
+                                <div class="col-md-12 col-sm-12 margin-top-10">
                                     <h5>NUMBER OF TRAVELERS</h5>
                                 </div>
 
-                                <div class="btn-group col-md-12 margin-top-10" data-toggle="buttons">
-                                    <label class="btn btn-details col-md-2 col-xs-4">
+                                <div class="btn-group col-md-12 col-sm-12 margin-top-10" data-toggle="buttons">
+                                    <label class="btn btn-details col-md-2 col-xs-4 col-sm-2">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="1 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>1 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2 col-xs-4">
+                                    <label class="btn btn-details col-md-2 col-xs-4 col-sm-2">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="2 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>2 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2 col-xs-4">
+                                    <label class="btn btn-details col-md-2 col-xs-4 col-sm-2">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="3 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>3 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2 col-xs-4">
+                                    <label class="btn btn-details col-md-2 col-xs-4 col-sm-2">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="4 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>4 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2 col-xs-4">
+                                    <label class="btn btn-details col-md-2 col-xs-4 col-sm-2">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="5 days">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
                                         <b>5 <i class="fa fa-user-circle-o" aria-hidden="true"></i></b>
                                     </label>
-                                    <label class="btn btn-details col-md-2 col-xs-4">
+                                    <label class="btn btn-details col-md-2 col-xs-4 col-sm-2">
                                         <input type="checkbox" autocomplete="off" name="number[]" value="Undecided">
                                         <i class="fa fa-check-square-o check-from"></i>
                                         <i class="fa fa-square-o oncheck-form" aria-hidden="true"></i>
@@ -106,11 +106,11 @@
                                     </label>
                                 </div>
 
-                                <div class="col-md-12 margin-top-10">
+                                <div class="col-md-12 col-sm-12 margin-top-10">
                                     <h5>TRAVEL DATE</h5>
                                 </div>
                                 <div class="box-personal">
-                                    <div class="col-md-12 header-form-2">
+                                    <div class="col-md-12 col-sm-12 header-form-2">
                                         <div id="contact_form">
                                             <div class="row">
                                                 <input class="" required="required" id="p_date" name="p_date" placeholder="TRAVEL DATE" type="date">

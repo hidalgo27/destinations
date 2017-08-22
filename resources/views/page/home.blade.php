@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-md-3 col-sm-4">
                         <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
                             <li class="active"><a href="#vtab1" data-toggle="tab" class="text-20">Peru Packages</a></li>
                             <li><a href="#vtab2" data-toggle="tab" class="text-20">Inca Trail Packages</a></li>
@@ -36,12 +36,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-md-9 col-sm-8">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active grid" id="vtab1">
                                 @foreach($paquete->take(6) as $paquetes)
 
-                                <div class="col-md-4 col-sm-4 col-xs-12 text-center os-animation grid-item" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                                <div class="col-md-4 col-sm-6 col-xs-12 text-center os-animation grid-item" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                     <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
                                     <div class="content-area-2 clearfix">
                                         <div class="content-area-figure-1">
@@ -699,27 +699,27 @@
             <div class="container os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s"><!-- container -->
 
                 <div class="callout-title-2 tx-center color-white">
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <a href="{{route("destinations_path")}}" class="color-white"><i class="fa fa-thumb-tack fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("destinations_path")}}" class="display-block color-orange-2">Destinations</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <a href="{{route("tours_path")}}" class="color-white"><i class="fa fa-flag fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("tours_path")}}" class="display-block color-orange-2">Tours</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <a href="http://peruviandestinations1.blogspot.pe/" class="color-white"><i class="fa fa-th-large fa-5x" aria-hidden="true"></i></a>
                         <a href="http://peruviandestinations1.blogspot.pe/" class="display-block color-orange-2">Travel Blog</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <a href="{{route("packages_path")}}" class="color-white"><i class="fa fa-globe fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("packages_path")}}" class="display-block color-orange-2">Travel Packages</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <a href="{{route("about_path")}}" class="color-white"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i></a>
                         <a href="{{route("about_path")}}" class="display-block color-orange-2">About Us</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <a href="#inquire" class="color-white"><i class="fa fa-pencil fa-5x" aria-hidden="true"></i></a>
                         <a href="#inquire" class="display-block color-orange-2">Design my trip</a>
                     </div>

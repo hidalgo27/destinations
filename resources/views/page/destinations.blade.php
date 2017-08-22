@@ -8,7 +8,7 @@
             <div class="item active">
                 <img src="{{asset('images/packages/banners/1.jpg')}}" alt="..." class="hidden-xs">
                 <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
-                <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
+                <div class="carousel-caption carousel-caption-itinerary col-md-4 hidden-sm text-left">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
                             {{--<h1 class="color-goto-orange"><strong>Peru Packages: {{ucwords(strtolower($paquetes->titulo))}}</strong></h1>--}}

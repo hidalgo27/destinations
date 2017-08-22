@@ -8,7 +8,7 @@
             <div class="item active">
                 <img src="{{asset('images/packages/banners/1.jpg')}}" alt="..." class="hidden-xs">
                 <img src="{{asset('images/slider/slider-xs.jpg')}}" alt="" class="img-responsive hidden-sm hidden-md hidden-lg">
-                <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left">
+                <div class="carousel-caption carousel-caption-itinerary col-md-4 text-left hidden-sm">
                     <div class="header-big-text-1 os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                         {{--<h3 class="color-white">Hello to Our Awesome <br>ew Template MyFlat.</h3>--}}
                         <h3 class="color-white">Peru Tour Packages</h3>
@@ -55,12 +55,13 @@
                         <h5 class="text-center"><a href="#peru2">Peru Tour Packages</a> | <a href="#trekking2">Trekking Tours</a> | <a href="#International">International Extensions</a></h5>
                     </div>
                 </div>
-                <div class="container">
+                <div class="">
                     <div class="row" id="peru2">
                         <h4 class="text-center margin-top-40">Peru Tour Packages</h4>
                     </div>
                     <div class="row margin-top-40">
-                        <div class="panel panel-primary">
+
+                        <div class="panel panel-primary table-responsive">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Peru Specials</h3>
                                 <div class="pull-right">
@@ -119,6 +120,7 @@
                                 </tbody>
                             </table>
                         </div>
+
                     </div>
 
                     <div class="row margin-top-40" id="trekking2">
@@ -239,14 +241,14 @@
                         <h5 class="text-center"><a href="#peru">Peru Specials</a> | <a href="#trekking">Trekking Tours</a> | <a href="#offers">Peru Offers</a></h5>
                     </div>
                 </div>
-                <div class="container">
+                <div class="">
                     <div class="row" id="peru">
                         <h4 class="text-center margin-top-40">Peru Travel Packages</h4>
                     </div>
                     <div class="row margin-top-40">
                         @foreach($paquete as $paquetes)
 
-                            <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                 <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
                                     <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">
@@ -294,7 +296,7 @@
                     <div class="row margin-top-40">
                         @foreach($paquete->where('estado',2) as $paquetes)
 
-                            <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                 <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
                                     <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">
@@ -338,7 +340,7 @@
                     <div class="row margin-top-40">
                         @foreach($paquete->where('estado',3) as $paquetes)
 
-                            <div class="col-md-3 col-sm-4 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                 <a href="{{route('show_path', str_replace(' ','-',strtolower($paquetes->titulo)))}}">
                                     <div class="content-area-2 content-area-packages clearfix">
                                         <div class="content-area-figure-1">

@@ -33,27 +33,27 @@
             <div class="container os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s"><!-- container -->
 
                 <div class="callout-title-2 tx-center color-white">
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <i class="fa fa-thumb-tack fa-5x" aria-hidden="true"></i>
                         <a href="" class="display-block color-orange-2">Destinations</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
                         <a href="" class="display-block color-orange-2">Tours</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <i class="fa fa-th-large fa-5x" aria-hidden="true"></i>
                         <a href="" class="display-block color-orange-2">Travel Blog</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
                         <a href="" class="display-block color-orange-2">Travel Packages</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
                         <a href="" class="display-block color-orange-2">About Us</a>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-sm-2">
                         <i class="fa fa-comment-o fa-5x" aria-hidden="true"></i>
                         <a href="" class="display-block color-orange-2">Testimonials</a>
                     </div>
