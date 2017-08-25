@@ -8,12 +8,16 @@
                     <ul>
                         <a href="tel:+18172304971" class="color-white text-14">US:+1(813) 336-22202</a> |
                         <a href="tel:+51956235133" class="color-white text-14">PE:+51 956-235-133</a>
+                        <li class="hidden-xs">|</li>
                         <li class="hidden-xs"> <a href="http://peruviandestinations1.blogspot.pe/" class="bg-orange" target="_blank"> <i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
                         {{--<li> <a href="#" onclick="startOlark()" class="bg-blue-2"> <i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>--}}
                         <li class="hidden-xs">|</li>
                         <li class="hidden-xs"> <a href="https://www.facebook.com/peruviandestinations/" target="_blank" class="color-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class="hidden-xs"> <a href="https://www.youtube.com/channel/UCLYoki8IRrP5BoU2PkUc_xA" target="_blank" class="color-youtube"> <i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         <li class="hidden-xs"> <a href="https://www.instagram.com/peruviandestinations/" target="_blank" class="color-instagram"> <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class="hidden-xs">|</li>
+                        <a href="https://m.me/peruviandestinations" class="box-redes-m hidden-xs" target="_blank"><img src="{{asset('images/icons/messenger.png')}}" alt=""></a>
+                        <a href="https://api.whatsapp.com/send?phone=51956235133" class="box-redes-m hidden-xs" target="_blank"><img src="{{asset('images/icons/whatsapp.png')}}" alt=""></a>
 
                     </ul>
                 </div>
@@ -140,6 +144,8 @@
     <div class="col-md-12 box-action-xs text-center padding-10 hidden-md hidden-lg hidden-sm">
         <a href="mailto:info@peruviandestinations.com" class="btn btn-primary"><i class="fa fa-envelope-o"></i></a>
         <a href="#inquire" class="btn btn-danger">Help me plan my trip</a>
+        | <a href="https://m.me/peruviandestinations" class="box-redes-xm" target="_blank"><img src="{{asset('images/icons/messenger.png')}}" alt=""></a>
+        <a href="https://api.whatsapp.com/send?phone=51956235133" class="box-redes-xm" target="_blank"><img src="{{asset('images/icons/whatsapp.png')}}" alt=""></a>
     </div>
 
 </nav>
