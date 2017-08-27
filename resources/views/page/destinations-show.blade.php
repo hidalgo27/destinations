@@ -34,6 +34,7 @@
                     @foreach($destinos->where('nombre', str_replace('-',' ', strtoupper($title))) as $des)
                             @php echo $des->tours; @endphp
                     @endforeach
+
                 </div>
             </div>
         </div>
