@@ -34,6 +34,8 @@
 
             </div>
             <div class="copyright-text-1 tx-center margin-top-50">
+                <a href="https://www.positivessl.com/trusted-ssl-site-seal.php" style="font-family: arial; font-size: 10px; color: #212121; text-decoration: none;"><img src="https://www.positivessl.com/images-new/comodo_secure_seal_76x26_transp.png" alt="Trusted Site Seal" title="Trusted Site Seal for Transparent background" border="0" /></a>
+                <div style="font-family: arial;font-weight:bold;font-size:15px;color:#86BEE0;"><a href="https://www.positivessl.com" style="color:#86BEE0; text-decoration: none;">SSL Certificate</a></div>
                 <p>© Travel 2017, All Rights Reserved, Developed by HCP</p>
             </div>
         </div><!-- /.container -->
