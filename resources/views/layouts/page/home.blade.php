@@ -2,7 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Peruvian Destinations | Peru Travel Packages</title>
+
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="google-site-verification" content="9Yt9m5zfYigMhCS8Vo0qApTQN63Co4FJBKMR4Cytpjo" />

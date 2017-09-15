@@ -9,6 +9,8 @@ use App\TPaqueteCategoria;
 use App\TPaqueteDestino;
 use App\TPaqueteIncluyeIcono;
 use App\TTour;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -21,6 +23,24 @@ class HomeController extends Controller
      */
     public function index()
     {
+        SEOMeta::setTitle('Go to peru - Travel packages to peru - Peru vacation - Machu picchu tours - travel agency - Peruvian Destinations');
+        SEOMeta::setDescription('Find your dream trip to an amazing adventure to Peru, You will get special discount from this local provider to your new experience.');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+        SEOMeta::addKeyword(['peru travel, peru travel package, experience peru, peruvian destinations, peru tours, peru travel agent, peru travel agency, cuzco travel pacakge, cusco tours, lima, ica, peru, Perú, machu picchu tours, Machu picchu package, Machu Picchu vacation, peru vacation, peru local tour operator, peru local travel agency, peru tourism, tour package to peru, visit machu picchu, visit peru, peru tours']);
+
+        OpenGraph::setDescription('Find your dream trip to an amazing adventure to Peru, You will get special discount from this local provider to your new experience.');
+        OpenGraph::setTitle('Go to peru - Travel packages to peru - Peru vacation - Machu picchu tours - travel agency - Peruvian Destinations');
+        OpenGraph::setUrl('https://peruviandestinations.com');
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
+
+        OpenGraph::addImage('https://peruviandestinations.com/images/slider/slider-2.jpg');
+        \Twitter::setTitle('Go to peru - Travel packages to peru - Peru vacation - Machu picchu tours - travel agency - Peruvian Destinations');
+//        \Twitter::setSite('@LuizVinicius73');
+
+//        Twitter::setTitle('Homepage');
+//        Twitter::setSite('@LuizVinicius73');
+
         $paquete = TPaquete::with('paquetes_destinos', 'precio_paquetes')->where('estado', 1)->get();
         $paquete_f = TPaquete::with('paquetes_destinos', 'precio_paquetes')->where('estado', 2)->orwhere('estado', 5)->get();
         $paquete_mg = TPaquete::with('paquetes_destinos', 'precio_paquetes')->where('estado', 3)->get();
@@ -36,6 +56,11 @@ class HomeController extends Controller
 
     public function packages()
     {
+        SEOMeta::setTitle('Peruvian Destinations Packages');
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+//        SEOMeta::addKeyword([]);
+
         $paquete = TPaquete::with('paquetes_destinos', 'precio_paquetes')->get();
         $categoria = TCategoria::get();
         $paquete_categoria = TPaqueteCategoria::with('paquete')->get();
@@ -46,12 +71,22 @@ class HomeController extends Controller
 
     public function destinations()
     {
+        SEOMeta::setTitle('Peruvian Destinations');
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+//        SEOMeta::addKeyword([]);
+
         $destinos = TDestino::get();
         return view('page.destinations', ['destinos'=>$destinos]);
     }
     public function destinations_sow($title)
     {
         $destinations = str_replace('-', ' ', ucwords(strtolower($title)));
+
+        SEOMeta::setTitle('Peruvian Destinations | '.$destinations);
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+//        SEOMeta::addKeyword([]);
 
 //        $destinations = 'Inca Trail';
 
@@ -86,10 +121,17 @@ class HomeController extends Controller
 
     public function about()
     {
+        SEOMeta::setTitle('Peruvian Destinations | About Us');
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
         return view('page.about');
     }
     public function testimonials()
     {
+        SEOMeta::setTitle('Peruvian Destinations | Testimonials');
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+
         return view('page.testimonials');
     }
 
@@ -113,6 +155,10 @@ class HomeController extends Controller
     public function show($titulo)
     {
         $title = str_replace('-', ' ', strtoupper($titulo));
+        SEOMeta::setTitle('Peruvian Destinations | '.ucwords(strtolower($title)));
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+
         $paquete_destinos = TPaqueteDestino::with('destinos')->get();
         $paquete = TPaquete::with('itinerario','paquetes_destinos', 'precio_paquetes')->where('titulo', $title)->get();
         $incluye_i = TPaqueteIncluyeIcono::with('paquete')->get();

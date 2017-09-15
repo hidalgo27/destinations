@@ -6,6 +6,7 @@ use App\TDestino;
 use App\TImagenTour;
 use App\TItinerarioTour;
 use App\TTour;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 
 class ToursController extends Controller
@@ -17,6 +18,11 @@ class ToursController extends Controller
      */
     public function index()
     {
+        SEOMeta::setTitle('Peruvian Destinations Tours');
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+//        SEOMeta::addKeyword([]);
+
         $tours = TTour::all();
         return view('page.tours', ['tours'=>$tours]);
     }
@@ -33,6 +39,11 @@ class ToursController extends Controller
     public function destinations($title)
     {
         $destination = str_replace('-', ' ', $title);
+        SEOMeta::setTitle('Peruvian Destinations | '.ucwords($destination).' Tours');
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+//        SEOMeta::addKeyword([]);
+
         $destino = TDestino::get()->where('nombre', strtoupper($destination));
         $imagen = TImagenTour::all();
         $tours = TTour::get()->where('ubicacion', $destination);
@@ -59,6 +70,10 @@ class ToursController extends Controller
     public function show($title)
     {
         $title = str_replace('-', ' ', strtoupper($title));
+        SEOMeta::setTitle('Peruvian Destinations | '.ucwords(strtolower($title)));
+        SEOMeta::setDescription('');
+        SEOMeta::setCanonical('https://peruviandestinations.com');
+//        SEOMeta::addKeyword([]);
         $imagen = TImagenTour::all();
         $tours = TTour::with('itinerario_tours')->where('titulo', $title)->get();
 //        dd($tours);
